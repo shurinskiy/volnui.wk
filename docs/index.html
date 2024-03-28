@@ -9,11 +9,144 @@
 </head> 
 <body id="home"> 
 <header class="header ">
-  
-</header> 
-<main class="main"> 
+	<div class="header__inner container">
+		<button class="header__navi-toggle"></button>
+		<a class="header__logo" href="./">Logo</a>
+		<div class="header__navi h-navi">
+			<button class="h-navi__close"></button>
+			<nav class="h-navi__menu" data-scroll-lock-scrollable>
+				<a class="h-navi__link" href="./">новинки</a>
+				<a class="h-navi__link" href="./">для неё</a>
+				<a class="h-navi__link" href="./">для него</a>
+				<a class="h-navi__link" href="./">unisex</a>
+				<a class="h-navi__link" href="./">о нас</a>
+				<a class="h-navi__link" href="./">сотрудничество</a>
+				<a class="h-navi__link" href="./">контакты</a>
+			</nav>
+			<div class="h-navi__utils utils">
+				<a class="utils__button utils__button_card" href="./"></a>
+				<button class="utils__button utils__button_search"></button>
+				<button class="utils__button utils__button_favorites"></button>
+			</div>
+		</div>
+	</div>
+</header>
 
-</main> 
+<section class="hero hero-js">
+	<div class="hero__slider swiper">
+		<div class="swiper-wrapper">
+			<div class="hero__slide swiper-slide" data-text="Волнуй, а не волнуйся">
+				<img src="./images/hero-image-1.webp" alt="">
+			</div>
+			<div class="hero__slide swiper-slide" data-text="Волнуй, а не волнуйся">
+				<img src="./images/hero-image-2.webp" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="hero__cover">
+		<div class="hero__status"></div>
+		<div class="hero__navigation"></div>
+		<a class="hero__button" href="./">Перейти в каталог</a>
+		<a class="hero__link" href="./"><img src="" alt=""></a>
+	</div>
+</section>
+
+<section class="aims">
+	<div class="aims__inner container">
+		<div class="aims__item">
+			<img src="./images/aims-image-1.webp" alt="">
+			<div class="aims__content">
+				<span class="aims__text">Для неё</span>
+				<a class="aims__button" href="./">Перейти</a>
+			</div>
+		</div>
+		<div class="aims__item">
+			<img src="./images/aims-image-2.webp" alt="">
+			<div class="aims__content">
+				<span class="aims__text">Для него</span>
+				<a class="aims__button" href="./">Перейти</a>
+			</div>
+		</div>
+		<div class="aims__item">
+			<img src="./images/aims-image-3.webp" alt="">
+			<div class="aims__content">
+				<span class="aims__text">Unisex</span>
+				<a class="aims__button" href="./">Перейти</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="feed">
+	<h1 class="feed__title container">Выбери свой лук</h1>
+	<div class="feed__items container">
+		<div class="feed__item card" style="order: 1;">
+			<div class="card__tabs tab">
+				<div class="card__sliders tab__blocks">
+					<div class="card__slider tab__block swiper active">
+						<a class="swiper-wrapper" href="./">
+							<div class="card__slide"><img src="./images/card-image-1.webp" alt=""></div>
+							<div class="card__slide"><img src="./images/card-image-2.webp" alt=""></div>
+						</a>
+						<a class="card__link" href="./"></a>
+					</div>
+					<div class="card__slider tab__block swiper">
+						<a class="swiper-wrapper" href="./">
+							<div class="card__slide"><img src="./images/card-image-3.webp" alt=""></div>
+							<div class="card__slide"><img src="./images/card-image-4.webp" alt=""></div>
+						</a>
+						<a class="card__link" href="./"></a>
+					</div>
+				</div>
+				<div class="card__toggles tab__buttons">
+					<button class="tab__button active"></button>
+					<button class="tab__button"></button>
+				</div>
+			</div>
+			<div class="card__bottom">
+				<h2 class="card__title">Спортивный топ</h2>
+				<div class="card__irrelevant">4599 ₽</div>
+				<div class="card__price">2999 ₽</div>
+			</div>
+		</div>
+		<div class="feed__item feed__item_video">
+			<video src=""></video>
+		</div>
+	</div>
+</section>
+
+<section class="news">
+	<h2 class="news__title container">Новости</h2>
+	<div class="news__inner container">
+		<div class="news__card n-card">
+			<div class="n-card__image"><img src="./images/news-image-1.webp" alt=""></div>
+			<div class="n-card__bottom">
+				<h3 class="n-card__title"></h3>
+				<a class="n-card__link" href="./">Подробнее</a>
+			</div>
+		</div>
+		<div class="news__card n-card">
+			<div class="n-card__image"><img src="./images/news-image-2.webp" alt=""></div>
+			<div class="n-card__bottom">
+				<h3 class="n-card__title"></h3>
+				<a class="n-card__link" href="./">Подробнее</a>
+			</div>
+		</div>
+		<div class="news__card n-card">
+			<div class="n-card__image"><img src="./images/news-image-3.webp" alt=""></div>
+			<div class="n-card__bottom">
+				<h3 class="n-card__title"></h3>
+				<a class="n-card__link" href="./">Подробнее</a>
+			</div>
+		</div>
+		<button class="news__more button">Смотреть все</button>
+	</div>
+</section>
+
+<section class="subscribe">
+	
+</section>
+
 <footer class="footer"> 
   
 </footer> 
