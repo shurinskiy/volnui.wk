@@ -9,13 +9,27 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/blocks/hero/hero.js":
+/*!*********************************!*\
+  !*** ./src/blocks/hero/hero.js ***!
+  \*********************************/
+/***/ (() => {
+
+eval("(function () {})();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvYmxvY2tzL2hlcm8vaGVyby5qcyIsIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsid2VicGFjazovL2d1bHAtc2Nzcy1zdGFydGVyLy4vc3JjL2Jsb2Nrcy9oZXJvL2hlcm8uanM/ZjlhOSJdLCJzb3VyY2VzQ29udGVudCI6WyIoKCkgPT4ge1xuXG5cbn0pKCk7XG4iXSwibWFwcGluZ3MiOiJBQUFBLENBQUMsWUFBTSxDQUdQLENBQUMsRUFBRSxDQUFDIiwiaWdub3JlTGlzdCI6W119\n//# sourceURL=webpack-internal:///./src/blocks/hero/hero.js\n");
+
+/***/ }),
+
 /***/ "./src/js/blocks.js":
 /*!**************************!*\
   !*** ./src/js/blocks.js ***!
   \**************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvanMvYmxvY2tzLmpzIiwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vZ3VscC1zY3NzLXN0YXJ0ZXIvLi9zcmMvanMvYmxvY2tzLmpzPzVlM2UiXSwic291cmNlc0NvbnRlbnQiOlsiIl0sIm1hcHBpbmdzIjoiIiwiaWdub3JlTGlzdCI6W119\n//# sourceURL=webpack-internal:///./src/js/blocks.js\n");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _blocks_hero_hero_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../blocks/hero/hero.js */ "./src/blocks/hero/hero.js");
+/* harmony import */ var _blocks_hero_hero_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_blocks_hero_hero_js__WEBPACK_IMPORTED_MODULE_0__);
+
 
 /***/ }),
 
@@ -26,7 +40,7 @@ eval("//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _polyfills_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./polyfills.js */ \"./src/js/polyfills.js\");\n/* harmony import */ var _polyfills_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_polyfills_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _blocks_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks.js */ \"./src/js/blocks.js\");\n/* harmony import */ var _blocks_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_blocks_js__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n/* Тут можно писать код общий для всего проекта и требующий единого пространства имен *///# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvanMvY29tbW9uLmpzIiwibWFwcGluZ3MiOiI7Ozs7O0FBQXdCO0FBQ0g7O0FBRXJCIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vZ3VscC1zY3NzLXN0YXJ0ZXIvLi9zcmMvanMvY29tbW9uLmpzPzQ0MGEiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFwiLi9wb2x5ZmlsbHMuanNcIjtcclxuaW1wb3J0IFwiLi9ibG9ja3MuanNcIjtcclxuXHJcbi8qINCi0YPRgiDQvNC+0LbQvdC+INC/0LjRgdCw0YLRjCDQutC+0LQg0L7QsdGJ0LjQuSDQtNC70Y8g0LLRgdC10LPQviDQv9GA0L7QtdC60YLQsCDQuCDRgtGA0LXQsdGD0Y7RidC40Lkg0LXQtNC40L3QvtCz0L4g0L/RgNC+0YHRgtGA0LDQvdGB0YLQstCwINC40LzQtdC9ICovIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/js/common.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _polyfills_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./polyfills.js */ \"./src/js/polyfills.js\");\n/* harmony import */ var _polyfills_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_polyfills_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _blocks_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks.js */ \"./src/js/blocks.js\");\n\n\n\n/* Тут можно писать код общий для всего проекта и требующий единого пространства имен *///# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvanMvY29tbW9uLmpzIiwibWFwcGluZ3MiOiI7Ozs7QUFBd0I7QUFDSDs7QUFFckIiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9ndWxwLXNjc3Mtc3RhcnRlci8uL3NyYy9qcy9jb21tb24uanM/NDQwYSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgXCIuL3BvbHlmaWxscy5qc1wiO1xyXG5pbXBvcnQgXCIuL2Jsb2Nrcy5qc1wiO1xyXG5cclxuLyog0KLRg9GCINC80L7QttC90L4g0L/QuNGB0LDRgtGMINC60L7QtCDQvtCx0YnQuNC5INC00LvRjyDQstGB0LXQs9C+INC/0YDQvtC10LrRgtCwINC4INGC0YDQtdCx0YPRjtGJ0LjQuSDQtdC00LjQvdC+0LPQviDQv9GA0L7RgdGC0YDQsNC90YHRgtCy0LAg0LjQvNC10L0gKi8iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/js/common.js\n");
 
 /***/ }),
 

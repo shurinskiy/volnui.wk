@@ -1,0 +1,31 @@
+.utils {
+	$self: &;
+	display: flex;
+	align-items: center;
+
+	&__button {
+		@extend %reset-button;
+		width: 100%;
+		max-width: 60px;
+		min-width: 40px;
+		line-height: 1;
+
+		&_card {
+			
+		}
+
+		&_search {
+			
+		}
+
+		&_favorites {
+			
+		}
+
+		svg {
+			fill: #fff;
+			display: block;
+			max-height: 22px;
+		}
+	}
+}

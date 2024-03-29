@@ -26,7 +26,6 @@ $breakpoints: (
 	'xxxxlg': 1920px
 );
 
-
 @include font-face("Inter-ExtraLight", "IN", 100);
 @include font-face("Inter-ExtraBold", "IN", 800);
 @include font-face("Inter-SemiBold", "IN", 600);
@@ -45,7 +44,7 @@ $breakpoints: (
 
 :root {
 	--size: #{$basesize}px;
-	--container: 1240px;
+	--container: 1920px;
 	--gap: 24px;
 	
 	@include media('<=xs') {
@@ -65,12 +64,15 @@ body, html {
 	display: flex;
 	flex-flow: column nowrap;
 }
-// .main { flex: 1 0 auto; }
+
 .footer { 
 	flex: 0 0 auto; 
 	margin-top: auto; 
 }
 
+.sprite {
+	display: none;
+}
 
 p { margin-bottom: 10px; }
 strong { font-weight: bold; }

@@ -1,11 +1,15 @@
 <header class="header @@if(this.mod){header_@@mod}">
 	<div class="header__inner container">
-		<button class="header__navi-toggle"></button>
-		<a class="header__logo" href="./">Logo</a>
+		<button class="header__navi-toggle">
+			<svg><use xlink:href="#icon-menu"></use></svg>
+		</button>
+		<a class="header__logo" href="./">
+			<img src="./images/logo.svg" alt="Logo">
+		</a>
 		<div class="header__navi h-navi">
 			<button class="h-navi__close"></button>
 			<nav class="h-navi__menu" data-scroll-lock-scrollable>
-				<a class="h-navi__link" href="./">новинки</a>
+				<a class="h-navi__link" href="./" data-hint="top">новинки</a>
 				<a class="h-navi__link" href="./">для неё</a>
 				<a class="h-navi__link" href="./">для него</a>
 				<a class="h-navi__link" href="./">unisex</a>
@@ -14,9 +18,15 @@
 				<a class="h-navi__link" href="./">контакты</a>
 			</nav>
 			<div class="h-navi__utils utils">
-				<a class="utils__button utils__button_card" href="./"></a>
-				<button class="utils__button utils__button_search"></button>
-				<button class="utils__button utils__button_favorites"></button>
+				<a class="utils__button utils__button_card" href="./">
+					<svg><use xlink:href="#icon-cart"></use></svg>
+				</a>
+				<button class="utils__button utils__button_search">
+					<svg><use xlink:href="#icon-zoom"></use></svg>
+				</button>
+				<button class="utils__button utils__button_favorites">
+					<svg><use xlink:href="#icon-heart"></use></svg>
+				</button>
 			</div>
 		</div>
 	</div>

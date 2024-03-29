@@ -1,7 +1,7 @@
-@@include("_head.html", {"id":"home"}) 
-@@include("_header.html")
+@@include("_head.html") 
+@@include("_header.html", {"mod":"home"})
 
-<section class="hero hero-js">
+<section class="hero">
 	<div class="hero__slider swiper">
 		<div class="swiper-wrapper">
 			<div class="hero__slide swiper-slide" data-text="Волнуй, а не волнуйся">
@@ -113,7 +113,33 @@
 </section>
 
 <section class="subscribe">
-	
+	<div class="subscribe__inner container">
+		<h2 class="subscribe__title">Узнавайте первыми</h2>
+		<div class="subscribe__text">Закрытые распродажи, акции<br/> и подборки образов в нашей рассылке</div>
+		<form action="/" class="subscribe__form">
+			<fieldset class="subscribe__fields">
+				<label class="subscribe__field" data-description="Введите номер телефона">
+					<input type="text" placeholder="+ 7 937 068 31 33">
+				</label>
+				<label class="subscribe__field" data-description="Введите город">
+					<input type="text" placeholder="Москва">
+				</label>
+				<label class="subscribe__field" data-description="Введите e-mail">
+					<input type="text" placeholder="office@volnui.ru">
+				</label>
+			</fieldset>
+			<div class="subscribe__bottom">
+				<label class="subscribe__agree">
+					<input type="checkbox">
+					<div class="subscribe__agree-side">
+						<a href="./">Я подтверждаю согласие с Политикой конфиденциальности и даю согласие на обработку персональных данных </a>
+						<p>Я согласен получать e-mail рассылки о презентациях новых коллекций</p>
+					</div>
+				</label>
+				<button class="subscribe__submit button">Подписаться</button>
+			</div>
+		</form>
+	</div>
 </section>
 
 @@include("_bottom.html")
