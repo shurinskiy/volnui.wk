@@ -1,24 +1,55 @@
 .aims {
 	$self: &;
+	margin-bottom: 70px;
 
 	&__inner {
-
+		max-width: 1720px !important;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 20px;
+		overflow: hidden;
+		border-radius: 25px;
 	}
 
 	&__item {
+		position: relative;
 
+		img {
+			display: block;
+		}
 	}
 
 	&__content {
-
+		position: absolute;
+		bottom: 10%;
+		z-index: 2;
+		right: 20px;
+		left: 20px;
+		color: #fff;
 	}
 
 	&__text {
-
+		font-family: "CR", sans-serif;
+		text-transform: uppercase;
+		font-weight: 200;
+		display: block;
+		font-size: 35px;
+		text-align: center;
+		margin-bottom: 40px;
 	}
-
+	
 	&__button {
-
+		display: block;
+		box-sizing: border-box;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: inherit;
+		font-size: 15px;
+		padding: 22px;
+		width: 100%;
+		max-width: 215px;
+		border: 1px solid #fff;
+		text-align: center;
+		margin: 0 auto;
 	}
-
 }

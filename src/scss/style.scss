@@ -26,7 +26,7 @@ $breakpoints: (
 	'xxxxlg': 1920px
 );
 
-@include font-face("Inter-ExtraLight", "IN", 100);
+@include font-face("Inter-ExtraLight", "IN", 200);
 @include font-face("Inter-ExtraBold", "IN", 800);
 @include font-face("Inter-SemiBold", "IN", 600);
 @include font-face("Inter-Regular", "IN", 400);
@@ -34,8 +34,13 @@ $breakpoints: (
 @include font-face("Inter-Light", "IN", 300);
 @include font-face("Inter-Black", "IN", 900);
 @include font-face("Inter-Bold", "IN", 700);
-@include font-face("Inter-Thin", "IN", 200);
-@include font-face("Nudla-Thin", "NT", 200);
+@include font-face("Inter-Thin", "IN", 100);
+@include font-face("Nudla-Thin", "ND", 100);
+@include font-face("Circe-ExtraLight", "CR", 200);
+@include font-face("Circe-Regular", "CR", 400);
+@include font-face("Circe-Light", "CR", 300);
+@include font-face("Circe-Bold", "CR", 700);
+@include font-face("Circe-Thin", "CR", 100);
 
 @import "../../node_modules/swiper/swiper";
 
