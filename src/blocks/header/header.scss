@@ -18,9 +18,14 @@
 	&__navi-toggle {
 		@extend %reset-button;
 		flex-grow: 1;
-		min-width: 40px;
+		min-width: 45px;
 		max-width: 80px;
 		text-align: left;
+		
+		@include media('<=xlg') {
+			flex-grow: 0;
+			max-width: none;
+		}
 
 		svg {
 			display: block;
@@ -34,7 +39,13 @@
 		box-sizing: border-box;
 		padding-right: 20px;
 		max-width: 250px;
+		min-width: 110px;
 		width: 100%;
+		
+		@include media('<=xlg') {
+			width: auto;
+			max-width: 185px;
+		}
 
 		img {
 			display: block;

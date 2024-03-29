@@ -10,6 +10,7 @@
 	&__menu {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		flex-grow: 1;
 	}
 
@@ -24,6 +25,11 @@
 		white-space: nowrap;
 		padding: 8px 0;
 		margin-right: 45px;
+		
+		@include media('<=xlg') {
+			padding: 8px 10px;
+			margin: 0;
+		}
 
 		&::before {
 			content: attr(data-hint);
@@ -34,15 +40,26 @@
 			line-height: 1;
 			bottom: calc(100% - 5px);
 			left: 100%;
+
+			@include media('<=xlg') {
+				left: calc(100% - 10px);
+			}
 		}
 
-		&:nth-child(4) {
-			margin-right: auto;
+		&:nth-child(5) {
+			
+			@include media('>xlg') {
+				margin-left: auto;
+			}
 		}
 	}
 
 	&__utils {
 		max-width: 300px;
 		flex-grow: 1;
+
+		@include media('<=xlg') {
+			margin-left: 15px;
+		}
 	}
 }

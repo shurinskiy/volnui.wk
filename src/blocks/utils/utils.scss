@@ -2,13 +2,21 @@
 	$self: &;
 	display: flex;
 	align-items: center;
+		
+	@include media('<=xlg') {
+		justify-content: flex-end;
+	}
 
 	&__button {
 		@extend %reset-button;
 		width: 100%;
-		max-width: 60px;
 		min-width: 40px;
+		max-width: 60px;
 		line-height: 1;
+		
+		@include media('<=xlg') {
+			max-width: 50px;
+		}
 
 		&_card {
 			
