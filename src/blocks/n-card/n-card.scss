@@ -2,7 +2,11 @@
 	$self: &;
 
 	&__image {
-
+		margin-bottom: 28px;
+		
+		img {
+			display: block;
+		}
 	}
 
 	&__bottom {
@@ -10,11 +14,14 @@
 	}
 
 	&__title {
-
+		font-weight: 500;
+		margin-bottom: 5px;
 	}
 
 	&__link {
-
+		color: #188BDE;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 14px;
 	}
-
 }

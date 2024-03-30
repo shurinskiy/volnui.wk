@@ -47,7 +47,7 @@
 </section>
 
 <section class="feed">
-	<h1 class="feed__title container">Выбери свой лук</h1>
+	<h1 class="feed__title title container">Выбери свой лук</h1>
 	<div class="feed__items container">
 		<div class="feed__item card" style="order: 1">
 			<div class="card__tabs tab">
@@ -85,46 +85,66 @@
 </section>
 
 <section class="news">
-	<h2 class="news__title container">Новости</h2>
-	<div class="news__inner container">
-		<div class="news__card n-card">
+	<h2 class="news__title title container">Новости</h2>
+	<div class="news__items container" data-hidden="3">
+		<div class="news__item n-card">
 			<div class="n-card__image"><img src="./images/news-image-1.webp" alt=""></div>
 			<div class="n-card__bottom">
-				<h3 class="n-card__title"></h3>
+				<h3 class="n-card__title">Для уличной прогулки</h3>
 				<a class="n-card__link" href="./">Подробнее</a>
 			</div>
 		</div>
-		<div class="news__card n-card">
+		<div class="news__item n-card">
 			<div class="n-card__image"><img src="./images/news-image-2.webp" alt=""></div>
 			<div class="n-card__bottom">
-				<h3 class="n-card__title"></h3>
+				<h3 class="n-card__title">Для занятий в зале</h3>
 				<a class="n-card__link" href="./">Подробнее</a>
 			</div>
 		</div>
-		<div class="news__card n-card">
+		<div class="news__item n-card">
 			<div class="n-card__image"><img src="./images/news-image-3.webp" alt=""></div>
 			<div class="n-card__bottom">
-				<h3 class="n-card__title"></h3>
+				<h3 class="n-card__title">Для бега и спорта</h3>
 				<a class="n-card__link" href="./">Подробнее</a>
 			</div>
 		</div>
-		<button class="news__more button">Смотреть все</button>
+		<div class="news__item n-card">
+			<div class="n-card__image"><img src="./images/news-image-1.webp" alt=""></div>
+			<div class="n-card__bottom">
+				<h3 class="n-card__title">Для уличной прогулки</h3>
+				<a class="n-card__link" href="./">Подробнее</a>
+			</div>
+		</div>
+		<div class="news__item n-card">
+			<div class="n-card__image"><img src="./images/news-image-2.webp" alt=""></div>
+			<div class="n-card__bottom">
+				<h3 class="n-card__title">Для занятий в зале</h3>
+				<a class="n-card__link" href="./">Подробнее</a>
+			</div>
+		</div>
+		<div class="news__item n-card">
+			<div class="n-card__image"><img src="./images/news-image-3.webp" alt=""></div>
+			<div class="n-card__bottom">
+				<h3 class="n-card__title">Для бега и спорта</h3>
+				<a class="n-card__link" href="./">Подробнее</a>
+			</div>
+		</div>
 	</div>
 </section>
 
 <section class="subscribe">
 	<div class="subscribe__inner container">
-		<h2 class="subscribe__title">Узнавайте первыми</h2>
+		<h2 class="subscribe__title title">Узнавайте первыми</h2>
 		<div class="subscribe__text">Закрытые распродажи, акции<br/> и подборки образов в нашей рассылке</div>
 		<form action="/" class="subscribe__form">
 			<fieldset class="subscribe__fields">
-				<label class="subscribe__field" data-description="Введите номер телефона">
+				<label class="subscribe__field" data-title="Введите номер телефона">
 					<input type="text" placeholder="+ 7 937 068 31 33">
 				</label>
-				<label class="subscribe__field" data-description="Введите город">
+				<label class="subscribe__field" data-title="Введите город">
 					<input type="text" placeholder="Москва">
 				</label>
-				<label class="subscribe__field" data-description="Введите e-mail">
+				<label class="subscribe__field" data-title="Введите e-mail">
 					<input type="text" placeholder="office@volnui.ru">
 				</label>
 			</fieldset>

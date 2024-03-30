@@ -88,7 +88,7 @@
 </section>
 
 <section class="feed">
-	<h1 class="feed__title container">Выбери свой лук</h1>
+	<h1 class="feed__title title container">Выбери свой лук</h1>
 	<div class="feed__items container">
 		<div class="feed__item card" style="order: 1">
 			<div class="card__tabs tab">
@@ -126,46 +126,66 @@
 </section>
 
 <section class="news">
-	<h2 class="news__title container">Новости</h2>
-	<div class="news__inner container">
-		<div class="news__card n-card">
+	<h2 class="news__title title container">Новости</h2>
+	<div class="news__items container" data-hidden="3">
+		<div class="news__item n-card">
 			<div class="n-card__image"><img src="./images/news-image-1.webp" alt=""></div>
 			<div class="n-card__bottom">
-				<h3 class="n-card__title"></h3>
+				<h3 class="n-card__title">Для уличной прогулки</h3>
 				<a class="n-card__link" href="./">Подробнее</a>
 			</div>
 		</div>
-		<div class="news__card n-card">
+		<div class="news__item n-card">
 			<div class="n-card__image"><img src="./images/news-image-2.webp" alt=""></div>
 			<div class="n-card__bottom">
-				<h3 class="n-card__title"></h3>
+				<h3 class="n-card__title">Для занятий в зале</h3>
 				<a class="n-card__link" href="./">Подробнее</a>
 			</div>
 		</div>
-		<div class="news__card n-card">
+		<div class="news__item n-card">
 			<div class="n-card__image"><img src="./images/news-image-3.webp" alt=""></div>
 			<div class="n-card__bottom">
-				<h3 class="n-card__title"></h3>
+				<h3 class="n-card__title">Для бега и спорта</h3>
 				<a class="n-card__link" href="./">Подробнее</a>
 			</div>
 		</div>
-		<button class="news__more button">Смотреть все</button>
+		<div class="news__item n-card">
+			<div class="n-card__image"><img src="./images/news-image-1.webp" alt=""></div>
+			<div class="n-card__bottom">
+				<h3 class="n-card__title">Для уличной прогулки</h3>
+				<a class="n-card__link" href="./">Подробнее</a>
+			</div>
+		</div>
+		<div class="news__item n-card">
+			<div class="n-card__image"><img src="./images/news-image-2.webp" alt=""></div>
+			<div class="n-card__bottom">
+				<h3 class="n-card__title">Для занятий в зале</h3>
+				<a class="n-card__link" href="./">Подробнее</a>
+			</div>
+		</div>
+		<div class="news__item n-card">
+			<div class="n-card__image"><img src="./images/news-image-3.webp" alt=""></div>
+			<div class="n-card__bottom">
+				<h3 class="n-card__title">Для бега и спорта</h3>
+				<a class="n-card__link" href="./">Подробнее</a>
+			</div>
+		</div>
 	</div>
 </section>
 
 <section class="subscribe">
 	<div class="subscribe__inner container">
-		<h2 class="subscribe__title">Узнавайте первыми</h2>
+		<h2 class="subscribe__title title">Узнавайте первыми</h2>
 		<div class="subscribe__text">Закрытые распродажи, акции<br/> и подборки образов в нашей рассылке</div>
 		<form action="/" class="subscribe__form">
 			<fieldset class="subscribe__fields">
-				<label class="subscribe__field" data-description="Введите номер телефона">
+				<label class="subscribe__field" data-title="Введите номер телефона">
 					<input type="text" placeholder="+ 7 937 068 31 33">
 				</label>
-				<label class="subscribe__field" data-description="Введите город">
+				<label class="subscribe__field" data-title="Введите город">
 					<input type="text" placeholder="Москва">
 				</label>
-				<label class="subscribe__field" data-description="Введите e-mail">
+				<label class="subscribe__field" data-title="Введите e-mail">
 					<input type="text" placeholder="office@volnui.ru">
 				</label>
 			</fieldset>
@@ -192,61 +212,62 @@
 					<svg><use xlink:href="#icon-soc-vk"></use></svg>
 				</a>
 				<a class="social__link" href="./">
-					<svg><use xlink:href="#icon-soc-in"></use></svg>
-				</a>
-				<a class="social__link" href="./">
 					<svg><use xlink:href="#icon-soc-tg"></use></svg>
 				</a>
+				<a class="social__link" href="./">
+					<svg><use xlink:href="#icon-soc-in"></use></svg>
+				</a>
+			</div>
+			<a class="f-navi__title" href="./">Каталог</a>
+			<a class="f-navi__title" href="./">Как сделать заказ</a>
+			<a class="f-navi__title" href="./">Магазины</a>
+		</div>
+		<div class="f-navi__col">
+			<h2 class="f-navi__title">Информация</h2>
+			<div class="f-navi__links">
+				<a class="f-navi__link" href="./">Доставка</a>
+				<a class="f-navi__link" href="./">Оплата</a>
+				<a class="f-navi__link" href="./">Политика конфиденциальности</a>
+				<a class="f-navi__link" href="./">Публичная оферта</a>
+				<a class="f-navi__link" href="./">Возврат</a>
+			</div>
+			<h2 class="f-navi__title">Информация</h2>
+			<div class="f-navi__links">
+				<a class="f-navi__link" href="./">Таблица размеров</a>
+				<a class="f-navi__link" href="./">Образы</a>
+				<a class="f-navi__link" href="./">Вопрос-ответ</a>
 			</div>
 		</div>
-		<a class="f-navi__title" href="./">Каталог</a>
-		<a class="f-navi__title" href="./">Как сделать заказ</a>
-		<a class="f-navi__title" href="./">Магазины</a>
-	</div>
-	<div class="f-navi__col">
-		<h2 class="f-navi__title">Информация</h2>
-		<div class="f-navi__links">
-			<a class="f-navi__link" href="./">Доставка</a>
-			<a class="f-navi__link" href="./">Оплата</a>
-			<a class="f-navi__link" href="./">Политика конфиденциальности</a>
-			<a class="f-navi__link" href="./">Публичная оферта</a>
-			<a class="f-navi__link" href="./">Возврат</a>
+		<div class="f-navi__col">
+			<h2 class="f-navi__title">О компании</h2>
+			<div class="f-navi__links">
+				<a class="f-navi__link" href="./">Сотрудничество</a>
+				<a class="f-navi__link" href="./">История бренда</a>
+				<a class="f-navi__link" href="./">Производство</a>
+				<a class="f-navi__link" href="./">Новости</a>
+				<a class="f-navi__link" href="./">Вакансии</a>
+				<a class="f-navi__link" href="./">Контакты</a>
+			</div>
 		</div>
-		<h2 class="f-navi__title">Информация</h2>
-		<div class="f-navi__links">
-			<a class="f-navi__link" href="./">Таблица размеров</a>
-			<a class="f-navi__link" href="./">Образы</a>
-			<a class="f-navi__link" href="./">Вопрос-ответ</a>
-		</div>
-	</div>
-	<div class="f-navi__col">
-		<h2 class="f-navi__title">О компании</h2>
-		<div class="f-navi__links">
-			<a class="f-navi__link" href="./">Сотрудничество</a>
-			<a class="f-navi__link" href="./">История бренда</a>
-			<a class="f-navi__link" href="./">Производство</a>
-			<a class="f-navi__link" href="./">Новости</a>
-			<a class="f-navi__link" href="./">Вакансии</a>
-			<a class="f-navi__link" href="./">Контакты</a>
+		<div class="f-navi__col">
+			<a class="f-navi__phone" href="tel:+74955410707">
+				<span>8 (495) 541 07 07</span>
+				<span>Звонок бесплатный</span>
+			</a>
+			<div class="f-navi__links">
+				<span class="f-navi__link">доб. 1220, 1221, 1230, 1234.</span>
+				<span class="f-navi__link">ПН–ПТ: 09:00–17:30 (по мск)</span>
+				<a class="f-navi__link" href="mailto:sales@volnui.ru">sales@volnui.ru</a>
+			</div>
 		</div>
 	</div>
-	<div class="f-navi__col">
-		<a class="f-navi__phone" href="tel:+74955410707">
-			<span>8 (495) 541 07 07</span>
-			<span>Звонок бесплатный</span>
-		</a>
-		<div class="f-navi__links">
-			<span class="f-navi__link">доб. 1220, 1221, 1230, 1234.</span>
-			<span class="f-navi__link">ПН–ПТ: 09:00–17:30 (по мск)</span>
-			<a class="f-navi__link" href="mailto:sales@volnui.ru">sales@volnui.ru</a>
-		</div>
-	</div>
+	<hr />
 	<div class="footer__bottom container">
 		<div class="footer__copy">
 			&copy; 2024 Все права защищены.<br/>
 			Использование материалов с сайта без разрешения правообладателя и активной ссылки на сайт запрещено.
 		</div>
-		<div class="footer__dev">Разработка сайта — <a href="./">sepayr.ru</a></div>
+		<div class="footer__dev">разработка сайта — <a href="./">sepayr.ru</a></div>
 	</div>
 </footer> 
 

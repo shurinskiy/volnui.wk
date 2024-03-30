@@ -46,6 +46,10 @@
 			width: auto;
 			max-width: 185px;
 		}
+		
+		@include media('<=lg') {
+			max-width: 170px;
+		}
 
 		img {
 			display: block;

@@ -1,4 +1,14 @@
 .button {
 	$self: &;
-
+	@extend %reset-button;
+	box-sizing: border-box;
+	width: fit-content;
+	display: block;
+	line-height: 1;
+	font-size: 12px;
+	font-weight: 700;
+	padding: 20px 40px;
+	text-transform: uppercase;
+	background-color: #3CFFB9;
+	font-family: "IN", sans-serif;
 }

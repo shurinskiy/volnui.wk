@@ -1,20 +1,39 @@
 .footer {
 	$self: &;
 
-	&__top {
-
+	&::before, hr {
+		border: none;
+		display: block;
+		content: '';
+		height: 1px;
+		background-color: #f1f1f1;
+		width: calc(100% - var(--gap) * 2);
+		max-width: 1500px;
+		margin: 0 auto;
 	}
-
+	
+	&__top {
+		max-width: 1240px;
+		padding-top: 80px;
+	}
+	
 	&__bottom {
-
+		font-size: 14px;
+		max-width: 1240px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 85px;
 	}
 
 	&__copy {
-
+		line-height: 1.7;
 	}
 
 	&__dev {
 
+		a {
+			color: inherit;
+		}
 	}
-
 }
