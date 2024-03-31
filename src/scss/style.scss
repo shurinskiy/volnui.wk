@@ -57,7 +57,6 @@ $breakpoints: (
 	}
 }
 
-
 body, html {
 	box-sizing: border-box;
 	background-color: #fff;
@@ -83,3 +82,8 @@ body, html {
 p { margin-bottom: 10px; }
 strong { font-weight: bold; }
 em { font-style: italic; }
+
+@keyframes showItem {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}

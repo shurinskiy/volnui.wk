@@ -1,18 +1,53 @@
 .feed {
 	$self: &;
+	margin-bottom: 80px;
 
 	&__title {
 		margin-bottom: 70px;
 	}
 
 	&__items {
-
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 50px 60px;
+		
+		@include media('<=xxxlg') {
+			grid-gap: 50px;
+		}
+		
+		@include media('<=xxlg') {
+			grid-gap: 50px 40px;
+		}
+		
+		@include media('<=xlg') {
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 50px 30px;
+		}
+		
+		@include media('<=md') {
+			grid-gap: 50px 20px;
+		}
 	}
 
 	&__item {
-
+		box-sizing: border-box;
+		grid-column: span 1;
+		
 		&_video {
-			
+			grid-column: span 2;
+			grid-row: span 2;
+			@include aspect-ratio(3, 4.17);
+	
+			video {
+				display: block;
+				width: 100%;
+				height: calc(100% - 30px);
+				object-fit: cover;
+			}
+	
+			@include media('<=xlg') {
+				display: none;
+			}
 		}
 	}
 }

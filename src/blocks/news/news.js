@@ -1,6 +1,6 @@
 (() => {
 
-	document.querySelectorAll('.news__items[data-hidden]').forEach(block => {
+	document.querySelectorAll('[data-hidden]').forEach(block => {
 		const count = +block.dataset.hidden;
 		const items = block.querySelectorAll('.news__item');
 		const more = document.createElement('button');
@@ -27,7 +27,6 @@
 							item.classList.remove('showing');
 						}, { once: true });
 					}
-						
 				});
 
 				more.remove();

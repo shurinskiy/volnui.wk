@@ -1,20 +1,27 @@
 .social {
 	$self: &;
+	box-sizing: border-box;
 	display: flex;
 	flex-wrap: wrap;
 
 	&__link {
-		outline: 1px solid #f2f2f2;
+		box-sizing: border-box;
+		flex-shrink: 0;
+		border: 1px solid #f2f2f2;
 		height: 60px;
 		width: 60px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 
+		&:not(:last-child) {
+			margin-right: -1px;
+		}
+
 		svg {
 			fill: #808080;
-			max-height: 24px;
-			max-width: 24px;
+			max-height: 23px;
+			max-width: 23px;
 		}
 	}
 }

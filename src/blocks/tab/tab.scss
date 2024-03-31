@@ -6,7 +6,15 @@
 	}
 
 	&__block {
+		display: none;
 
+		&.active {
+			display: block;
+		}
+		
+		&.showing {
+			animation: showItem 0.5s;
+		}
 	}
 
 	&__buttons {
@@ -16,5 +24,4 @@
 	&__button {
 
 	}
-
 }

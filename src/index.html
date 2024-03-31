@@ -49,37 +49,20 @@
 <section class="feed">
 	<h1 class="feed__title title container">Выбери свой лук</h1>
 	<div class="feed__items container">
-		<div class="feed__item card" style="order: 1">
-			<div class="card__tabs tab">
-				<div class="card__sliders tab__blocks">
-					<div class="card__slider tab__block swiper active">
-						<a class="swiper-wrapper" href="./">
-							<div class="card__slide"><img src="./images/card-image-1.webp" alt=""></div>
-							<div class="card__slide"><img src="./images/card-image-2.webp" alt=""></div>
-						</a>
-						<a class="card__link" href="./"></a>
-					</div>
-					<div class="card__slider tab__block swiper">
-						<a class="swiper-wrapper" href="./">
-							<div class="card__slide"><img src="./images/card-image-3.webp" alt=""></div>
-							<div class="card__slide"><img src="./images/card-image-4.webp" alt=""></div>
-						</a>
-						<a class="card__link" href="./"></a>
-					</div>
-				</div>
-				<div class="card__toggles tab__buttons">
-					<button class="tab__button active"></button>
-					<button class="tab__button"></button>
-				</div>
-			</div>
-			<div class="card__bottom">
-				<h2 class="card__title">Спортивный топ</h2>
-				<div class="card__irrelevant">4599 ₽</div>
-				<div class="card__price">2999 ₽</div>
-			</div>
-		</div>
-		<div class="feed__item feed__item_video">
-			<video src=""></video>
+		@@include('_card.html', {'order':'1'})
+		@@include('_card.html', {'order':'2'})
+		@@include('_card.html', {'order':'3'})
+		@@include('_card.html', {'order':'4'})
+		@@include('_card.html', {'order':'5'})
+		@@include('_card.html', {'order':'6'})
+		@@include('_card.html', {'order':'7'})
+		@@include('_card.html', {'order':'8'})
+		@@include('_card.html', {'order':'9'})
+		@@include('_card.html', {'order':'10'})
+		@@include('_card.html', {'order':'11'})
+		@@include('_card.html', {'order':'12'})
+		<div class="feed__item feed__item_video" style="order: 5">
+			<video src="./images/video-1.mp4"></video>
 		</div>
 	</div>
 </section>
