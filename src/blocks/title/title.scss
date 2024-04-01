@@ -5,4 +5,5 @@
 	font-weight: 100;
 	line-height: 1.2;
 	font-size: 48px;
+	@include range(48px, 32px, 1440px, 480px);
 }

@@ -15,19 +15,34 @@
 	&__top {
 		max-width: 1240px;
 		padding-top: 80px;
+	
+		@include media('<=xs') {
+			margin-bottom: 50px;
+		}
 	}
 	
 	&__bottom {
+		box-sizing: border-box;
 		font-size: 14px;
 		max-width: 1240px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		padding: 15px 0;
 		min-height: 85px;
+
+		@include media('<=md') {
+			display: block;			
+		}
 	}
 
 	&__copy {
 		line-height: 1.7;
+		margin-right: 30px;
+		
+		@include media('<=md') {
+			margin: 0 0 20px;
+		}
 	}
 
 	&__dev {

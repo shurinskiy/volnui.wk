@@ -3,12 +3,25 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 20px;
-
+	
+	@include media('<=md') {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+	@include media('<=xs') {
+		display: flex;
+		flex-flow: column nowrap;
+	}
 
 	&__col {
 		display: flex;
 		flex-flow: column nowrap;
-
+	
+		@include media('<=md') {
+			&:first-child {
+				order: 1;
+			}
+		}
 	}
 
 	&__title {

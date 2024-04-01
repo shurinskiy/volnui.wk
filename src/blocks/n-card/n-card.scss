@@ -4,6 +4,10 @@
 	&__image {
 		margin-bottom: 28px;
 		
+		@include media('<=sm') {
+			margin-bottom: 15px;
+		}
+		
 		img {
 			display: block;
 		}
@@ -16,12 +20,20 @@
 	&__title {
 		font-weight: 500;
 		margin-bottom: 5px;
-	}
 
+		@include media('<=sm') {
+			font-size: 14px;
+		}
+	}
+	
 	&__link {
 		color: #188BDE;
 		text-transform: uppercase;
 		font-weight: 700;
 		font-size: 14px;
+
+		@include media('<=sm') {
+			font-size: 12px;
+		}
 	}
 }

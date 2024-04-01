@@ -27,6 +27,10 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 10px;
+		
+		@include media('<=sm') {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__field {
@@ -52,11 +56,19 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		@include media('<=xs') {
+			display: block;
+		}
 	}
 
 	&__agree {
 		margin-right: 24px;
 		font-family: "CR", sans-serif;
+
+		@include media('<=xs') {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__agree-item {
@@ -68,6 +80,7 @@
 		input[type='checkbox'] {
 			@extend %reset-button;
 			align-self: flex-start;
+			flex-shrink: 0;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -93,6 +106,6 @@
 	}
 
 	&__submit {
-
+		flex-shrink: 0;
 	}
 }

@@ -161,9 +161,10 @@
 		color: #B1B1B1;
 		text-decoration: line-through;
 		margin-right: 20px;
+		white-space: nowrap;
 	}
-
+	
 	&__price {
-
+		white-space: nowrap;
 	}
 }

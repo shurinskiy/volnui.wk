@@ -49,7 +49,7 @@ $breakpoints: (
 
 :root {
 	--size: #{$basesize}px;
-	--container: 1920px;
+	--container: 4480px;
 	--gap: 24px;
 	
 	@include media('<=xs') {

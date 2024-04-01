@@ -1,6 +1,14 @@
 .aims {
 	$self: &;
 	margin-bottom: 70px;
+	
+	@include media('<=md') {
+		margin-bottom: 50px;
+	}
+	
+	@include media('<=xxs') {
+		margin-bottom: 30px;
+	}
 
 	&__inner {
 		max-width: 1720px !important;
@@ -9,14 +17,36 @@
 		grid-gap: 20px;
 		overflow: hidden;
 		border-radius: 25px;
+		
+		@include media('<=xlg') {
+			border-radius: 20px;
+		}
+		
+		@include media('<=lg') {
+			border-radius: 15px;
+			grid-gap: 15px;
+		}
+		
+		@include media('<=md') {
+			grid-gap: 10px;
+			border-radius: 10px;
+		}
+		
+		@include media('<=xs') {
+			grid-gap: 8px;
+			border-radius: 5px;
+		}
+		
+		@include media('<=xxs') {
+			grid-gap: 5px;
+			border-radius: 3px;
+		}
 	}
 
 	&__item {
 		position: relative;
 
-		img {
-			display: block;
-		}
+		img { display: block; }
 	}
 
 	&__content {
@@ -26,6 +56,16 @@
 		right: 20px;
 		left: 20px;
 		color: #fff;
+
+		@include media('<=md') {
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 	}
 
 	&__text {
@@ -33,9 +73,21 @@
 		text-transform: uppercase;
 		font-weight: 200;
 		display: block;
-		font-size: 35px;
 		text-align: center;
 		margin-bottom: 40px;
+		font-size: 35px;
+		@include range(35px, 16px, 1440px, 360px);
+		
+		@include media('<=lg') {
+			margin-bottom: 30px;
+		}
+		
+		@include media('<=md') {
+			margin: 0;
+		}
+		
+		@include media('<=xxs') {
+		}
 	}
 	
 	&__button {
@@ -51,5 +103,13 @@
 		border: 1px solid #fff;
 		text-align: center;
 		margin: 0 auto;
+		
+		@include media('<=lg') {
+			padding: 16px;
+		}
+		
+		@include media('<=md') {
+			display: none;
+		}
 	}
 }

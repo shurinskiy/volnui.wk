@@ -52,6 +52,7 @@ let pth = {
 		js: ['./src/js/**/*.js','./src/blocks/**/(*.js|*.json)'],
 		css: ['./src/scss/**/*.scss','./src/blocks/**/*.scss'],
 		img: './src/images/**/!(icon-*.svg|shape-*.svg)',
+		shp: './src/images/**/shape-*.svg',
 		fnts: './src/fonts/**/*.*'
 	}
 };
@@ -229,11 +230,12 @@ function watch() {
 	gulp.watch(pth.wtch.js, js);
 	gulp.watch(pth.wtch.html, html);
 	gulp.watch(pth.wtch.css, styles);
+	gulp.watch(pth.wtch.shp, iconsOuter);
 	gulp.watch(pth.wtch.img, images);
 	gulp.watch(pth.wtch.fnts, fonts);
 }
 
-const build = gulp.series(clear, gulp.parallel(html, js, jslib, styles, images, fonts));
+const build = gulp.series(clear, gulp.parallel(html, js, jslib, styles, images, iconsOuter, fonts));
 
 exports.build = build;
 exports.icons = icons;
