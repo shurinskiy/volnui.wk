@@ -32,22 +32,31 @@
 	&__item {
 		box-sizing: border-box;
 		grid-column: span 1;
+	}
+
+	&__video {
+		grid-column: span 2;
+		grid-row: span 2;
+		@include aspect-ratio(3, 1.703);
+
+		video {
+			display: block;
+			width: 100%;
+			height: calc(100% - 30px);
+			object-fit: cover;
+		}
 		
-		&_video {
-			grid-column: span 2;
-			grid-row: span 2;
-			@include aspect-ratio(3, 4.17);
-	
+		&_wide {
+			grid-column: span 4;
+			margin: 0 -24px;
+
 			video {
-				display: block;
-				width: 100%;
-				height: calc(100% - 30px);
-				object-fit: cover;
+				height: 100%;
 			}
-	
-			@include media('<=xlg') {
-				display: none;
-			}
+		}
+
+		@include media('<=xlg') {
+			display: none;
 		}
 	}
 }

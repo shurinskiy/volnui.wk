@@ -155,6 +155,33 @@ function icons() {
 	.pipe(gulp.dest(pth.src.tmpl))
 };
 
+function iconsOuter() {
+	return gulp.src(pth.src.shp)
+	.pipe($.svgSprite({
+		svg: {  xmlDeclaration: false },
+		shape: {
+			transform: [{
+				svgo: {
+					plugins: [
+						{ name: 'preset-default' },
+						{ name: 'removeAttrs', params: { attrs: '*:(fill|data-*|id|class|style|stroke)' }},
+					]
+				}
+			}]
+		},
+		mode: {
+			view: {
+				bust: false,
+				dest: './',
+				sprite: 'icons-sprite.svg',
+				example: false
+			}
+		}
+	}))
+	.on('error', swallowError)
+	.pipe(gulp.dest(pth.pbl.img))
+};
+
 function fonts() {
 	return gulp.src(pth.src.fnts)
 		.pipe($.newer(pth.pbl.fnts))
@@ -210,5 +237,6 @@ const build = gulp.series(clear, gulp.parallel(html, js, jslib, styles, images, 
 
 exports.build = build;
 exports.icons = icons;
+exports.iconsOuter = iconsOuter;
 exports.watch = gulp.series(build, watch);
 exports.deploy = gulp.series(build, deploy);

@@ -13,7 +13,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 			disableOnInteraction: true
 		},
 		pagination: {
-			el: '.hero__pagination',
+			el: '.hero__dots',
 			bulletClass: 'hero__dot',
 			bulletActiveClass: 'active',
 			clickable: true,

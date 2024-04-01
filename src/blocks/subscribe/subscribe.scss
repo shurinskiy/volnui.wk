@@ -55,18 +55,35 @@
 	}
 
 	&__agree {
-		display: flex;
-
-		input[type='checkbox'] {
-			align-self: flex-start;
-		}
+		margin-right: 24px;
+		font-family: "CR", sans-serif;
 	}
 
-	&__agree-side {
+	&__agree-item {
 		box-sizing: border-box;
 		font-size: 12px;
-		margin-right: 24px;
-		padding-left: 15px;
+		display: flex;
+		margin-bottom: 8px;
+
+		input[type='checkbox'] {
+			@extend %reset-button;
+			align-self: flex-start;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 15px;
+			height: 15px;
+			width: 15px;
+			border: 1px solid #D6D6D6;
+
+			&:checked::before {
+				display: block;
+				content: '';
+				width: 9px;
+				height: 7px;
+				background: url('#{$images-path}icons-sprite.svg#shape-check-view') center / auto no-repeat transparent;
+			}
+		}
 
 		a {
 			display: block;
