@@ -1,6 +1,7 @@
 .hero {
 	$self: &;
 	height: 100vh;
+	height: 100dvh;
 	display: flex;
 	position: relative;
 	z-index: 1;
