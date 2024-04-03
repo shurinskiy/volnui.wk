@@ -1,0 +1,22 @@
+.detail {
+	$self: &;
+	margin-bottom: 80px;
+
+	&__inner {
+		display: grid;
+		grid-template-columns: 7fr 5fr;
+		grid-gap: 30px;
+	}
+
+	&__gallery {
+
+	}
+
+	&__side {
+		
+	}
+
+	&__sticky {
+		position: sticky;
+	}
+}

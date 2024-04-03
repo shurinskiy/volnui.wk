@@ -1,11 +1,29 @@
 .header {
 	$self: &;
+	background-color: #000;
+	height: 70px;
+	margin-bottom: 20px;
 
 	&_home {
+		background-color: transparent;
 		height: 120px;
-		margin-bottom: -120px;
+		margin: 0 0 -120px;
 		position: relative;
 		z-index: 2;
+
+		#{$self}__logo {
+			max-width: 250px;
+			min-width: 110px;
+			
+			@include media('<=xlg') {
+				width: auto;
+				max-width: 185px;
+			}
+			
+			@include media('<=lg') {
+				max-width: 170px;
+			}
+		}
 	}
 
 	&__inner {
@@ -37,17 +55,13 @@
 
 	&__logo {
 		box-sizing: border-box;
-		padding-right: 20px;
-		max-width: 250px;
-		min-width: 110px;
+		padding-right: 50px;
 		width: 100%;
+		min-width: 110px;
+		max-width: 200px;
 		
 		@include media('<=xlg') {
-			width: auto;
-			max-width: 185px;
-		}
-		
-		@include media('<=lg') {
+			padding-right: 20px;
 			max-width: 170px;
 		}
 

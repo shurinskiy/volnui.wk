@@ -3,6 +3,8 @@
 	min-width: 0;
 	overflow: hidden;
 	font-family: "CR", sans-serif;
+	display: flex;
+	flex-flow: column nowrap;
 	
 	&__tabs {
 		position: relative;
@@ -107,6 +109,14 @@
 		font-size: 14px;
 		padding: 10px;
 		border: 1px solid #fff;
+		
+		@include media('<=xxs') {
+			font-size: 11px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 14px;
+		}
 	}
 
 	&__toggles {
@@ -151,6 +161,14 @@
 	&__bottom {
 		padding-top: 10px;
 		display: flex;
+
+		@include media('<=xxs') {
+			font-size: 13px;
+		}
+
+		@include media('<=xxxs') {
+			font-size: 16px;
+		}
 	}
 
 	&__title {
@@ -162,6 +180,14 @@
 		text-decoration: line-through;
 		margin-right: 20px;
 		white-space: nowrap;
+		
+		@include media('<=xxs') {
+			margin-right: 10px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-right: 20px;
+		}
 	}
 	
 	&__price {

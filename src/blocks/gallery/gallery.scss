@@ -1,0 +1,15 @@
+.gallery {
+	$self: &;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-self: start;
+	grid-gap: 20px;
+
+	&__item {
+		grid-column: span 1;
+
+		img { 
+			display: block;
+		}
+	}
+}
