@@ -139,7 +139,7 @@ function icons() {
 				svgo: {
 					plugins: [
 						{ name: 'preset-default' },
-						{ name: 'removeAttrs', params: { attrs: '*:(fill|data-*|id|class|style|stroke)' }},
+						{ name: 'removeAttrs', params: { attrs: '*:(fill|data-*|id|class|style|stroke*)' }},
 					]
 				}
 			}]
@@ -165,7 +165,7 @@ function iconsOuter() {
 				svgo: {
 					plugins: [
 						{ name: 'preset-default' },
-						{ name: 'removeAttrs', params: { attrs: '*:(fill|data-*|id|class|style|stroke)' }},
+						{ name: 'removeAttrs', params: { attrs: '*:(fill|data-*|id|class|style|stroke*)' }},
 					]
 				}
 			}]

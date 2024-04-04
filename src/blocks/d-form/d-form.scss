@@ -1,0 +1,120 @@
+.d-form {
+	$self: &;
+
+	&__title {
+		font-family: "CR", sans-serif;
+		font-size: 40px;
+		font-weight: 300;
+		margin-bottom: 15px;
+	}
+	
+	&__prices {
+		display: flex;
+		align-items: center;
+		margin-bottom: 15px;
+	}
+
+	&__price-current {
+		font-size: 26px;
+		margin-right: 25px;
+	}
+	
+	&__price-old {
+		color: #808080;
+		text-decoration: line-through;
+		
+		svg {
+			fill: #808080;
+			width: 16px;
+			height: 9px;
+			margin-right: 6px;
+		}
+	}
+
+	&__props {
+		font-size: 13px;
+		margin-bottom: 40px;
+
+		span {
+			display: block;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__sizes {
+		margin-bottom: 22px;
+	}
+
+	&__buttons {
+		display: grid;
+		grid-template-columns: 1fr repeat(2, 70px);
+		margin-bottom: 22px;
+		min-height: 70px;
+		grid-gap: 22px;
+	}
+
+	&__buy {
+		@extend %reset-button;
+		box-sizing: border-box;
+		display: block;
+		line-height: 1;
+		font-size: 14px;
+		font-weight: 700;
+		padding: 15px 25px;
+		text-align: center;
+		text-transform: uppercase;
+		background-color: #3CFFB9;
+		font-family: "IN", sans-serif;
+		flex-grow: 1;
+	}
+	
+	&__cart {
+		@extend %reset-button;
+		box-sizing: border-box;
+		background-color: #3CFFB9;
+		
+		svg {
+			width: 26px;
+			height: 22px;
+		}
+	}
+	
+	&__favorite {
+		@extend %reset-button;
+		box-sizing: border-box;
+		border: 1px solid #e6e6e6;
+
+		svg {
+			fill: transparent;
+			stroke-width: 2;
+			stroke: #FF8080;
+			width: 26px;
+			height: 22px;
+		}
+
+		&_set svg {
+			fill: #FF8080;
+		}
+	}
+
+	&__info {
+		box-sizing: border-box;
+		border-top: 1px solid #f6f6f6;
+		padding-top: 40px;
+	}
+
+	&__info-title {
+		font-size: 14px;
+		font-weight: 700;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+	}
+
+	&__info-text {
+		font-size: 13px;
+
+		p {
+			margin-bottom: 20px;
+		}
+	}
+}

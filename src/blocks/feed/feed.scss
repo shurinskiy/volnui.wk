@@ -134,6 +134,10 @@
 				order: 28;
 			}
 		}
+
+		&_last {
+			order: 999999999;
+		}
 		
 		video {
 			display: block;
