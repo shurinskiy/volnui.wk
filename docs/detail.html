@@ -42,20 +42,63 @@
 	</div>
 </header>
 
+<div class="breadcrumbs container">
+	<a class="breadcrumbs__link" href="./">Каталог</a>
+	<a class="breadcrumbs__link" href="./">Одежда</a>
+	<span class="breadcrumbs__current">Спортивная одежда</span>
+</div>
+
 <section class="detail">
 	<div class="detail__inner container">
 		<div class="detail__gallery gallery">
-			<div class="gallery__item"><img src="./images/card-image-1.webp" alt=""></div>
-			<div class="gallery__item"><img src="./images/card-image-2.webp" alt=""></div>
-			<div class="gallery__item"><img src="./images/card-image-3.webp" alt=""></div>
-			<div class="gallery__item"><img src="./images/card-image-4.webp" alt=""></div>
-			<div class="gallery__item"><img src="./images/card-image-3.webp" alt=""></div>
-			<div class="gallery__item"><img src="./images/card-image-4.webp" alt=""></div>
+			<div class="gallery__sliders">
+				<div class="gallery__slider swiper active">
+					<div class="gallery__wrapper swiper-wrapper">
+						<div class="gallery__image swiper-slide" data-src="./images/card-image-1.webp">
+							<img src="./images/card-image-1.webp" alt="">
+						</div>
+						<div class="gallery__image swiper-slide" data-src="./images/card-image-2.webp">
+							<img src="./images/card-image-2.webp" alt="">
+						</div>
+						<div class="gallery__image swiper-slide" data-src="./images/card-image-3.webp">
+							<img src="./images/card-image-3.webp" alt="">
+						</div>
+						<div class="gallery__image swiper-slide" data-src="./images/card-image-4-large.webp">
+							<img src="./images/card-image-4.webp" alt="">
+						</div>
+						<div class="gallery__image swiper-slide" data-src="./images/card-image-3.webp">
+							<img src="./images/card-image-3.webp" alt="">
+						</div>
+						<div class="gallery__image swiper-slide" data-src="./images/card-image-5-large.webp">
+							<img src="./images/card-image-5.webp" alt="">
+						</div>
+					</div>
+					<div class="gallery__dots"></div>
+				</div>
+				<div class="gallery__slider swiper">
+					<div class="gallery__wrapper swiper-wrapper">
+						<div class="gallery__image swiper-slide" data-src="./images/card-image-1.webp">
+							<img src="./images/card-image-4.webp" alt="">
+						</div>
+						<div class="gallery__image swiper-slide" data-src="./images/card-image-2.webp">
+							<img src="./images/card-image-3.webp" alt="">
+						</div>
+						<div class="gallery__image swiper-slide" data-src="./images/card-image-3.webp">
+							<img src="./images/card-image-2.webp" alt="">
+						</div>
+						<div class="gallery__image swiper-slide" data-src="./images/card-image-4-large.webp">
+							<img src="./images/card-image-1.webp" alt="">
+						</div>
+					</div>
+					<div class="gallery__dots"></div>
+				</div>
+			</div>
 		</div>
 		<div class="detail__side">
 			<div class="detail__sticky">
 				<form action="./" class="detail__form d-form">
 					<h1 class="d-form__title">Топ с v-образным вырезом горловины лодочка</h1>
+
 					<div class="d-form__prices">
 						<div class="d-form__price-current">3 500 руб.</div>
 						<div class="d-form__price-old">
@@ -63,11 +106,23 @@
 							<span>4 500 руб.</span>
 						</div>
 					</div>
+
+					<div class="d-form__toggles toggle">
+						<button class="toggle__button active"></button>
+						<button class="toggle__button"></button>
+					</div>
+
+					<div class="d-form__colors">
+						<div class="d-form__color active">Черный винил</div>
+						<div class="d-form__color">Речной песок</div>
+					</div>
+
 					<div class="d-form__props">
 						<span><strong>Aртикул: 3702513/ Топ</strong></span>
 						<span>Линия: весна - лета 2024/2025</span>
 						<span>Капсула: капсула 03</span>
 					</div>
+
 					<div class="d-form__sizes d-sizes">
 						<div class="d-sizes__head">
 							<span>Доступные размеры:</span>
@@ -155,6 +210,7 @@
 					</div>
 					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
 						<div class="swiper-wrapper">
+							<div class="card__slide swiper-slide"><img src="./images/card-image-5.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-3.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-2.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-1.webp" alt=""></div>
@@ -163,9 +219,9 @@
 						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
 					</div>
 				</div>
-				<div class="card__toggles tab__buttons">
-					<button class="card__toggle tab__button active"></button>
-					<button class="card__toggle tab__button"></button>
+				<div class="card__toggles tab__buttons toggle">
+					<button class="toggle__button tab__button active"></button>
+					<button class="toggle__button tab__button"></button>
 				</div>
 			</div>
 			<div class="card__bottom">
@@ -189,6 +245,7 @@
 					</div>
 					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
 						<div class="swiper-wrapper">
+							<div class="card__slide swiper-slide"><img src="./images/card-image-5.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-3.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-2.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-1.webp" alt=""></div>
@@ -197,9 +254,9 @@
 						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
 					</div>
 				</div>
-				<div class="card__toggles tab__buttons">
-					<button class="card__toggle tab__button active"></button>
-					<button class="card__toggle tab__button"></button>
+				<div class="card__toggles tab__buttons toggle">
+					<button class="toggle__button tab__button active"></button>
+					<button class="toggle__button tab__button"></button>
 				</div>
 			</div>
 			<div class="card__bottom">
@@ -223,6 +280,7 @@
 					</div>
 					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
 						<div class="swiper-wrapper">
+							<div class="card__slide swiper-slide"><img src="./images/card-image-5.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-3.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-2.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-1.webp" alt=""></div>
@@ -231,9 +289,9 @@
 						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
 					</div>
 				</div>
-				<div class="card__toggles tab__buttons">
-					<button class="card__toggle tab__button active"></button>
-					<button class="card__toggle tab__button"></button>
+				<div class="card__toggles tab__buttons toggle">
+					<button class="toggle__button tab__button active"></button>
+					<button class="toggle__button tab__button"></button>
 				</div>
 			</div>
 			<div class="card__bottom">
@@ -257,6 +315,7 @@
 					</div>
 					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
 						<div class="swiper-wrapper">
+							<div class="card__slide swiper-slide"><img src="./images/card-image-5.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-3.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-2.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-1.webp" alt=""></div>
@@ -265,9 +324,9 @@
 						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
 					</div>
 				</div>
-				<div class="card__toggles tab__buttons">
-					<button class="card__toggle tab__button active"></button>
-					<button class="card__toggle tab__button"></button>
+				<div class="card__toggles tab__buttons toggle">
+					<button class="toggle__button tab__button active"></button>
+					<button class="toggle__button tab__button"></button>
 				</div>
 			</div>
 			<div class="card__bottom">
@@ -297,6 +356,7 @@
 					</div>
 					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
 						<div class="swiper-wrapper">
+							<div class="card__slide swiper-slide"><img src="./images/card-image-5.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-3.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-2.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-1.webp" alt=""></div>
@@ -305,9 +365,9 @@
 						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
 					</div>
 				</div>
-				<div class="card__toggles tab__buttons">
-					<button class="card__toggle tab__button active"></button>
-					<button class="card__toggle tab__button"></button>
+				<div class="card__toggles tab__buttons toggle">
+					<button class="toggle__button tab__button active"></button>
+					<button class="toggle__button tab__button"></button>
 				</div>
 			</div>
 			<div class="card__bottom">
@@ -331,6 +391,7 @@
 					</div>
 					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
 						<div class="swiper-wrapper">
+							<div class="card__slide swiper-slide"><img src="./images/card-image-5.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-3.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-2.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-1.webp" alt=""></div>
@@ -339,9 +400,9 @@
 						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
 					</div>
 				</div>
-				<div class="card__toggles tab__buttons">
-					<button class="card__toggle tab__button active"></button>
-					<button class="card__toggle tab__button"></button>
+				<div class="card__toggles tab__buttons toggle">
+					<button class="toggle__button tab__button active"></button>
+					<button class="toggle__button tab__button"></button>
 				</div>
 			</div>
 			<div class="card__bottom">
@@ -365,6 +426,7 @@
 					</div>
 					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
 						<div class="swiper-wrapper">
+							<div class="card__slide swiper-slide"><img src="./images/card-image-5.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-3.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-2.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-1.webp" alt=""></div>
@@ -373,9 +435,9 @@
 						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
 					</div>
 				</div>
-				<div class="card__toggles tab__buttons">
-					<button class="card__toggle tab__button active"></button>
-					<button class="card__toggle tab__button"></button>
+				<div class="card__toggles tab__buttons toggle">
+					<button class="toggle__button tab__button active"></button>
+					<button class="toggle__button tab__button"></button>
 				</div>
 			</div>
 			<div class="card__bottom">
@@ -399,6 +461,7 @@
 					</div>
 					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
 						<div class="swiper-wrapper">
+							<div class="card__slide swiper-slide"><img src="./images/card-image-5.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-3.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-2.webp" alt=""></div>
 							<div class="card__slide swiper-slide"><img src="./images/card-image-1.webp" alt=""></div>
@@ -407,9 +470,9 @@
 						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
 					</div>
 				</div>
-				<div class="card__toggles tab__buttons">
-					<button class="card__toggle tab__button active"></button>
-					<button class="card__toggle tab__button"></button>
+				<div class="card__toggles tab__buttons toggle">
+					<button class="toggle__button tab__button active"></button>
+					<button class="toggle__button tab__button"></button>
 				</div>
 			</div>
 			<div class="card__bottom">
@@ -419,6 +482,7 @@
 			</div>
 		</div>
 		<div class="feed__video feed__video_last feed__video_wide">
+			<a href="./"><svg><use xlink:href="#icon-arr-right"></use></svg></a>
 			<video src="./images/video-2.mp4" muted="muted" loop></video>
 		</div>
 	</div>

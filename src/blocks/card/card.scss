@@ -126,38 +126,6 @@
 		z-index: 2;
 	}
 
-	&__toggle {
-		@extend %reset-button;
-		width: 16px;
-		height: 16px;
-		border-color: transparent;
-		border-radius: 50%;
-		position: relative;
-
-		&::before {
-			position: absolute;
-			display: block;
-			content: '';
-			width: 9px;
-			height: 9px;
-			top: 50%;
-			left: 50%;
-			background-color: #858585;
-			transform: translate(-50%, -50%);
-			border-radius: 50%;
-		}
-	
-		&.active {
-			border: 2px solid #b1b1b1;
-			
-			&::before {
-				width: 7px;
-				height: 7px;
-				background-color: #162252;
-			}
-		}
-	}
-
 	&__bottom {
 		padding-top: 10px;
 		display: flex;

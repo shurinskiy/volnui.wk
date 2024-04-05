@@ -66,6 +66,8 @@
 		"omit": "@@,js-,swiper,active,opened,svg,icon-box"
 	},
 	"dependencies": {
+		"enquire.js": "^2.1.6",
+		"lightgallery": "^2.7.2",
 		"scroll-lock": "^2.1.5",
 		"swiped-events": "^1.1.9",
 		"swiper": "^11.1.0"

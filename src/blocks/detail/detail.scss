@@ -6,6 +6,10 @@
 		display: grid;
 		grid-template-columns: 7fr 5fr;
 		grid-gap: 30px;
+	
+		@include media('<=sm') {
+			display: block;
+		}
 	}
 
 	&__gallery {

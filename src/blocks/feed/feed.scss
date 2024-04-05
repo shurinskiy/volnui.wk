@@ -63,8 +63,10 @@
 	}
 
 	&__video {
+		box-sizing: border-box;
 		grid-column: span 2;
 		grid-row: span 2;
+		position: relative;
 		@include aspect-ratio(3, 4.18);
 		
 		@include media('<=md') {
@@ -171,6 +173,45 @@
 		
 			video {
 				height: 100%;
+			}
+		}
+
+		a {
+			box-sizing: border-box;
+			position: absolute;
+			left: 150px;
+			top: calc(100% - 260px);
+			z-index: 3;
+			width: 115px;
+			height: 115px;
+			background: url('#{$images-path}watch.svg') center / contain no-repeat transparent;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			@include media('<=xlg') {
+				left: 80px;
+				top: calc(100% - 200px);
+			}
+			
+			@include media('<=md') {
+				width: 80px;
+				height: 80px;
+				left: 60px;
+				top: calc(100% - 140px);
+			}
+			
+			@include media('<=xxs') {
+				width: 60px;
+				height: 60px;
+				left: 20px;
+				top: calc(100% - 80px);
+			}
+	
+			svg {
+				fill: #fff;
+				width: 25px;
+				height: 14px;
 			}
 		}
 	}

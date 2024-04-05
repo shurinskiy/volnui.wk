@@ -1,15 +1,59 @@
 .gallery {
 	$self: &;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	align-self: start;
-	grid-gap: 20px;
 
-	&__item {
+	&__sliders {
+
+	}
+
+	&__slider {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+		
+		&.showing {
+			animation: showItem 0.5s;
+		}
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-self: start;
+		grid-gap: 20px;
+		
+		@include media('<=md') {
+			grid-template-columns: 1fr;
+		}
+		
+		@include media('<=sm') {
+			display: flex;
+			grid-gap: 0;
+		}
+	}
+
+	&__image {
 		grid-column: span 1;
+		cursor: pointer;
+		
+		@include media('<=sm') {
+
+		}
 
 		img { 
 			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
+	}
+
+	&__toggles {
+		// display: none;
+	}
+
+	&__toggle {
+
 	}
 }

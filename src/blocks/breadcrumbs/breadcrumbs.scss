@@ -1,0 +1,28 @@
+.breadcrumbs {
+	$self: &;
+	font-size: 15px;
+	margin-bottom: 22px;
+
+	&__link {
+		color: #979797;
+		text-decoration: none;
+
+		&::after {
+			display: inline-block;
+			content: '';
+			height: 1px;
+			width: 8px;
+			background-color: #979797;
+			margin: 0 5px;
+			vertical-align: middle;
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__current {
+		color: #383838;
+	}
+}

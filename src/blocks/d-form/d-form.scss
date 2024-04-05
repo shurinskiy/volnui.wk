@@ -11,7 +11,7 @@
 	&__prices {
 		display: flex;
 		align-items: center;
-		margin-bottom: 15px;
+		margin-bottom: 25px;
 	}
 
 	&__price-current {
@@ -28,6 +28,26 @@
 			width: 16px;
 			height: 9px;
 			margin-right: 6px;
+		}
+	}
+
+	&__toggles {
+		margin-bottom: 10px;
+	}
+	
+	&__colors {
+		margin-bottom: 25px;
+	}
+
+	&__color {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+		
+		&.showing {
+			animation: showItem 0.5s;
 		}
 	}
 
@@ -51,6 +71,10 @@
 		margin-bottom: 22px;
 		min-height: 70px;
 		grid-gap: 22px;
+		
+		@include media('<=lg') {
+			grid-gap: 15px;
+		}
 	}
 
 	&__buy {
@@ -60,7 +84,7 @@
 		line-height: 1;
 		font-size: 14px;
 		font-weight: 700;
-		padding: 15px 25px;
+		padding: 15px 20px;
 		text-align: center;
 		text-transform: uppercase;
 		background-color: #3CFFB9;

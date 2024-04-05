@@ -44,6 +44,8 @@ export const driveTabs = (options = {}, cb) => {
 
 		buttons.forEach((button, i) => {
 			button.addEventListener('click', (e) => {
+				e.preventDefault();
+
 				if (! e.target.classList.contains(`${cls}`)) {
 					buttons.forEach((button, i) => {
 						button.classList.remove(`${cls}`);
