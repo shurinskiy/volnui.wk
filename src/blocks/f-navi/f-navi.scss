@@ -1,7 +1,7 @@
 .f-navi {
 	$self: &;
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr) 1.2fr;
 	grid-gap: 20px;
 	
 	@include media('<=md') {
@@ -77,6 +77,10 @@
 			font-size: 14px;
 			color: #B1B1B1;
 			text-align: right;
+
+			@include media('<=xs') {
+				display: none;
+			}
 		}
 	}
 }

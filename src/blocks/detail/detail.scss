@@ -7,7 +7,7 @@
 		grid-template-columns: 7fr 5fr;
 		grid-gap: 30px;
 	
-		@include media('<=sm') {
+		@include media('<=xs') {
 			display: block;
 		}
 	}
@@ -17,10 +17,18 @@
 	}
 
 	&__side {
-		max-width: 550px;		
+		max-width: 550px;
+		
+		@include media('<=sm') {
+			max-width: none;
+		}
 	}
 
 	&__sticky {
 		position: sticky;
+		
+		@include media('<=xs') {
+			position: static;
+		}
 	}
 }

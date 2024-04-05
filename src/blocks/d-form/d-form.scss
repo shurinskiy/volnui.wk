@@ -1,11 +1,29 @@
 .d-form {
 	$self: &;
+	display: flex;
+	flex-flow: column nowrap;
+
+	@include media('<=xs') {
+		padding-top: 20px;
+	}
 
 	&__title {
 		font-family: "CR", sans-serif;
 		font-size: 40px;
 		font-weight: 300;
 		margin-bottom: 15px;
+		
+		@include media('<=lg') {
+			font-size: 34px;
+		}
+		
+		@include media('<=md') {
+			font-size: 30px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 24px;
+		}
 	}
 	
 	&__prices {
@@ -17,6 +35,10 @@
 	&__price-current {
 		font-size: 26px;
 		margin-right: 25px;
+		
+		@include media('<=xs') {
+			margin-right: auto;
+		}
 	}
 	
 	&__price-old {
@@ -33,10 +55,21 @@
 
 	&__toggles {
 		margin-bottom: 10px;
+
+		@include media('<=xs') {
+			margin: 0 auto 10px;
+			order: -1;
+		}
 	}
 	
 	&__colors {
 		margin-bottom: 25px;
+		
+		@include media('<=xs') {
+			margin-bottom: 20px;
+			text-align: center;
+			order: -1;
+		}
 	}
 
 	&__color {
@@ -66,6 +99,7 @@
 	}
 
 	&__buttons {
+		box-sizing: border-box;
 		display: grid;
 		grid-template-columns: 1fr repeat(2, 70px);
 		margin-bottom: 22px;
@@ -74,6 +108,21 @@
 		
 		@include media('<=lg') {
 			grid-gap: 15px;
+		}
+		
+		@include media('<=xs') {
+			grid-template-columns: 1fr repeat(2, 50px);
+			min-height: 50px;
+			position: fixed;
+			left: 16px;
+			right: 16px;
+			bottom: 0;
+			z-index: 3;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 13px;
+			grid-gap: 10px;
 		}
 	}
 
@@ -90,6 +139,14 @@
 		background-color: #3CFFB9;
 		font-family: "IN", sans-serif;
 		flex-grow: 1;
+		
+		@include media('<=xxs') {
+			font-size: 13px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 12px;
+		}
 	}
 	
 	&__cart {
@@ -106,6 +163,7 @@
 	&__favorite {
 		@extend %reset-button;
 		box-sizing: border-box;
+		background-color: #fff;
 		border: 1px solid #e6e6e6;
 
 		svg {

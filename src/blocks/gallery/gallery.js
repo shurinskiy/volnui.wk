@@ -62,7 +62,7 @@ import lgZoom from 'lightgallery/plugins/zoom';
 			});
 		}
 
-		enquire.register("screen and (max-width: 780px", {
+		enquire.register("screen and (max-width: 640px", {
 			match: function() {
 				enableSwiper(slider);
 			},
