@@ -11,6 +11,10 @@
 		width: calc(100% - var(--gap) * 2);
 		max-width: 1500px;
 		margin: 0 auto;
+			
+		@include media('<=xs') {
+			display: none;
+		}
 	}
 	
 	&__top {
@@ -18,7 +22,8 @@
 		padding-top: 80px;
 	
 		@include media('<=xs') {
-			margin-bottom: 50px;
+			padding: 0;
+			margin-bottom: 40px;
 		}
 	}
 	
@@ -43,6 +48,10 @@
 		
 		@include media('<=md') {
 			margin: 0 0 20px;
+		}
+			
+		@include media('<=xxs') {
+			font-size: 12px;
 		}
 	}
 

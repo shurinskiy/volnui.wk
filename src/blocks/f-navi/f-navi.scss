@@ -11,6 +11,7 @@
 	@include media('<=xs') {
 		display: flex;
 		flex-flow: column nowrap;
+		grid-gap: 0;
 	}
 
 	&__col {
@@ -22,6 +23,9 @@
 				order: 1;
 			}
 		}
+	
+		@include media('<=xs') {
+		}
 	}
 
 	&__title {
@@ -30,32 +34,115 @@
 		text-decoration: none;
 		font-weight: 600;
 		font-size: 14px;
-		margin-bottom: 15px;
+		padding-bottom: 15px;
 		color: inherit;
-	}
-	
-	a#{$self}__title:hover {
-		text-decoration: underline;
+		
+		@include media('<=xs') {
+			font-size: 12px;
+		}
+
+		&_link {
+
+			@include media('<=xs') {
+				display: none;
+			}
+			
+			&:hover {
+				text-decoration: underline;
+			}			
+		}
 	}
 
 	&__soc {
 		padding-top: 10px;
 		margin-bottom: 50px;
+			
+		@include media('<=xs') {
+			margin: 0;
+		}
+	}
+
+	&__block {
+		margin-bottom: 30px;
+		border-bottom: 1px solid #F5F5F5;
+
+		@include media('<=xs') {
+			padding-bottom: 10px;
+		}
+		
+		#{$self}__title {
+			@include media('<=xs') {
+				display: flex;
+				cursor: pointer;
+
+				&::after {
+					display: block;
+					content: '';
+					width: 13px;
+					height: 13px;
+					opacity: 0.2;
+					background: url('#{$images-path}icons-sprite.svg#shape-plus-view-dark') center / contain no-repeat transparent;
+					margin-left: auto;
+				}
+				
+				&.opened::after {
+					background-image: url('#{$images-path}icons-sprite.svg#shape-minus-view-dark');
+					background-size: 100% 1px;
+				}
+			}
+		}
+
+		#{$self}__links {
+			@include media('>xs') {
+				display: block !important;
+			}
+	
+			@include media('<=xs') {
+				display: none;
+			}
+		}
 	}
 
 	&__links {
-		padding-top: 15px;
-		margin-bottom: 30px;
+		font-size: 14px;
+			
+		@include media('<=xxs') {
+			font-size: 12px;
+		}
+
+		a {
+			display: block;
+			text-decoration: none;
+			color: inherit;
+			padding: 10px 0;
+			
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 
-	&__link {
-		display: block;
+	&__info {
+		padding-top: 15px;
+		margin-bottom: 30px;
 		font-size: 14px;
-		text-decoration: none;
-		color: inherit;
-		padding: 10px 0;
+			
+		@include media('<=xxs') {
+			font-size: 12px;
+		}
 
-		&:hover {
+		a, span {
+			display: block;
+			text-decoration: none;
+			color: inherit;
+			padding: 10px 0;
+			
+			@include media('<=xxs') {
+				padding: 5px 0;
+			}
+		}
+
+		a:hover {
 			text-decoration: underline;
 		}
 	}
@@ -70,6 +157,10 @@
 			font-family: "CR", sans-serif;
 			font-size: 35px;
 			white-space: nowrap;
+
+			@include media('<=xxs') {
+				font-size: 32px;
+			}
 		}
 		
 		span:nth-child(2) {

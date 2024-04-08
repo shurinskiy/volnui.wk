@@ -33,12 +33,14 @@
 		max-width: 1780px !important;
 	}
 
-	&__navi-toggle {
+	&__toggle {
 		@extend %reset-button;
 		flex-grow: 1;
 		min-width: 45px;
-		max-width: 80px;
+		max-width: 70px;
 		text-align: left;
+		position: relative;
+		z-index: 14;
 		
 		@include media('<=xlg') {
 			flex-grow: 0;
@@ -59,6 +61,8 @@
 		width: 100%;
 		min-width: 110px;
 		max-width: 200px;
+		position: relative;
+		z-index: 14;
 		
 		@include media('<=xlg') {
 			padding-right: 20px;
@@ -70,11 +74,147 @@
 		}
 	}
 
-	&__navi {
+	&__menu {
 		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 
 		@include media('<=md') {
 			display: none;
+		}
+	}
+
+	&__link {
+		box-sizing: border-box;
+		position: relative;
+		color: inherit;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 14px;
+		white-space: nowrap;
+		padding: 8px 0;
+		margin-right: 45px;
+		color: #fff;
+		
+		@include media('<=xlg') {
+			padding: 8px 10px;
+			margin: 0;
+		}
+		
+		@include media('<=lg') {
+			font-size: 12px;
+		}
+
+		&::before {
+			content: attr(data-hint);
+			position: absolute;
+			color: #E32726;
+			font-weight: 700;
+			font-size: 9px;
+			line-height: 1;
+			bottom: calc(100% - 5px);
+			left: 100%;
+
+			@include media('<=xlg') {
+				left: calc(100% - 10px);
+			}
+		}
+
+		&:nth-child(5) {
+			
+			@include media('>xlg') {
+				margin-left: auto;
+			}
+		}
+	}
+	
+	&__button {
+		@extend %reset-button;
+		width: 100%;
+		min-width: 40px;
+		max-width: 60px;
+		line-height: 1;
+		
+		@include media('<=xlg') {
+			max-width: 50px;
+		}
+		
+		@include media('<=lg') {
+			min-width: 30px;
+			max-width: 40px;
+		}
+
+		&_card {
+			position: relative;
+
+			&[data-cart]::before {
+				display: flex;
+				content: attr(data-cart);
+				width: 14px;
+				height: 14px;
+				background-color: #E32726;
+				border-radius: 50%;
+				color: #fff;
+				position: absolute;
+				right: 0;
+				bottom: 100%;
+				font-size: 9px;
+				line-height: 1;
+				align-items: center;
+				justify-content: center;
+			}
+
+			@include media('<=xlg') {
+				margin-left: 15px;
+			}
+
+			@include media('<=md') {
+				margin-left: auto;
+			}
+		}
+
+		&_search {
+			@include media('<=xs') {
+				display: none;
+			}			
+		}
+
+		&_favorites {
+			@include media('<=xs') {
+				display: none;
+			}			
+		}
+
+		svg {
+			fill: #fff;
+			display: block;
+			max-height: 22px;
+			
+			@include media('<=lg') {
+				max-height: 18px;
+			}
+			
+			@include media('<=md') {
+				max-height: 22px;
+			}
+		}
+	}
+
+	&__navi {
+		width: 100%;
+		height: 100vh;
+		height: 100dvh;
+		position: fixed;
+		z-index: 12;
+		top: 0;
+		left: -353px; 
+		max-width: 353px;
+		transition: left 0.2s linear;
+
+		&.opened {
+			left: 0;
 		}
 	}
 }

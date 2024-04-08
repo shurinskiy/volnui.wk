@@ -19,29 +19,33 @@
 			width: 18px;
 			height: 10px;
 			margin-right: 30px;
+			
+			@include media('<=xxs') {
+				margin-right: 10px;
+			}
 		}
 	}
 
-	&__row {
-		display: flex;
-		align-items: center;
-		margin-bottom: 4px;
+	&__table {
 		font-size: 12px;
+		display: flex;
+	}
 
-		@include media('<=xxs') {
-			font-size: 10px;
-		}
+	&__titles {
+		flex-grow: 1;
+		display: flex;
+		flex-flow: column nowrap;
 	}
 
 	&__title {
 		box-sizing: border-box;
-		flex-grow: 1;
-		background-color: #F8F8F8;
 		text-transform: uppercase;
+		background-color: #F8F8F8;
+		height: 40px;
+		padding: 0 18px;
 		display: flex;
 		align-items: center;
-		padding: 0 18px;
-		height: 40px;
+		margin-bottom: 4px;
 		
 		@include media('<=xxs') {
 			padding: 0 10px;
@@ -49,49 +53,58 @@
 		}
 		
 		@include media('<=xxxs') {
-			height: 30px;
+			height: 32px;
+		}
+
+		&:nth-child(2) {
+			margin: auto 0;
 		}
 	}
 
-	&__size {
-		width: 40px;
-		height: 40px;
-		margin-left: 4px;
+	&__items {
 		display: flex;
-		flex-shrink: 0;
-		align-items: center;
-		justify-content: center;
-		background-color: #F8F8F8;
+	}
+
+	&__item {
+		box-sizing: border-box;
+		margin-left: 4px;
+		width: 40px;
 		
 		@include media('<=xxs') {
-			height: 35px;
 			width: 35px;
 		}
 		
 		@include media('<=xxxs') {
-			height: 30px;
-			width: 30px;
+			width: 32px;
+		}
+	}
+
+	&__value {
+		background-color: #F8F8F8;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 4px;
+		padding: 0 5px;
+		
+		@include media('<=xxs') {
+			height: 35px;
+		}
+		
+		@include media('<=xxxs') {
+			height: 32px;
 		}
 	}
 
 	&__control {
-		width: 40px;
-		margin-left: 4px;
-		flex-shrink: 0;
-		
-		@include media('<=xxs') {
-			width: 35px;
-		}
-		
-		@include media('<=xxxs') {
-			width: 30px;
-		}
 		
 		input {
 			@extend %reset-input;
 			background-color: #F0F0F0;
 			text-align: center;
-			font-size: 12px;
+			font-size: inherit;
+			padding: 0 5px;
 			height: 40px;
 			width: 100%;
 			
@@ -100,27 +113,28 @@
 			}
 			
 			@include media('<=xxxs') {
-				height: 30px;
+				height: 32px;
 			}
 		}
 		
 		button {
 			@extend %reset-button;
 			background-color: #F8F8F8;
-			font-size: 12px;
-			width: 100%;
+			font-size: inherit;
+			padding: 0 5px;
 			height: 40px;
+			width: 100%;
 			
 			@include media('<=xxs') {
 				height: 35px;
 			}
 			
 			@include media('<=xxxs') {
-				height: 30px;
+				height: 32px;
 			}
 		}
 
-		&_disabled button, &_disabled input {
+		&.disabled button, &.disabled input {
 			display: none;
 		}
 	}

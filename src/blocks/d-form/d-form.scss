@@ -96,6 +96,10 @@
 
 	&__sizes {
 		margin-bottom: 22px;
+		
+		@include media('<=xs') {
+			margin-bottom: 28px;
+		}
 	}
 
 	&__buttons {
@@ -111,18 +115,57 @@
 		}
 		
 		@include media('<=xs') {
-			grid-template-columns: 1fr repeat(2, 50px);
+			display: block;
 			min-height: 50px;
-			position: fixed;
-			left: 16px;
-			right: 16px;
-			bottom: 0;
-			z-index: 3;
+			// position: fixed;
+			// left: 16px;
+			// right: 16px;
+			// bottom: 0;
+			// z-index: 3;
 		}
 		
 		@include media('<=xxs') {
 			font-size: 13px;
 			grid-gap: 10px;
+		}
+	}
+
+	&__panel {
+		display: none;
+		min-height: 50px;
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 3;
+		
+		@include media('<=xs') {
+			display: flex;
+		}
+		
+		button {
+			@extend %reset-button;
+			height: 70px;
+			background-color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-top: 1px solid #f2f2f2;
+			font-family: "IN", sans-serif;
+			text-transform: uppercase;
+			font-size: 14px;
+			font-weight: 700;
+			width: 50%;
+			
+			@include media('<=xxs') {
+				font-size: 12px;
+				height: 50px;
+			}
+
+			&:nth-child(1) {
+				border-color: #3CFFB9;
+				background-color: #3CFFB9;
+			}
 		}
 	}
 
@@ -140,6 +183,12 @@
 		font-family: "IN", sans-serif;
 		flex-grow: 1;
 		
+		@include media('<=xs') {
+			width: 100%;
+			max-width: 430px;
+			margin: 0 auto;
+		}
+		
 		@include media('<=xxs') {
 			font-size: 13px;
 		}
@@ -154,6 +203,10 @@
 		box-sizing: border-box;
 		background-color: #3CFFB9;
 		
+		@include media('<=xs') {
+			display: none;
+		}
+		
 		svg {
 			width: 26px;
 			height: 22px;
@@ -165,6 +218,10 @@
 		box-sizing: border-box;
 		background-color: #fff;
 		border: 1px solid #e6e6e6;
+		
+		@include media('<=xs') {
+			display: none;
+		}
 
 		svg {
 			fill: transparent;

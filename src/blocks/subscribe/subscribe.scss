@@ -2,6 +2,10 @@
 	$self: &;
 	margin-bottom: 100px;
 	font-family: "IN", sans-serif;
+	
+	@include media('<=xs') {
+		margin-bottom: 50px;
+	}
 
 	&__inner {
 		max-width: 1070px !important;
@@ -17,6 +21,10 @@
 		text-align: center;
 		line-height: 1.9;
 		font-size: 14px;
+		
+		@include media('<=xxs') {
+			font-size: 12px;
+		}
 	}
 
 	&__form {
@@ -50,6 +58,10 @@
 			width: 100%;
 			min-width: 0;
 			font-size: 14px;
+
+			&::placeholder {
+				color: #ccc;
+			}
 		}
 	}
 
@@ -95,7 +107,7 @@
 				content: '';
 				width: 9px;
 				height: 7px;
-				background: url('#{$images-path}icons-sprite.svg#shape-check-view') center / auto no-repeat transparent;
+				background: url('#{$images-path}icons-sprite.svg#shape-check-view-dark') center / contain no-repeat transparent;
 			}
 		}
 
@@ -108,5 +120,9 @@
 
 	&__submit {
 		flex-shrink: 0;
+
+		@include media('<=xs') {
+			margin: 0 auto;
+		}
 	}
 }

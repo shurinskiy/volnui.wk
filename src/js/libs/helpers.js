@@ -197,9 +197,11 @@ export const slideDown = (el, duration = 500, cb) => {
 // Плавно переключить отображение элемента
 export const slideToggle = (el, duration, cb) => {
 	if (window.getComputedStyle(el).display === 'none') {
-		return slideDown(el, duration, cb);
+		slideDown(el, duration, cb);
+		return true;
 	} else {
-		return slideUp(el, duration, cb);
+		slideUp(el, duration, cb);
+		return false;
 	}
 }
 

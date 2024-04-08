@@ -1,4 +1,3 @@
-
 import "../blocks/hero/hero.js";
 import "../blocks/news/news.js";
 import "../blocks/tab/tab.js";
@@ -7,3 +6,6 @@ import "../blocks/feed/feed.js";
 import "../blocks/detail/detail.js";
 import "../blocks/gallery/gallery.js";
 import "../blocks/d-sizes/d-sizes.js";
+import "../blocks/f-navi/f-navi.js";
+import "../blocks/header/header.js";
+import "../blocks/navi/navi.js";

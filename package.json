@@ -63,10 +63,11 @@
 		"from": "src/**/*.html",
 		"to": "src/blocks",
 		"js": "src/js/blocks.js",
-		"omit": "@@,js-,swiper,active,opened,svg,icon-box"
+		"omit": "@@,js-,swiper,active,opened,svg,icon-box,disabled"
 	},
 	"dependencies": {
 		"enquire.js": "^2.1.6",
+		"gulp-svg-symbol-view": "^1.0.3",
 		"lightgallery": "^2.7.2",
 		"scroll-lock": "^2.1.5",
 		"swiped-events": "^1.1.9",

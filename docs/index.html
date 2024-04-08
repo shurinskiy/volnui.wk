@@ -10,34 +10,96 @@
 <body > 
 <header class="header header_home">
 	<div class="header__inner container">
-		<button class="header__navi-toggle">
+		<button class="header__toggle">
 			<svg><use xlink:href="#icon-menu"></use></svg>
 		</button>
 		<a class="header__logo" href="./">
 			<img src="./images/logo.svg" alt="Logo">
 		</a>
-		<div class="header__navi h-navi">
-			<button class="h-navi__close"></button>
-			<nav class="h-navi__menu" data-scroll-lock-scrollable>
-				<a class="h-navi__link" href="./" data-hint="top">новинки</a>
-				<a class="h-navi__link" href="./">для неё</a>
-				<a class="h-navi__link" href="./">для него</a>
-				<a class="h-navi__link" href="./">unisex</a>
-				<a class="h-navi__link" href="./">о нас</a>
-				<a class="h-navi__link" href="./">сотрудничество</a>
-				<a class="h-navi__link" href="./">контакты</a>
-			</nav>
-			<div class="h-navi__utils utils">
-				<a class="utils__button utils__button_card" href="./">
-					<svg><use xlink:href="#icon-cart"></use></svg>
-				</a>
-				<button class="utils__button utils__button_search">
-					<svg><use xlink:href="#icon-zoom"></use></svg>
-				</button>
-				<button class="utils__button utils__button_favorites">
-					<svg><use xlink:href="#icon-heart"></use></svg>
-				</button>
+		<div class="header__menu">
+			<a class="header__link" href="./" data-hint="top">новинки</a>
+			<a class="header__link" href="./">для неё</a>
+			<a class="header__link" href="./">для него</a>
+			<a class="header__link" href="./">unisex</a>
+			<a class="header__link" href="./">о нас</a>
+			<a class="header__link" href="./">сотрудничество</a>
+			<a class="header__link" href="./">контакты</a>
+		</div>
+		<a class="header__button header__button_card" href="./" data-cart="2">
+			<svg><use xlink:href="#icon-cart"></use></svg>
+		</a>
+		<button class="header__button header__button_search">
+			<svg><use xlink:href="#icon-zoom"></use></svg>
+		</button>
+		<button class="header__button header__button_favorites">
+			<svg><use xlink:href="#icon-heart"></use></svg>
+		</button>
+	</div>
+	<div class="header__navi navi">
+		<div class="navi__content" data-scroll-lock-scrollable>
+			<div class="navi__block">
+				<h2 class="navi__title">Женщинам</h2>
+				<div class="navi__links">
+					<a href="./">Lorem ipsum dolor</a>
+					<a href="./">Sit amet consectetur</a>
+					<a href="./">Adipisicing elit</a>
+					<a href="./">Fugiat dignissimos</a>
+				</div>
 			</div>
+			<div class="navi__block">
+				<h2 class="navi__title">Мужчинам</h2>
+				<div class="navi__links">
+					<a href="./">Iste aspernatur quis</a>
+					<a href="./">Adipisci architecto</a>
+					<a href="./">Numquam exercitationem</a>
+					<a href="./">Reiciendis voluptatibus</a>
+				</div>
+			</div>
+			<div class="navi__block">
+				<h2 class="navi__title">Unisex</h2>
+				<div class="navi__links">
+					<a href="./">Deserunt laborum</a>
+					<a href="./">Asperiores cupiditate</a>
+					<a href="./">Veniam velit atque</a>
+					<a href="./">Commodi quaerat nulla</a>
+				</div>
+			</div>
+			<a class="navi__title navi__title_link" href="./">Как сделать заказ</a>
+			<a class="navi__title navi__title_link" href="./">Магазины</a>
+			<div class="navi__block">
+				<h2 class="navi__title">Информация</h2>
+				<div class="navi__links">
+					<a href="./">Доставка</a>
+					<a href="./">Оплата</a>
+					<a href="./">Политика конфиденциальности</a>
+					<a href="./">Публичная оферта</a>
+					<a href="./">Возврат</a>
+				</div>
+			</div>
+			<div class="navi__block">
+				<h2 class="navi__title">Клиентам</h2>
+				<div class="navi__links">
+					<a href="./">Таблица размеров</a>
+					<a href="./">Образы</a>
+					<a href="./">Вопрос-ответ</a>
+				</div>
+			</div>
+			<div class="navi__block">
+				<h2 class="navi__title">О компании</h2>
+				<div class="navi__links">
+					<a href="./">Сотрудничество</a>
+					<a href="./">История бренда</a>
+					<a href="./">Производство</a>
+					<a href="./">Новости</a>
+					<a href="./">Вакансии</a>
+					<a href="./">Контакты</a>
+				</div>
+			</div>
+			<a class="navi__phone" href="./">
+				<span>ПН–ПТ: 09:00–17:30 (по мск)</span>
+				<span>8 (495) 541 07 07</span>
+				<span>Звонок бесплатный</span>
+			</a>
 		</div>
 	</div>
 </header>
@@ -1457,7 +1519,7 @@
 <footer class="footer"> 
 	<div class="footer__top f-navi container">
 		<div class="f-navi__col">
-			<h2 class="f-navi__title">Мы в соц. сетях</h2>
+			<h2 class="f-navi__title">Мы в социальных сетях</h2>
 			<div class="f-navi__soc social">
 				<a class="social__link" href="./">
 					<svg><use xlink:href="#icon-soc-vk"></use></svg>
@@ -1469,35 +1531,41 @@
 					<svg><use xlink:href="#icon-soc-in"></use></svg>
 				</a>
 			</div>
-			<a class="f-navi__title" href="./">Каталог</a>
-			<a class="f-navi__title" href="./">Как сделать заказ</a>
-			<a class="f-navi__title" href="./">Магазины</a>
+			<a class="f-navi__title f-navi__title_link" href="./">Каталог</a>
+			<a class="f-navi__title f-navi__title_link" href="./">Как сделать заказ</a>
+			<a class="f-navi__title f-navi__title_link" href="./">Магазины</a>
 		</div>
 		<div class="f-navi__col">
-			<h2 class="f-navi__title">Информация</h2>
-			<div class="f-navi__links">
-				<a class="f-navi__link" href="./">Доставка</a>
-				<a class="f-navi__link" href="./">Оплата</a>
-				<a class="f-navi__link" href="./">Политика конфиденциальности</a>
-				<a class="f-navi__link" href="./">Публичная оферта</a>
-				<a class="f-navi__link" href="./">Возврат</a>
+			<div class="f-navi__block">
+				<h2 class="f-navi__title">Клиентам</h2>
+				<div class="f-navi__links">
+					<a href="./">Доставка</a>
+					<a href="./">Оплата</a>
+					<a href="./">Политика конфиденциальности</a>
+					<a href="./">Публичная оферта</a>
+					<a href="./">Возврат</a>
+				</div>
 			</div>
-			<h2 class="f-navi__title">Клиентам</h2>
-			<div class="f-navi__links">
-				<a class="f-navi__link" href="./">Таблица размеров</a>
-				<a class="f-navi__link" href="./">Образы</a>
-				<a class="f-navi__link" href="./">Вопрос-ответ</a>
+			<div class="f-navi__block">
+				<h2 class="f-navi__title">Информация</h2>
+				<div class="f-navi__links">
+					<a href="./">Таблица размеров</a>
+					<a href="./">Образы</a>
+					<a href="./">Вопрос-ответ</a>
+				</div>
 			</div>
 		</div>
 		<div class="f-navi__col">
-			<h2 class="f-navi__title">О компании</h2>
-			<div class="f-navi__links">
-				<a class="f-navi__link" href="./">Сотрудничество</a>
-				<a class="f-navi__link" href="./">История бренда</a>
-				<a class="f-navi__link" href="./">Производство</a>
-				<a class="f-navi__link" href="./">Новости</a>
-				<a class="f-navi__link" href="./">Вакансии</a>
-				<a class="f-navi__link" href="./">Контакты</a>
+			<div class="f-navi__block">
+				<h2 class="f-navi__title">О компании</h2>
+				<div class="f-navi__links">
+					<a href="./">Сотрудничество</a>
+					<a href="./">История бренда</a>
+					<a href="./">Производство</a>
+					<a href="./">Новости</a>
+					<a href="./">Вакансии</a>
+					<a href="./">Контакты</a>
+				</div>
 			</div>
 		</div>
 		<div class="f-navi__col">
@@ -1505,10 +1573,10 @@
 				<span>8 (495) 541 07 07</span>
 				<span>Звонок бесплатный</span>
 			</a>
-			<div class="f-navi__links">
-				<span class="f-navi__link">Добавочный номер 1220, 1221, 1230, 1234.</span>
-				<span class="f-navi__link">Понедельник - Пятница: 09:00–17:30 (по мск)</span>
-				<a class="f-navi__link" href="mailto:sales@volnui.ru">sales@volnui.ru</a>
+			<div class="f-navi__info">
+				<span >Добавочный номер 1220, 1221, 1230, 1234.</span>
+				<span >Понедельник - Пятница: 09:00–17:30 (по мск)</span>
+				<a href="mailto:sales@volnui.ru">sales@volnui.ru</a>
 			</div>
 		</div>
 	</div>

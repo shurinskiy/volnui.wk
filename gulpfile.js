@@ -158,28 +158,13 @@ function icons() {
 
 function iconsOuter() {
 	return gulp.src(pth.src.shp)
-	.pipe($.svgSprite({
-		svg: {  xmlDeclaration: false },
-		shape: {
-			transform: [{
-				svgo: {
-					plugins: [
-						{ name: 'preset-default' },
-						{ name: 'removeAttrs', params: { attrs: '*:(fill|data-*|id|class|style|stroke*)' }},
-					]
-				}
-			}]
-		},
-		mode: {
-			view: {
-				bust: false,
-				dest: './',
-				sprite: 'icons-sprite.svg',
-				example: false
-			}
+	.pipe($.svgSymbolView({
+		name: 'icons-sprite',
+		monochrome: {
+			dark: '#000000',
+			green: '#3CFFB9'
 		}
 	}))
-	.on('error', swallowError)
 	.pipe(gulp.dest(pth.pbl.img))
 };
 

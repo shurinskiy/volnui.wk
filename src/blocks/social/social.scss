@@ -22,6 +22,11 @@
 			fill: #808080;
 			max-height: 23px;
 			max-width: 23px;
+			
+			@include media('<=xxs') {
+				max-height: 20px;
+				max-width: 20px;
+			}
 		}
 	}
 }

@@ -32,14 +32,6 @@ import lgZoom from 'lightgallery/plugins/zoom';
 		});
 	});
 
-	document.querySelectorAll('.gallery__wrapper').forEach(gallery => {
-		lightGallery(gallery, {
-			plugins: [lgZoom],
-			download: false,
-			share: false,
-		});		
-	})
-
 	sliders.forEach((slider, i) => {
 		let swiper;
 
@@ -62,6 +54,12 @@ import lgZoom from 'lightgallery/plugins/zoom';
 			});
 		}
 
+		lightGallery(slider.querySelector('.gallery__wrapper'), {
+			plugins: [lgZoom],
+			download: false,
+			share: false,
+		});		
+			
 		enquire.register("screen and (max-width: 640px", {
 			match: function() {
 				enableSwiper(slider);

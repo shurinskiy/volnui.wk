@@ -1,0 +1,136 @@
+.navi {
+	$self: &;
+	box-sizing: border-box;
+	background-color: #fff;
+	padding: 90px 30px 20px;
+	font-family: "IN", sans-serif;
+
+	&__content {
+		display: flex;
+		box-sizing: border-box;
+		flex-flow: column nowrap;
+		overflow-y: auto;
+		height: 100%;
+
+		&::-webkit-scrollbar {
+			width: 7px;
+			height: 7px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background-color: #f0f0f0;
+		}
+		
+		&::-webkit-scrollbar-thumb {
+			background-color: #ccc;
+			border-radius: 10px;
+		}
+		
+		&::-webkit-scrollbar-corner {
+			background-color: transparent;
+		}		
+	}
+
+	&__block {
+		box-sizing: border-box;
+		padding-bottom: 10px;
+		margin-bottom: 25px;
+		border-bottom: 1px solid #F5F5F5;
+
+		#{$self}__title {
+			display: flex;
+			cursor: pointer;
+
+			&::after {
+				display: block;
+				content: '';
+				width: 13px;
+				height: 13px;
+				opacity: 0.2;
+				background: url('#{$images-path}icons-sprite.svg#shape-plus-view-dark') center / contain no-repeat transparent;
+				margin: 0 10px 0 auto;
+			}
+			
+			&.opened::after {
+				background-image: url('#{$images-path}icons-sprite.svg#shape-minus-view-dark');
+				background-size: 100% 1px;
+			}
+		}
+
+		#{$self}__links {
+			display: none;
+			padding-bottom: 10px;
+		}
+	}
+
+	&__title {
+		display: block;
+		box-sizing: border-box;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 14px;
+		padding-bottom: 15px;
+		color: inherit;
+		
+		@include media('<=xs') {
+			font-size: 12px;
+		}
+		
+		&_link {
+			margin-bottom: 28px;
+			
+			&:hover {
+				text-decoration: underline;
+			}			
+		}
+	}
+
+	&__links {
+		font-size: 14px;
+			
+		@include media('<=xxs') {
+			font-size: 12px;
+		}
+
+		a {
+			display: block;
+			text-decoration: none;
+			color: inherit;
+			padding: 4px 0;
+			
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__phone {
+		display: block;
+		box-sizing: border-box;
+		text-decoration: none;
+		color: inherit;
+		width: fit-content;
+		margin: auto 0 5px;
+
+		span {
+			display: block;
+
+			&:nth-child(1) {
+				font-size: 14px;
+			}
+
+			&:nth-child(2) {
+				font-family: "CR", sans-serif;
+				font-size: 35px;
+			}
+			
+			&:nth-child(3) {
+				font-family: "CR", sans-serif;
+				font-size: 16px;
+				color: #B1B1B1;
+				text-align: right;
+			}
+		}
+	}
+}
