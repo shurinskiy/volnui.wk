@@ -1,0 +1,64 @@
+.select {
+	$self: &;
+	display: block;
+	position: relative;
+
+	&_opened {
+		
+		#{$self}__list {
+			display: block;
+		}
+		
+		#{$self}__head::after {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__head {
+		box-sizing: border-box;
+		height: 100%;
+		width: fit-content;
+		display: flex;
+		align-items: center;
+		white-space: nowrap;
+		padding: 10px 24px 10px 0;
+		cursor: pointer;
+	
+		&::after {
+			display: block;
+			content: '';
+			width: 10px;
+			height: 7px;
+			background: url('#{$images-path}icons-sprite.svg#shape-chevron-view-dark') center / contain no-repeat transparent;
+			position: absolute;
+			right: 8px;
+			top: calc(50% - 4px);
+		}
+	}
+
+	&__list {
+		box-sizing: border-box;
+		display: none;
+		position: absolute;
+		left: -1px;
+		top: 100%;
+		z-index: 3;
+		top: calc(100% + 8px);
+		width: fit-content;
+		padding: 10px;
+		border-radius: 5px;
+		background-color: #fff;
+		border: 1px solid #eee;
+		animation: showItem 0.4s ease;
+	}
+
+	&__item {
+		cursor: pointer;
+		padding: 5px 10px;
+		white-space: nowrap;
+
+		&:hover {
+			background-color: #f1f1f1;
+		}
+	}
+}

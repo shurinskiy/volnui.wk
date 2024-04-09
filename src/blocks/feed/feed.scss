@@ -11,9 +11,32 @@
 		margin-bottom: 40px;
 	}
 
+	&_encreased {
+		@include media('>md') {
+
+			#{$self}__items {
+				grid-template-columns: repeat(6, 1fr);
+				grid-gap: 50px 24px;
+				
+				@include media('<=xxxlg') {
+					grid-template-columns: repeat(5, 1fr);
+				}
+				
+				@include media('<=xlg') {
+					grid-template-columns: repeat(4, 1fr);
+				}
+			}
+			
+			#{$self}__video {
+				display: none;
+			}		
+		}
+
+	}
+
 	&__title {
 		margin-bottom: 70px;
-	
+		
 		@include media('<=md') {
 			margin-bottom: 50px;
 		}
@@ -22,7 +45,7 @@
 			margin-bottom: 30px;
 		}
 	}
-
+	
 	&__items {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);

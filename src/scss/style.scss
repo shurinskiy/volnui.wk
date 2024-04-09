@@ -80,6 +80,14 @@ body, html {
 	flex-flow: column nowrap;
 }
 
+body {
+	padding-top: 90px;
+
+	&#home {
+		padding: 0;
+	}
+}
+
 .footer { 
 	flex: 0 0 auto; 
 	margin-top: auto; 

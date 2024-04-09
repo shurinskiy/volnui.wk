@@ -1,8 +1,13 @@
 .header {
 	$self: &;
+	box-sizing: border-box;
 	background-color: #000;
 	height: 70px;
-	margin-bottom: 20px;
+	position: fixed;
+	z-index: 12;
+	top: 0;
+	left: 0;
+	width: 100%;
 
 	&_home {
 		background-color: transparent;
@@ -107,7 +112,7 @@
 			font-size: 12px;
 		}
 
-		&::before {
+		&[data-hint]::before {
 			content: attr(data-hint);
 			position: absolute;
 			color: #E32726;
@@ -146,6 +151,24 @@
 			max-width: 40px;
 		}
 
+		@include media('<=xs') {
+			display: none;
+		}			
+
+		svg {
+			fill: #fff;
+			display: block;
+			max-height: 22px;
+			
+			@include media('<=lg') {
+				max-height: 18px;
+			}
+			
+			@include media('<=md') {
+				max-height: 22px;
+			}
+		}
+
 		&_card {
 			position: relative;
 
@@ -173,31 +196,17 @@
 			@include media('<=md') {
 				margin-left: auto;
 			}
-		}
 
-		&_search {
 			@include media('<=xs') {
-				display: none;
+				display: block;
 			}			
 		}
 
-		&_favorites {
-			@include media('<=xs') {
-				display: none;
-			}			
-		}
-
-		svg {
-			fill: #fff;
+		&_mobile {
 			display: block;
-			max-height: 22px;
-			
-			@include media('<=lg') {
-				max-height: 18px;
-			}
-			
-			@include media('<=md') {
-				max-height: 22px;
+
+			svg {
+				fill: #000;
 			}
 		}
 	}

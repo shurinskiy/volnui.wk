@@ -8,7 +8,7 @@
 	<title></title> 
 </head> 
 <body > 
-<header class="header ">
+<header class="header " data-scroll-lock-fill-gap>
 	<div class="header__inner container">
 		<button class="header__toggle">
 			<svg><use xlink:href="#icon-menu"></use></svg>
@@ -18,9 +18,9 @@
 		</a>
 		<div class="header__menu">
 			<a class="header__link" href="./" data-hint="top">новинки</a>
-			<a class="header__link" href="./">для неё</a>
-			<a class="header__link" href="./">для него</a>
-			<a class="header__link" href="./">unisex</a>
+			<a class="header__link" href="./category.html">для неё</a>
+			<a class="header__link" href="./category.html">для него</a>
+			<a class="header__link" href="./category.html">unisex</a>
 			<a class="header__link" href="./">о нас</a>
 			<a class="header__link" href="./">сотрудничество</a>
 			<a class="header__link" href="./">контакты</a>
@@ -28,10 +28,10 @@
 		<a class="header__button header__button_card" href="./" data-cart="2">
 			<svg><use xlink:href="#icon-cart"></use></svg>
 		</a>
-		<button class="header__button header__button_search">
+		<button class="header__button">
 			<svg><use xlink:href="#icon-zoom"></use></svg>
 		</button>
-		<button class="header__button header__button_favorites">
+		<button class="header__button">
 			<svg><use xlink:href="#icon-heart"></use></svg>
 		</button>
 	</div>
@@ -64,6 +64,7 @@
 					<a href="./">Commodi quaerat nulla</a>
 				</div>
 			</div>
+			<a class="navi__title navi__title_link navi__title_mobile" href="./">Новинки</a>
 			<a class="navi__title navi__title_link" href="./">Как сделать заказ</a>
 			<a class="navi__title navi__title_link" href="./">Магазины</a>
 			<div class="navi__block">
@@ -100,6 +101,14 @@
 				<span>8 (495) 541 07 07</span>
 				<span>Звонок бесплатный</span>
 			</a>
+			<div class="navi__panel">
+				<button class="header__button header__button_mobile">
+					<svg><use xlink:href="#icon-zoom"></use></svg>
+				</button>
+				<button class="header__button header__button_mobile">
+					<svg><use xlink:href="#icon-heart"></use></svg>
+				</button>
+			</div>
 		</div>
 	</div>
 </header>
@@ -244,7 +253,7 @@
 							<svg><use xlink:href="#icon-favorite"></use></svg>
 						</button>
 					</div>
-					<div class="d-form__panel">
+					<div class="d-form__panel" data-scroll-lock-fill-gap>
 						<button>Добавить в корзину</button>
 						<button>В избранное</button>
 					</div>

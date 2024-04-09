@@ -1,0 +1,79 @@
+.pagination {
+	$self: &;
+	margin-bottom: 70px;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include media('<=sm') {
+			display: block;
+		}
+	}
+	
+	&__links {
+		display: flex;
+		align-items: center;
+
+		@include media('<=sm') {
+			justify-content: center;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__link {
+		height: 50px;
+		width: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #F6F6F6;
+		text-decoration: none;
+		font-size: 14px;
+		line-height: 1;
+		color: inherit;
+
+		&:not(:last-child) {
+			margin-right: 1px;
+		}
+
+		&_prev {
+
+		}
+
+		&_next {
+
+		}
+		
+		&_current {
+			background-color: #3CFFB9;
+		}
+
+		svg {
+			width: 9px;
+			height: 10px;
+		}
+	}
+
+	&__all {
+		text-transform: uppercase;
+		text-decoration: none;
+		max-width: 460px;
+		color: inherit;
+		height: 50px;
+		width: 100%;
+		display: flex;
+		line-height: 1;
+		font-size: 14px;
+		font-weight: 600;
+		align-items: center;
+		justify-content: center;
+		background-color: #3CFFB9;
+
+		@include media('<=sm') {
+			max-width: 360px;
+			margin: 0 auto;
+		}
+	}
+}

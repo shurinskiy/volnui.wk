@@ -132,7 +132,7 @@
 
 	&__panel {
 		display: none;
-		min-height: 50px;
+		min-height: 70px;
 		position: fixed;
 		left: 0;
 		right: 0;
@@ -145,7 +145,6 @@
 		
 		button {
 			@extend %reset-button;
-			height: 70px;
 			background-color: #fff;
 			display: flex;
 			align-items: center;

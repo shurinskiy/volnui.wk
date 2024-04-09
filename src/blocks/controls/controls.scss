@@ -1,0 +1,64 @@
+.controls {
+	$self: &;
+
+	&__select {
+		font-size: 15px;
+
+		@include media('<=sm') {
+			margin-right: auto;
+		}
+	}
+
+	&__button {
+		@extend %reset-button;
+		height: 24px;
+		width: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: 20px;
+		
+		@include media('<=xs') {
+			margin-left: 15px;
+		}
+
+		svg {
+			width: 22px;
+			height: 21px;
+			
+			@include media('<=xs') {
+				width: 18px;
+				height: 18px;
+			}
+		}
+
+		&_search {
+
+		}
+
+		&_filter {
+
+		}
+
+		&_encrease {
+
+			svg:nth-child(1) {
+				display: none;
+			}
+
+			&.active {
+				svg:nth-child(1) {
+					display: block;
+				}
+				
+				svg:nth-child(2) {
+					display: none;
+				}
+			}
+
+			@include media('<=sm') {
+				display: none;
+			}
+		}
+	}
+}

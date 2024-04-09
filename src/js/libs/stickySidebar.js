@@ -25,7 +25,7 @@ export const stickySidebar = (items, options = {}) => {
 				return;
 			}
 
-			this.endScroll = window.innerHeight - this.aside.offsetHeight - this.options.top;
+			this.endScroll = window.innerHeight - this.aside.offsetHeight - this.options.bottom;
 	
 			let asideTop = parseInt(this.aside.style.top.replace('px;', ''));
 	

@@ -7,8 +7,8 @@
 	<link rel="stylesheet" href="style.css"> 
 	<title></title> 
 </head> 
-<body id="home"> 
-<header class="header header_home" >
+<body > 
+<header class="header " data-scroll-lock-fill-gap>
 	<div class="header__inner container">
 		<button class="header__toggle">
 			<svg><use xlink:href="#icon-menu"></use></svg>
@@ -113,57 +113,48 @@
 	</div>
 </header>
 
-<section class="hero">
-	<div class="hero__slider swiper">
-		<div class="swiper-wrapper">
-			<div class="hero__slide swiper-slide" data-text="Волнуй, а не волнуйся">
-				<img src="./images/hero-image-1.webp" alt="">
-			</div>
-			<div class="hero__slide swiper-slide" data-text="Волнуй, а не волнуйся">
-				<img src="./images/hero-image-2.webp" alt="">
-			</div>
-		</div>
-	</div>
-	<div class="hero__status">
-		<div class="hero__s-current">00</div>
-		<div class="hero__s-progress"><span></span></div>
-		<div class="hero__s-total">00</div>
-	</div>
-	<div class="hero__dots"></div>
-	<a class="hero__button" href="./">Перейти в каталог</a>
-	<a class="hero__link" href="./">
-		<svg><use xlink:href="#icon-arr-right"></use></svg>
-	</a>
-</section>
+<div class="breadcrumbs container">
+	<a class="breadcrumbs__link" href="./">Каталог</a>
+	<a class="breadcrumbs__link" href="./">Одежда</a>
+	<span class="breadcrumbs__current">Спортивная одежда</span>
+</div>
 
-<section class="aims">
-	<div class="aims__inner container">
-		<a class="aims__item" href="./">
-			<img src="./images/aims-image-1.webp" alt="">
-			<div class="aims__content">
-				<span class="aims__text">Для неё</span>
-				<span class="aims__button">Перейти</span>
-			</div>
-		</a>
-		<a class="aims__item" href="./">
-			<img src="./images/aims-image-2.webp" alt="">
-			<div class="aims__content">
-				<span class="aims__text">Для него</span>
-				<span class="aims__button">Перейти</span>
-			</div>
-		</a>
-		<a class="aims__item" href="./">
-			<img src="./images/aims-image-3.webp" alt="">
-			<div class="aims__content">
-				<span class="aims__text">Unisex</span>
-				<span class="aims__button">Перейти</span>
-			</div>
-		</a>
+<div class="head">
+	<div class="head__inner container">
+		<h1 class="head__title">Sport collection</h1>
+		<div class="head__controls controls">
+			<select class="controls__select">
+				<option value="1">По новизне</option>
+				<option value="2">По популярности</option>
+				<option value="3">По скидке</option>
+				<option value="4">Цена по возрастанию</option>
+				<option value="5">Цена по убыванию</option>
+			</select>
+			<button class="controls__button controls__button_search">
+				<svg><use xlink:href="#icon-search"></use></svg>
+			</button>
+			<button class="controls__button controls__button_filter">
+				<svg><use xlink:href="#icon-filter-round"></use></svg>
+			</button>
+			<button class="controls__button controls__button_encrease">
+				<svg><use xlink:href="#icon-view-two"></use></svg>
+				<svg><use xlink:href="#icon-view-three"></use></svg>
+			</button>
+		</div>
+		<div class="head__tags">
+			<a class="head__tag active" href="./">Все</a>
+			<a class="head__tag" href="./">Брюки и леггинсы</a>
+			<a class="head__tag" href="./">Топы и майки</a>
+			<a class="head__tag" href="./">Футболки</a>
+			<a class="head__tag" href="./">Ветровки</a>
+			<a class="head__tag" href="./">Джемперы</a>
+			<a class="head__tag" href="./">Шорты</a>
+		</div>
+		<div class="head__intro">Коллекция женских топов от VOLNUI предлагает разнообразие стилей, изготовленных из премиальных материалов для любого случая. <span>Исследуйте изысканный выбор топов, начиная от элегантных блузок до повседневных футболок, все они созданы для того, чтобы дополнить ваш гардероб. Погрузитесь в роскошные ткани, такие как шелк, тонкий хлопок и мягкий кашемир, гарантируя комфорт и стиль. Независимо от того, выбираете ли вы утонченную блузку для особого случая или расслабленную футболку для повседневной носки, наша коллекция предлагает что-то подходящее для каждого вкуса и времени года. Обнаружьте идеальный топ, который дополнит ваш индивидуальный стиль и легко подчеркнет вашу уверенность</span> <button>Читать целиком</button></div>
 	</div>
-</section>
+</div>
 
 <section class="feed">
-	<h1 class="feed__title title container">Выбери свой лук</h1>
 	<div class="feed__items container">
 		<div class="feed__item card"  style="order: 1" >
 			<div class="card__tabs tab">
@@ -1444,86 +1435,24 @@
 	</div>
 </section>
 
-<section class="news">
-	<h2 class="news__title title container">Новости</h2>
-	<div class="news__items container" data-hidden="3">
-		<div class="news__item n-card">
-			<div class="n-card__image"><img src="./images/news-image-1.webp" alt=""></div>
-			<div class="n-card__bottom">
-				<h3 class="n-card__title">Для уличной прогулки</h3>
-				<a class="n-card__link" href="./">Подробнее</a>
-			</div>
+<div class="pagination">
+	<div class="pagination__inner container">
+		<div class="pagination__links">
+			<a class="pagination__link pagination__link_prev" href="./">
+				<svg><use xlink:href="#icon-arr-left-short"></use></svg>
+			</a>
+			<span class="pagination__link pagination__link_current">1</span>
+			<a class="pagination__link" href="./">2</a>
+			<a class="pagination__link" href="./">3</a>
+			<a class="pagination__link" href="./">4</a>
+			<a class="pagination__link" href="./">5</a>
+			<a class="pagination__link pagination__link_next" href="./">
+				<svg><use xlink:href="#icon-arr-right-short"></use></svg>
+			</a>
 		</div>
-		<div class="news__item n-card">
-			<div class="n-card__image"><img src="./images/news-image-2.webp" alt=""></div>
-			<div class="n-card__bottom">
-				<h3 class="n-card__title">Для занятий в зале</h3>
-				<a class="n-card__link" href="./">Подробнее</a>
-			</div>
-		</div>
-		<div class="news__item n-card">
-			<div class="n-card__image"><img src="./images/news-image-3.webp" alt=""></div>
-			<div class="n-card__bottom">
-				<h3 class="n-card__title">Для бега и спорта</h3>
-				<a class="n-card__link" href="./">Подробнее</a>
-			</div>
-		</div>
-		<div class="news__item n-card">
-			<div class="n-card__image"><img src="./images/news-image-1.webp" alt=""></div>
-			<div class="n-card__bottom">
-				<h3 class="n-card__title">Для уличной прогулки</h3>
-				<a class="n-card__link" href="./">Подробнее</a>
-			</div>
-		</div>
-		<div class="news__item n-card">
-			<div class="n-card__image"><img src="./images/news-image-2.webp" alt=""></div>
-			<div class="n-card__bottom">
-				<h3 class="n-card__title">Для занятий в зале</h3>
-				<a class="n-card__link" href="./">Подробнее</a>
-			</div>
-		</div>
-		<div class="news__item n-card">
-			<div class="n-card__image"><img src="./images/news-image-3.webp" alt=""></div>
-			<div class="n-card__bottom">
-				<h3 class="n-card__title">Для бега и спорта</h3>
-				<a class="n-card__link" href="./">Подробнее</a>
-			</div>
-		</div>
+		<a class="pagination__all" href="./">Показать ещё</a>
 	</div>
-</section>
-
-<section class="subscribe">
-	<div class="subscribe__inner container">
-		<h2 class="subscribe__title title">Узнавайте первыми</h2>
-		<div class="subscribe__text">Закрытые распродажи, акции<br/> и подборки образов в нашей рассылке</div>
-		<form action="/" class="subscribe__form">
-			<fieldset class="subscribe__fields">
-				<label class="subscribe__field" data-title="Введите номер телефона">
-					<input type="text" placeholder="+ 7 937 068 31 33">
-				</label>
-				<label class="subscribe__field" data-title="Введите город">
-					<input type="text" placeholder="Москва">
-				</label>
-				<label class="subscribe__field" data-title="Введите e-mail">
-					<input type="text" placeholder="office@volnui.ru">
-				</label>
-			</fieldset>
-			<div class="subscribe__bottom">
-				<div class="subscribe__agree">
-					<label class="subscribe__agree-item">
-						<input type="checkbox">
-						<a href="./">Я подтверждаю согласие с Политикой конфиденциальности и даю согласие на обработку персональных данных </a>
-					</label>
-					<label class="subscribe__agree-item">
-						<input type="checkbox">
-						<span>Я согласен получать e-mail рассылки о презентациях новых коллекций</span>
-					</label>
-				</div>
-				<button class="subscribe__submit button">Подписаться</button>
-			</div>
-		</form>
-	</div>
-</section>
+</div>
 
 <footer class="footer"> 
 	<div class="footer__top f-navi container">

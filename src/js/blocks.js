@@ -9,3 +9,6 @@ import "../blocks/d-sizes/d-sizes.js";
 import "../blocks/f-navi/f-navi.js";
 import "../blocks/header/header.js";
 import "../blocks/navi/navi.js";
+import "../blocks/select/select.js";
+import "../blocks/head/head.js";
+import "../blocks/controls/controls.js";
