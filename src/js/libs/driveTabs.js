@@ -35,12 +35,12 @@ driveTabs({
 export const driveTabs = (options = {}, cb) => {
 	const containers = options.container || '.tab';
 	const button = options.button || `.${containers}__button`;
-	const block = options.block || `.${containers}__block`;
+	const block = [options.block].flat() || [`.${containers}__block`];
 	const cls = options.cls || 'active';
 
 	document.querySelectorAll(containers).forEach((container) => {
 		const buttons = container.querySelectorAll(button);
-		const blocks = container.querySelectorAll(block);
+		const blocks = block.map(set => container.querySelectorAll(set));
 
 		buttons.forEach((button, i) => {
 			button.addEventListener('click', (e) => {
@@ -49,14 +49,15 @@ export const driveTabs = (options = {}, cb) => {
 				if (! e.target.classList.contains(`${cls}`)) {
 					buttons.forEach((button, i) => {
 						button.classList.remove(`${cls}`);
-						blocks[i].classList.remove(`${cls}`);
+						blocks.map(set => set[i].classList.remove(`${cls}`));
 					});
 		
 					button.classList.add(`${cls}`);
-					blocks[i].classList.add(`${cls}`);
-	
-					if (typeof cb === 'function') 
-						return cb.call(blocks[i]);
+
+					blocks.map(set => {
+						set[i].classList.add(`${cls}`);
+						(typeof cb === 'function') && cb.call(set[i]);
+					});
 				}
 			});
 		});

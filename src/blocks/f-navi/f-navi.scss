@@ -64,9 +64,9 @@
 
 	&__block {
 		margin-bottom: 30px;
-		border-bottom: 1px solid #F5F5F5;
-
+		
 		@include media('<=xs') {
+			border-bottom: 1px solid #F5F5F5;
 			padding-bottom: 10px;
 		}
 		

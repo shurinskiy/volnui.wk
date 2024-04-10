@@ -3,36 +3,23 @@ import { Pagination } from 'swiper/modules';
 import enquire from 'enquire.js';
 import lightGallery from 'lightgallery'; 
 import lgZoom from 'lightgallery/plugins/zoom';
+import { driveTabs } from "../../js/libs/driveTabs";
 
 (() => {
-	const sliders = document.querySelectorAll('.gallery__slider');
-	const blocks = [sliders, document.querySelectorAll('.d-form__color')];
-	const buttons = document.querySelectorAll('.d-form__toggles button');
 
-	buttons.forEach((button, i) => {
-		button.addEventListener('click', (e) => {
-			e.preventDefault();
-
-			if (! e.target.classList.contains('active')) {
-				buttons.forEach((button, i) => {
-					button.classList.remove('active');
-					blocks.map(set => set[i].classList.remove('active'));
-				});
+	driveTabs({
+		container: '.detail',
+		button: '.d-form__toggles button',
+		block: ['.gallery__slider', '.d-form__color']
+	}, function() {
+		this.classList.add('showing');
 	
-				button.classList.add('active');
-
-				blocks.map(set => {
-					set[i].classList.add('active','showing');
-
-					set[i].addEventListener('animationend', e => {
-						set[i].classList.remove('showing');
-					}, { once: true });
-				});
-			}
-		});
+		this.addEventListener('animationend', e => {
+			this.classList.remove('showing');
+		}, { once: true });
 	});
-
-	sliders.forEach((slider, i) => {
+	
+	document.querySelectorAll('.gallery__slider').forEach((item, i) => {
 		let swiper;
 
 		const enableSwiper = (el) => {
@@ -47,14 +34,14 @@ import lgZoom from 'lightgallery/plugins/zoom';
 					bulletActiveClass: 'active'
 				},
 				on: {
-					beforeInit: function(slider) {
-						slider.el.querySelector('.gallery__dots').classList.add(`gallery__dots_${i}`);
+					beforeInit: function(item) {
+						item.el.querySelector('.gallery__dots').classList.add(`gallery__dots_${i}`);
 					},
 				}
 			});
 		}
 
-		lightGallery(slider.querySelector('.gallery__wrapper'), {
+		lightGallery(item.querySelector('.gallery__wrapper'), {
 			plugins: [lgZoom],
 			download: false,
 			share: false,
@@ -62,7 +49,7 @@ import lgZoom from 'lightgallery/plugins/zoom';
 			
 		enquire.register("screen and (max-width: 640px", {
 			match: function() {
-				enableSwiper(slider);
+				enableSwiper(item);
 			},
 			unmatch: function() {
 				if (swiper !== undefined ) {

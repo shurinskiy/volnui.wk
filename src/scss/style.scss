@@ -1,5 +1,5 @@
 @import "lib/additional.scss"; 
-@include reset(); 
+@include reset();
 
 // Browsersync mark
 #__bs_notify__ { 
@@ -61,10 +61,6 @@ $breakpoints: (
 	@include media('<=xxs') {
 		--gap: 10px;
 	}
-	
-	@include media('<=xxxs') {
-		--gap: 5px;
-	}
 }
 
 body, html {
@@ -83,7 +79,7 @@ body, html {
 body {
 	padding-top: 90px;
 
-	&#home {
+	&.outer {
 		padding: 0;
 	}
 }

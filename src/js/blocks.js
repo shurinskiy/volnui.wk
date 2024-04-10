@@ -12,3 +12,4 @@ import "../blocks/navi/navi.js";
 import "../blocks/select/select.js";
 import "../blocks/head/head.js";
 import "../blocks/controls/controls.js";
+import "../blocks/info/info.js";

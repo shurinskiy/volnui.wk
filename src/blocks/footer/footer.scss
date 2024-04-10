@@ -1,6 +1,10 @@
 .footer {
 	$self: &;
 	font-family: "IN", sans-serif;
+	
+	@include media('<=xs') {
+		padding-top: 25px;
+	}
 
 	&::before, hr {
 		border: none;

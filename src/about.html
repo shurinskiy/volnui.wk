@@ -1,0 +1,96 @@
+@@include("_head.html", {"class":"outer"}) 
+@@include("_header.html", {"mod":"outer"})
+
+<section class="brand">
+	<div class="brand__inner container">
+		<div class="brand__path">
+			<a class="brand__p-link" href="./">Volnui</a>
+			<a class="brand__p-link" href="./">Главная</a>
+			<span class="brand__p-current" href="./">О нас</span>
+		</div>
+		<div class="brand__text">О бренде «Volnui»</div>
+	</div>
+</section>
+
+<section class="news">
+	<h2 class="news__title title container">Новости</h2>
+	<div class="news__items container" data-hidden="3">
+		<div class="news__item n-card">
+			<div class="n-card__image"><img src="./images/news-image-1.webp" loading="lazy" alt=""></div>
+			<div class="n-card__bottom">
+				<h3 class="n-card__title">Для уличной прогулки</h3>
+				<a class="n-card__link" href="./">Подробнее</a>
+			</div>
+		</div>
+		<div class="news__item n-card">
+			<div class="n-card__image"><img src="./images/news-image-2.webp" loading="lazy" alt=""></div>
+			<div class="n-card__bottom">
+				<h3 class="n-card__title">Для занятий в зале</h3>
+				<a class="n-card__link" href="./">Подробнее</a>
+			</div>
+		</div>
+		<div class="news__item n-card">
+			<div class="n-card__image"><img src="./images/news-image-3.webp" loading="lazy" alt=""></div>
+			<div class="n-card__bottom">
+				<h3 class="n-card__title">Для бега и спорта</h3>
+				<a class="n-card__link" href="./">Подробнее</a>
+			</div>
+		</div>
+		<div class="news__item n-card">
+			<div class="n-card__image"><img src="./images/news-image-1.webp" loading="lazy" alt=""></div>
+			<div class="n-card__bottom">
+				<h3 class="n-card__title">Для уличной прогулки</h3>
+				<a class="n-card__link" href="./">Подробнее</a>
+			</div>
+		</div>
+		<div class="news__item n-card">
+			<div class="n-card__image"><img src="./images/news-image-2.webp" loading="lazy" alt=""></div>
+			<div class="n-card__bottom">
+				<h3 class="n-card__title">Для занятий в зале</h3>
+				<a class="n-card__link" href="./">Подробнее</a>
+			</div>
+		</div>
+		<div class="news__item n-card">
+			<div class="n-card__image"><img src="./images/news-image-3.webp" loading="lazy" alt=""></div>
+			<div class="n-card__bottom">
+				<h3 class="n-card__title">Для бега и спорта</h3>
+				<a class="n-card__link" href="./">Подробнее</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="subscribe">
+	<div class="subscribe__inner container">
+		<h2 class="subscribe__title title">Узнавайте первыми</h2>
+		<div class="subscribe__text">Закрытые распродажи, акции<br/> и подборки образов в нашей рассылке</div>
+		<form action="/" class="subscribe__form">
+			<fieldset class="subscribe__fields">
+				<label class="subscribe__field" data-title="Введите номер телефона">
+					<input type="text" placeholder="+ 7 937 068 31 33">
+				</label>
+				<label class="subscribe__field" data-title="Введите город">
+					<input type="text" placeholder="Москва">
+				</label>
+				<label class="subscribe__field" data-title="Введите e-mail">
+					<input type="text" placeholder="office@volnui.ru">
+				</label>
+			</fieldset>
+			<div class="subscribe__bottom">
+				<div class="subscribe__agree">
+					<label class="subscribe__agree-item">
+						<input type="checkbox">
+						<a href="./">Я подтверждаю согласие с Политикой конфиденциальности и даю согласие на обработку персональных данных </a>
+					</label>
+					<label class="subscribe__agree-item">
+						<input type="checkbox">
+						<span>Я согласен получать e-mail рассылки о презентациях новых коллекций</span>
+					</label>
+				</div>
+				<button class="subscribe__submit button">Подписаться</button>
+			</div>
+		</form>
+	</div>
+</section>
+
+@@include("_bottom.html")
