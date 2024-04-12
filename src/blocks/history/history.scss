@@ -1,0 +1,77 @@
+.history {
+	$self: &;
+	margin-bottom: 80px;
+
+	&__inner {
+
+	}
+
+	&__title {
+		text-transform: uppercase;
+		text-align: center;
+		max-width: 700px;
+		margin: 0 auto 70px;
+
+		span {
+			display: block;
+
+			&:nth-child(1) {
+				font-size: 12px;
+				margin-bottom: 30px;
+			}
+			
+			&:nth-child(2) {
+				font-size: 26px;
+				line-height: 1.5;
+				@include range(26px, 18px, 780px, 360px);
+			}
+		}
+	}
+
+	&__items {
+		display: grid;
+		box-sizing: border-box;
+		grid-template-columns: repeat(3, 1fr);
+		max-width: 1440px;
+		margin: 0 auto;
+		
+		@include media('<=sm') {
+			display: block;
+		}
+	}
+
+	&__item {
+		box-sizing: border-box;
+		grid-column: 1 span;
+		padding: 80px 35px 35px;
+		border: 1px solid #F4F4F4;
+		
+		@include media('<=sm') {
+			display: block;
+			padding: 30px 20px;
+		}
+
+		&:not(:last-child) {
+			border-right-color: transparent;
+			
+			@include media('<=sm') {
+				border-right-color: #F4F4F4;
+				border-bottom-color: transparent;
+			}
+		}
+	}
+
+	&__i-title {
+		text-transform: uppercase;
+		margin-bottom: 30px;
+		font-size: 26px;
+		@include range(26px, 20px, 780px, 360px);
+	}
+
+	&__i-text {
+		span {
+			display: block;
+			margin-bottom: 10px;
+		}
+	}
+}

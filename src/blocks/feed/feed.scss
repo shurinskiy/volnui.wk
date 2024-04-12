@@ -50,6 +50,7 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-gap: 50px 60px;
+		transition: grid-gap 0.3s;
 		
 		@include media('<=xxxlg') {
 			grid-gap: 50px;

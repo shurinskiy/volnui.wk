@@ -71,7 +71,7 @@ export const menuToggle = (menu, toggles, options = {}) => {
 		
 
 		menuClose(e) {
-			if(e) e.stopPropagation();
+			e || e.stopPropagation();
 
 			menu.classList.remove(`${this.options.class}`);
 			menu.removeAttribute('style');
