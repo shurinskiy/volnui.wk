@@ -89,6 +89,10 @@
 	&__item {
 		box-sizing: border-box;
 		grid-column: span 1;
+		
+		&.showing {
+			animation: showItem 0.5s;
+		}
 	}
 
 	&__video {

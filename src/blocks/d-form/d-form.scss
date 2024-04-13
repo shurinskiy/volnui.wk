@@ -142,7 +142,11 @@
 		@include media('<=xs') {
 			display: flex;
 		}
-		
+			
+		@include media('<=xxs') {
+			min-height: 50px;
+		}
+	
 		button {
 			@extend %reset-button;
 			background-color: #fff;
@@ -158,7 +162,6 @@
 			
 			@include media('<=xxs') {
 				font-size: 12px;
-				height: 50px;
 			}
 
 			&:nth-child(1) {

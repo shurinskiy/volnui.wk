@@ -50,6 +50,12 @@
 		@include media('<=sm') {
 			margin-bottom: 20px;
 		}
+
+		&::-webkit-scrollbar {
+			@include media('<=xs') {
+				display: none;
+			}
+		}
 	}
 
 	&__tag {
