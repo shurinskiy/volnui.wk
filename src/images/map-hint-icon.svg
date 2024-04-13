@@ -1,0 +1,11 @@
+<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter)">
+	<circle cx="18.5" cy="14.5" r="10.5" fill="#3CFFB9"/>
+	<circle cx="18.5" cy="14.5" r="10" stroke="white"/>
+</g>
+<defs>
+<filter id="filter" x="0" y="0" width="37" height="37" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feDropShadow dx="-1" dy="3" stdDeviation="4" flood-opacity="0.4"/>
+</filter>
+</defs>
+</svg>

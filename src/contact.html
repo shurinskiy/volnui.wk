@@ -1,0 +1,70 @@
+@@include("_head.html") 
+@@include("_header.html")
+
+<div class="breadcrumbs container">
+	<a class="breadcrumbs__link" href="./">Главная</a>
+	<span class="breadcrumbs__current">Контакты</span>
+</div>
+
+<section class="contact" id="top">
+	<div class="contact__inner container">
+		<h1 class="contact__title title">Контакты</h1>
+		<div class="contact__map map">
+			<div class="map__panel">
+				<div class="map__p-inner">
+					@@include("_c-card.html", {"parent":"map__p-card","coords":"55.742884, 37.657745"})
+					@@include("_c-card.html", {"parent":"map__p-card","coords":"55.760753, 37.625100"})
+					@@include("_c-card.html", {"parent":"map__p-card","coords":"55.749851, 37.567060"})
+					@@include("_c-card.html", {"parent":"map__p-card","coords":"55.742884, 37.657745"})
+					@@include("_c-card.html", {"parent":"map__p-card","coords":"55.760753, 37.625100"})
+				</div>
+			</div>
+		</div>
+		<div class="contact__items">
+			<div class="contact__item">
+				@@include("_c-card.html", {"parent":"contact__card","coords":"55.742884, 37.657745"})
+			</div>
+			<div class="contact__item">
+				@@include("_c-card.html", {"parent":"contact__card","coords":"55.760753, 37.625100"})
+			</div>
+			<div class="contact__item">
+				@@include("_c-card.html", {"parent":"contact__card","coords":"55.749851, 37.567060"})
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="subscribe">
+	<div class="subscribe__inner container">
+		<h2 class="subscribe__title title">Узнавайте первыми</h2>
+		<div class="subscribe__text">Закрытые распродажи, акции<br/> и подборки образов в нашей рассылке</div>
+		<form action="/" class="subscribe__form">
+			<fieldset class="subscribe__fields">
+				<label class="subscribe__field" data-title="Введите номер телефона">
+					<input type="text" placeholder="+ 7 937 068 31 33">
+				</label>
+				<label class="subscribe__field" data-title="Введите город">
+					<input type="text" placeholder="Москва">
+				</label>
+				<label class="subscribe__field" data-title="Введите e-mail">
+					<input type="text" placeholder="office@volnui.ru">
+				</label>
+			</fieldset>
+			<div class="subscribe__bottom">
+				<div class="subscribe__agree">
+					<label class="subscribe__agree-item">
+						<input type="checkbox">
+						<a href="./">Я подтверждаю согласие с Политикой конфиденциальности и даю согласие на обработку персональных данных </a>
+					</label>
+					<label class="subscribe__agree-item">
+						<input type="checkbox">
+						<span>Я согласен получать e-mail рассылки о презентациях новых коллекций</span>
+					</label>
+				</div>
+				<button class="subscribe__submit button">Подписаться</button>
+			</div>
+		</form>
+	</div>
+</section>
+
+@@include("_bottom.html")

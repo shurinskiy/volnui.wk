@@ -80,9 +80,11 @@ export const selectTweaker = (items, name = 'select') => {
 			});
 		});
 	
-		document.addEventListener('mouseup', e => { 
-			if (!_wrapper.contains(e.target)) 
-				_wrapper.classList.remove(`${name}_opened`);
+		['click','touchstart'].forEach(event => {
+			document.addEventListener(event, e => { 
+				if (!_wrapper.contains(e.target)) 
+					_wrapper.classList.remove(`${name}_opened`);
+			}, { passive: false });
 		});
 	});
 }

@@ -13,3 +13,4 @@ import "../blocks/select/select.js";
 import "../blocks/head/head.js";
 import "../blocks/controls/controls.js";
 import "../blocks/info/info.js";
+import "../blocks/map/map.js";

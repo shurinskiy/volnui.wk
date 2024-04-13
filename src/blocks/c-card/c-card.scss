@@ -1,0 +1,49 @@
+.c-card {
+	$self: &;
+
+	&__title {
+		text-transform: uppercase;
+		color: #808080;
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+
+	&__address {
+		font-size: 14px;
+		line-height: 1.5;
+		margin-bottom: 10px;
+	}
+	
+	&__info {
+		font-size: 12px;
+		color: #808080;
+		line-height: 1.7;
+		margin-bottom: 30px;
+
+		a {
+			display: block;
+			text-decoration: none;
+			color: inherit;
+		}
+
+		span {
+			display: block;
+		}
+	}
+
+	&__maplink {
+		display: flex;
+		font-size: 11px;
+		align-items: center;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-weight: 700;
+		color: inherit;
+		
+		svg {
+			width: 9px;
+			height: 12px;
+			margin-right: 10px;
+		}
+	}
+}

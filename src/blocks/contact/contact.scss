@@ -1,0 +1,49 @@
+.contact {
+	$self: &;
+	margin-bottom: 80px;
+
+	&__inner {
+
+	}
+
+	&__title {
+		margin-bottom: 40px;
+	}
+
+	&__map {
+		max-width: 1440px;
+		margin: 0 auto 70px;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 20px;
+		max-width: 1300px;
+		margin: 0 auto;
+		
+		@include media('<=md') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		@include media('<=xs') {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__item {
+		box-sizing: border-box;
+		border: 1px solid #F2F2F2;
+	}
+	
+	&__card {
+		padding: 45px 20px;
+		max-width: 250px;
+		margin: 0 auto;
+		
+		@include media('<=xs') {
+			padding: 20px;
+			max-width: none;
+		}
+	}
+}
