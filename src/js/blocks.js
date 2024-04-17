@@ -14,3 +14,4 @@ import "../blocks/head/head.js";
 import "../blocks/controls/controls.js";
 import "../blocks/info/info.js";
 import "../blocks/map/map.js";
+import "../blocks/range/range.js";

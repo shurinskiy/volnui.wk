@@ -106,7 +106,6 @@ export const menuToggle = (menu, toggles, options = {}) => {
 						const isself = e.target.closest(`.${menu.className.split(' ')[0]}`);
 
 						if(isopen && !isself && !this.omitToClose(e)) {
-							console.log('here');
 							e.preventDefault();
 							this.menuClose(e);
 						}

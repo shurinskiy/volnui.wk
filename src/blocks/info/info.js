@@ -15,9 +15,10 @@ import { driveTabs } from "../../js/libs/driveTabs";
 	});
 
 	const hashListener = () => {
-		if (window.location.hash) {
-			const hash = window.location.hash.substring(1);
-			document.querySelector(`.info__buttons #${hash}`).click();
+		const buttons = document.querySelector('.info__buttons');
+
+		if (window.location.hash && buttons) {
+			buttons.querySelector(`#${window.location.hash.substring(1)}`).click();
 		}
 	}
 

@@ -5,8 +5,12 @@
 		entries.forEach(entry => ! entry.isIntersecting ? entry.target.pause() : entry.target.play());
 	}, { threshold: 0.4 });
 
-	videos.forEach(element => {
-		observer.observe(element);
+	videos.forEach(video => {
+		video.addEventListener('pause', e => e.currentTarget.controls = false);
+		video.addEventListener('play', e => e.currentTarget.controls = false);
+		video.controls = false;
+
+		observer.observe(video);
 	});	
 
 })();

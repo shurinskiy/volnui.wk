@@ -103,13 +103,18 @@
 		border: 1px solid #fff;
 		text-align: center;
 		margin: 0 auto;
-		
+		transition: background-color 0.3s;
+
 		@include media('<=lg') {
 			padding: 16px;
 		}
 		
 		@include media('<=md') {
 			display: none;
+		}
+
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.2);
 		}
 	}
 }
