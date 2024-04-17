@@ -1,3 +1,5 @@
+import { slideToggle } from "../../js/libs/helpers";
+
 (() => {
 	document.querySelector('button.controls__button_encrease')?.addEventListener('click', ({currentTarget: t}) => {
 		const feed = document.querySelector('.feed');
@@ -12,6 +14,13 @@
 				item.classList.remove('showing');
 			}, { once: true });
 		})
+	});
+
+	document.querySelector('button.controls__button_filter')?.addEventListener('click', ({currentTarget: t}) => {
+		slideToggle(document.querySelector('.filter'), {
+			duration: 400,
+			opacity: true
+		});
 	});
 
 })();

@@ -2,7 +2,12 @@
 	$self: &;
 	margin-bottom: 80px;
 	background-color: #fff;
-	
+
+	@keyframes showCard {
+		from { opacity: 0.1; }
+		to { opacity: 1; }
+	}
+
 	@include media('<=md') {
 		margin-bottom: 60px;
 	}
@@ -50,7 +55,7 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-gap: 50px 60px;
-		transition: grid-gap 0.3s;
+		transition: grid-gap 0.4s;
 		
 		@include media('<=xxxlg') {
 			grid-gap: 50px;
@@ -91,7 +96,7 @@
 		grid-column: span 1;
 		
 		&.showing {
-			animation: showItem 0.5s;
+			animation: showCard 0.5s;
 		}
 	}
 

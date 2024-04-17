@@ -1,14 +1,16 @@
 .range {
 	$self: &;
 	margin-bottom: 20px;
-
+	
 	&__values {
 		display: flex;
-
+		margin-bottom: 20px;
+		
 		input[type='number'] {
 			@extend %reset-input;
-			width: 100%;
+			font-size: 14px;
 			max-width: 50px;
+			width: 100%;
 
 			&:last-child {
 				text-align: right;

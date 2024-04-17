@@ -1,0 +1,137 @@
+.filter {
+	$self: &;
+	box-sizing: border-box;
+	margin-bottom: 40px;
+	background-color: #f5f5f5;
+	padding: 40px;
+	display: none;
+
+	&__items {
+		// column-count: 6;
+		// column-gap: 30px;
+
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		grid-gap: 20px;
+		
+		@include media('<=xxxlg') {
+			grid-template-columns: repeat(6, 1fr);
+		}
+		
+		@include media('<=xxlg') {
+			grid-template-columns: repeat(5, 1fr);
+		}
+		
+		@include media('<=xlg') {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		
+		@include media('<=md') {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		
+		@include media('<=xs') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__column {
+		break-inside: avoid;
+		margin-bottom: 25px;
+
+		&_range {
+			@include media('<=xxs') {
+				order: -1;
+				grid-column: span 2;
+			}
+		}
+	}
+
+	&__controls {
+
+		&_double {
+			column-count: 2;
+			column-gap: 30px;
+			max-width: 150px;
+		}
+	}
+
+	&__subtitle {
+		font-size: 13px;
+		text-transform: uppercase;
+		margin-bottom: 25px;
+	}
+
+	&__control {
+		display: flex;
+		color: #808080;
+		font-size: 14px;
+		align-items: center;
+		padding: 10px 0;
+
+		input[type='checkbox'] {
+			@extend %reset-button;
+			align-self: flex-start;
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid #D6D6D6;
+			background-color: #fff;
+			margin-right: 14px;
+			height: 15px;
+			width: 15px;
+			
+			&:checked::before {
+				display: block;
+				content: '';
+				width: 9px;
+				height: 7px;
+				background: url('#{$images-path}icons-sprite.svg#shape-check-view-dark') center / contain no-repeat transparent;
+			}
+		}
+		
+		input[type='radio'] {
+			@extend %reset-button;
+			align-self: flex-start;
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid #D6D6D6;
+			background-color: #fff;
+			margin-right: 14px;
+			border-radius: 50%;
+			height: 15px;
+			width: 15px;
+			
+			&:checked::before {
+				display: block;
+				content: '';
+				width: 5px;
+				height: 5px;
+				border-radius: 50%;
+				background-color: #222;
+			}
+		}
+	}
+
+	&__range {
+
+	}
+
+	&__submit {
+		@extend %reset-button;
+		box-sizing: border-box;
+		width: fit-content;
+		display: block;
+		line-height: 1;
+		font-size: 14px;
+		font-weight: 600;
+		padding: 25px 50px;
+		text-align: center;
+		text-transform: uppercase;
+		background-color: #3CFFB9;
+		font-family: "IN", sans-serif;
+	}
+}
