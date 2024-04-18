@@ -221,11 +221,12 @@
 		height: 100vh;
 		height: 100dvh;
 		position: fixed;
-		z-index: 12;
+		z-index: 13;
 		top: 0;
 		left: -360px; 
 		max-width: 360px;
 		transition: left 0.2s linear;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 
 		&.opened {
 			left: 0;

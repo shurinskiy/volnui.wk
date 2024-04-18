@@ -4,6 +4,9 @@
 	background-color: #fff;
 	padding: 90px 30px 20px 60px;
 	font-family: "IN", sans-serif;
+	display: flex;
+	box-sizing: border-box;
+	flex-flow: column nowrap;
 
 	@at-root body.outer & {
 		padding-top: 120px;
@@ -18,11 +21,8 @@
 	}
 
 	&__content {
-		display: flex;
-		box-sizing: border-box;
-		flex-flow: column nowrap;
 		overflow-y: auto;
-		height: 100%;
+		flex-grow: 1;
 
 		&::-webkit-scrollbar {
 			width: 5px;
@@ -159,10 +159,11 @@
 	}
 
 	&__panel {
-		margin-top: auto;
+		// margin-top: auto;
 		display: none;
 		align-items: center;
 		justify-content: space-around;
+		padding-top: 20px;
 		
 		@include media('<=xs') {
 			display: flex;

@@ -16,11 +16,8 @@ import { slideToggle } from "../../js/libs/helpers";
 		})
 	});
 
-	document.querySelector('button.controls__button_filter')?.addEventListener('click', ({currentTarget: t}) => {
-		slideToggle(document.querySelector('.filter'), {
-			duration: 400,
-			opacity: true
-		});
+	document.querySelector('button.controls__button_filter')?.addEventListener('click', e => {
+		slideToggle(document.querySelector('.filter'), { duration: 400, opacity: true });
 	});
 
 })();

@@ -1,0 +1,46 @@
+.aside {
+	$self: &;
+	position: fixed;
+	height: 100vh;
+	height: 100dvh;
+	z-index: 12;
+	right: -360px; top: 0;
+	max-width: 360px;
+	width: 100%;
+	padding: 60px 0 20px;
+	background-color: #fff;		
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+	transition: right 0.3s ease-out;
+
+	#{$self}__toggle {
+		display: block;
+	}
+	
+	#{$self}__close {
+		display: block;
+	}
+
+	#{$self}__content {
+		position: static;
+	}
+		
+	&.opened {
+		right: 0;
+	}
+
+	&__close {
+		@extend %reset-button;
+		display: none;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		width: 30px;
+		height: 30px;
+		background: url('#{$images-path}icons-sprite.svg#shape-close-view-dark') center / auto no-repeat transparent;
+		opacity: 0.5;
+	}
+
+	&__content {
+
+	}
+}

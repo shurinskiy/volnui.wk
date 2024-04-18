@@ -15,6 +15,8 @@ import { menuToggle } from "../../js/libs/menuToggle";
 	});
 	
 	// открытие и закрытие меню, свайпом на мобильных устройствах
+	// чтобы не перекрывались с сайдбаром
 	navi.addEventListener('swiped-left', (e) => menu.menuClose(e));
+	document.querySelector('button.controls__button_search')?.addEventListener('click', (e) => menu.menuClose(e));
 
 })();
