@@ -1,11 +1,10 @@
 .navi {
 	$self: &;
+	display: flex;
 	box-sizing: border-box;
 	background-color: #fff;
 	padding: 90px 30px 20px 60px;
 	font-family: "IN", sans-serif;
-	display: flex;
-	box-sizing: border-box;
 	flex-flow: column nowrap;
 
 	@at-root body.outer & {
@@ -21,6 +20,9 @@
 	}
 
 	&__content {
+		display: flex;
+		box-sizing: border-box;
+		flex-flow: column nowrap;
 		overflow-y: auto;
 		flex-grow: 1;
 
