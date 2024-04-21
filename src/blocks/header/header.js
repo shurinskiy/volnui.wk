@@ -9,16 +9,22 @@ import { menuToggle } from "../../js/libs/menuToggle";
 	const toggles = header.querySelectorAll('.header__toggle');
 	
 	const menu = menuToggle(navi, toggles, {
-		scrollLock: scrollLock,
 		omitToClose: '.modal',
-		class: 'opened'
+		class: 'opened',
+		open: function() {
+			scrollLock.disablePageScroll();
+		},
+		close: function() {
+			scrollLock.clearQueueScrollLocks();
+			scrollLock.enablePageScroll();
+		}
 	});
-	
+
 	// открытие и закрытие меню, свайпом на мобильных устройствах
+	navi.addEventListener('swiped-left', (e) => menu.close(e));
 	// чтобы не перекрывались с сайдбаром
-	navi.addEventListener('swiped-left', (e) => menu.menuClose(e));
 	document.querySelectorAll('button.controls__button_search, .header__button_search')?.forEach(button => {
-		button.addEventListener('click', (e) => menu.menuClose(e))
-	});;
+		button.addEventListener('click', (e) => menu.close(e, false));
+	});
 
 })();
