@@ -7,8 +7,8 @@
 	<link rel="stylesheet" href="style.css"> 
 	<title></title> 
 </head> 
-<body class="outer"> 
-<header class="header header_outer" >
+<body > 
+<header class="header " data-scroll-lock-fill-gap>
 	<div class="header__inner">
 		<button class="header__toggle">
 			<svg><use xlink:href="#icon-menu"></use></svg>
@@ -136,146 +136,292 @@
 </div>
 
 
-<section class="brand">
-	<div class="brand__inner container">
-		<div class="brand__path">
-			<a class="brand__p-link" href="./">Volnui</a>
-			<a class="brand__p-link" href="./">Главная</a>
-			<span class="brand__p-current" href="./">О нас</span>
-		</div>
-		<div class="brand__text">О бренде «Volnui»</div>
-	</div>
-</section>
+<div class="breadcrumbs container">
+	<a class="breadcrumbs__link" href="./">Каталог</a>
+	<span class="breadcrumbs__current">Корзина</span>
+</div>
 
-<section class="history">
-	<div class="history__inner container">
-		<h2 class="history__title">
-			<span>О бренде</span>
-			<span>Volnui уже два года делает<br/> людей красивыми и уверенными в себе</span>
-		</h2>
-		<div class="history__items">
-			<div class="history__item">
-				<h3 class="history__i-title">2024 год</h3>
-				<div class="history__i-text"><span>История компании берет свое начало</span> <span>в 2024 году вместе с открытием первого</span> <span>магазина VOLNUI в Москве</span></div>
-			</div>
-			<div class="history__item">
-				<h3 class="history__i-title">> 1 Млн</h3>
-				<div class="history__i-text"><span>Единиц готовой продукции</span> <span>в год изготавливается</span> <span>на нашем производстве</span></div>
-			</div>
-			<div class="history__item">
-				<h3 class="history__i-title">Для кого</h3>
-				<div class="history__i-text">Одежда бренда VOLNUI за счет своей универсальности – отличный вариант для людей разных возрастных категорий. Нас выбирают люди от 20 до 50 лет, которые хотят создать стильный образ для любого случая жизни</div>
-			</div>
-		</div>
+<section class="page">
+	<h1 class="page__title title container">Корзина</h1>
+	<div class="page__navi container">
+		<a class="page__navi-link" href="./cart.html"><span data-hint="3">Корзина</span></a>
+		<a class="page__navi-link active" href="./favorite.html"><span data-hint="5">Избранное</span></a>
 	</div>
-</section>
-
-<section class="about">
-	<div class="about__inner">
-		<div class="about__items">
-			<div class="about__top">
-				<div class="about__t-content">
-					<h2 class="about__t-title">О бренде Volnui</h2>
-					<div class="about__t-text">
-						<p>Бренд VOLNUI – одежда для тех, кто любит сочетать разные стили. С 2023 года мы создаем спортивные, классические и повседневные коллекции одежды для всех. Это позволяет каждому человеку сочетать разные элементы гардероба и создать для себя уникальный образ на разные случаи жизни.</p>
-						<p>VOLNUI любят за качество и натуральные тканиот турецких и итальянских фабрик. Вся одежда изготавливается преимущественно из хлопка, шерсти, льна, за которыми легко ухаживать</p>
-						<p>У нас свое собственное производство – начиная от лекал, разработки образцов и пошива партии. Все модели создаются по современным трендам и предпочтениям наших клиентов.</p>
-						<p>Одежда VOLNUI станет для вас воплощением всех ваших лучших образов</p>
+	<div class="page__inner">
+		<div class="page__content page__content_wide container feed feed_favorite">
+			<div class="feed__items">
+				<a class="feed__item card" href="./detail.html"  style="order: 1" >
+			<div class="card__tabs tab">
+				<div class="card__sliders tab__blocks">
+					<div class="card__slider tab__block swiper active" data-badge="new" data-discount="-34%">
+						<div class="swiper-wrapper">
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-1.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-2.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-3.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-4.webp" loading="lazy" alt="">
+							</div>
+						</div>
+						<div class="card__dots"></div>
+						<span class="card__link">Смотреть весь образ</span>
 					</div>
-					<a class="about__button" href="./">Заявка на сотрудничество</a>
+					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
+						<div class="swiper-wrapper">
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-5.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-3.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-2.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-1.webp" loading="lazy" alt="">
+							</div>
+						</div>
+						<div class="card__dots"></div>
+						<span class="card__link">Смотреть весь образ</span>
+					</div>
+				</div>
+				<div class="card__toggles tab__buttons toggle">
+					<button class="toggle__button tab__button active"></button>
+					<button class="toggle__button tab__button"></button>
+					<button class="card__favorite">
+						<svg><use xlink:href="#icon-favorite"></use></svg>
+					</button>
 				</div>
 			</div>
-			<div class="about__item">
-				<a class="about__i-watch" href="./"><svg><use xlink:href="#icon-play"></use></svg></a>
-				<h3 class="about__i-title">Техника производства</h3>
-				<div class="about__i-text">VOLNUI – это не только онлайн-магазин, но и собственная фабрика по производству одежды. Над каждой модной коллекцией трудятся дизайнер, модельер-конструктор, технолог, внимательный к деталям закройщик и портной</div>
+			<div class="card__bottom">
+				<h2 class="card__title">Спортивный топ</h2>
+				<div class="card__irrelevant">4599 ₽</div>
+				<div class="card__price">2999 ₽</div>
 			</div>
-			<div class="about__item">
-				<h3 class="about__i-title">Команда</h3>
-				<div class="about__i-text">Эта команда специалистов имеют большой опыт в легкой промышленности и создании одежды. Именно поэтому все модели получаются идеальными в посадке, утонченными и удобными в носке</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="news">
-	<h2 class="news__title title container">Новости</h2>
-	<div class="news__items container" data-hidden="3">
-		<div class="news__item n-card">
-			<div class="n-card__image"><img src="./images/news-image-1.webp" loading="lazy" alt=""></div>
-			<div class="n-card__bottom">
-				<h3 class="n-card__title">Для уличной прогулки</h3>
-				<a class="n-card__link" href="./">Подробнее</a>
-			</div>
-		</div>
-		<div class="news__item n-card">
-			<div class="n-card__image"><img src="./images/news-image-2.webp" loading="lazy" alt=""></div>
-			<div class="n-card__bottom">
-				<h3 class="n-card__title">Для занятий в зале</h3>
-				<a class="n-card__link" href="./">Подробнее</a>
-			</div>
-		</div>
-		<div class="news__item n-card">
-			<div class="n-card__image"><img src="./images/news-image-3.webp" loading="lazy" alt=""></div>
-			<div class="n-card__bottom">
-				<h3 class="n-card__title">Для бега и спорта</h3>
-				<a class="n-card__link" href="./">Подробнее</a>
-			</div>
-		</div>
-		<div class="news__item n-card">
-			<div class="n-card__image"><img src="./images/news-image-1.webp" loading="lazy" alt=""></div>
-			<div class="n-card__bottom">
-				<h3 class="n-card__title">Для уличной прогулки</h3>
-				<a class="n-card__link" href="./">Подробнее</a>
-			</div>
-		</div>
-		<div class="news__item n-card">
-			<div class="n-card__image"><img src="./images/news-image-2.webp" loading="lazy" alt=""></div>
-			<div class="n-card__bottom">
-				<h3 class="n-card__title">Для занятий в зале</h3>
-				<a class="n-card__link" href="./">Подробнее</a>
-			</div>
-		</div>
-		<div class="news__item n-card">
-			<div class="n-card__image"><img src="./images/news-image-3.webp" loading="lazy" alt=""></div>
-			<div class="n-card__bottom">
-				<h3 class="n-card__title">Для бега и спорта</h3>
-				<a class="n-card__link" href="./">Подробнее</a>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="subscribe">
-	<div class="subscribe__inner container">
-		<h2 class="subscribe__title title">Узнавайте первыми</h2>
-		<div class="subscribe__text">Закрытые распродажи, акции<br/> и подборки образов в нашей рассылке</div>
-		<form action="/" class="subscribe__form">
-			<fieldset class="subscribe__fields">
-				<label class="subscribe__field" data-title="Введите номер телефона">
-					<input type="text" placeholder="+ 7 937 068 31 33">
-				</label>
-				<label class="subscribe__field" data-title="Введите город">
-					<input type="text" placeholder="Москва">
-				</label>
-				<label class="subscribe__field" data-title="Введите e-mail">
-					<input type="text" placeholder="office@volnui.ru">
-				</label>
-			</fieldset>
-			<div class="subscribe__bottom">
-				<div class="subscribe__agree">
-					<label class="subscribe__agree-item">
-						<input type="checkbox">
-						<a href="./">Я подтверждаю согласие с Политикой конфиденциальности и даю согласие на обработку персональных данных </a>
-					</label>
-					<label class="subscribe__agree-item">
-						<input type="checkbox">
-						<span>Я согласен получать e-mail рассылки о презентациях новых коллекций</span>
-					</label>
+		</a>
+				<a class="feed__item card" href="./detail.html"  style="order: 2" >
+			<div class="card__tabs tab">
+				<div class="card__sliders tab__blocks">
+					<div class="card__slider tab__block swiper active" data-badge="new" data-discount="-34%">
+						<div class="swiper-wrapper">
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-1.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-2.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-3.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-4.webp" loading="lazy" alt="">
+							</div>
+						</div>
+						<div class="card__dots"></div>
+						<span class="card__link">Смотреть весь образ</span>
+					</div>
+					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
+						<div class="swiper-wrapper">
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-5.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-3.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-2.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-1.webp" loading="lazy" alt="">
+							</div>
+						</div>
+						<div class="card__dots"></div>
+						<span class="card__link">Смотреть весь образ</span>
+					</div>
 				</div>
-				<button class="subscribe__submit button">Подписаться</button>
+				<div class="card__toggles tab__buttons toggle">
+					<button class="toggle__button tab__button active"></button>
+					<button class="toggle__button tab__button"></button>
+					<button class="card__favorite">
+						<svg><use xlink:href="#icon-favorite"></use></svg>
+					</button>
+				</div>
 			</div>
-		</form>
+			<div class="card__bottom">
+				<h2 class="card__title">Спортивный топ</h2>
+				<div class="card__irrelevant">4599 ₽</div>
+				<div class="card__price">2999 ₽</div>
+			</div>
+		</a>
+				<a class="feed__item card" href="./detail.html"  style="order: 3" >
+			<div class="card__tabs tab">
+				<div class="card__sliders tab__blocks">
+					<div class="card__slider tab__block swiper active" data-badge="new" data-discount="-34%">
+						<div class="swiper-wrapper">
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-1.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-2.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-3.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-4.webp" loading="lazy" alt="">
+							</div>
+						</div>
+						<div class="card__dots"></div>
+						<span class="card__link">Смотреть весь образ</span>
+					</div>
+					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
+						<div class="swiper-wrapper">
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-5.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-3.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-2.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-1.webp" loading="lazy" alt="">
+							</div>
+						</div>
+						<div class="card__dots"></div>
+						<span class="card__link">Смотреть весь образ</span>
+					</div>
+				</div>
+				<div class="card__toggles tab__buttons toggle">
+					<button class="toggle__button tab__button active"></button>
+					<button class="toggle__button tab__button"></button>
+					<button class="card__favorite">
+						<svg><use xlink:href="#icon-favorite"></use></svg>
+					</button>
+				</div>
+			</div>
+			<div class="card__bottom">
+				<h2 class="card__title">Спортивный топ</h2>
+				<div class="card__irrelevant">4599 ₽</div>
+				<div class="card__price">2999 ₽</div>
+			</div>
+		</a>
+				<a class="feed__item card" href="./detail.html"  style="order: 4" >
+			<div class="card__tabs tab">
+				<div class="card__sliders tab__blocks">
+					<div class="card__slider tab__block swiper active" data-badge="new" data-discount="-34%">
+						<div class="swiper-wrapper">
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-1.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-2.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-3.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-4.webp" loading="lazy" alt="">
+							</div>
+						</div>
+						<div class="card__dots"></div>
+						<span class="card__link">Смотреть весь образ</span>
+					</div>
+					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
+						<div class="swiper-wrapper">
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-5.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-3.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-2.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-1.webp" loading="lazy" alt="">
+							</div>
+						</div>
+						<div class="card__dots"></div>
+						<span class="card__link">Смотреть весь образ</span>
+					</div>
+				</div>
+				<div class="card__toggles tab__buttons toggle">
+					<button class="toggle__button tab__button active"></button>
+					<button class="toggle__button tab__button"></button>
+					<button class="card__favorite">
+						<svg><use xlink:href="#icon-favorite"></use></svg>
+					</button>
+				</div>
+			</div>
+			<div class="card__bottom">
+				<h2 class="card__title">Спортивный топ</h2>
+				<div class="card__irrelevant">4599 ₽</div>
+				<div class="card__price">2999 ₽</div>
+			</div>
+		</a>
+				<a class="feed__item card" href="./detail.html"  style="order: 5" >
+			<div class="card__tabs tab">
+				<div class="card__sliders tab__blocks">
+					<div class="card__slider tab__block swiper active" data-badge="new" data-discount="-34%">
+						<div class="swiper-wrapper">
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-1.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-2.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-3.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-4.webp" loading="lazy" alt="">
+							</div>
+						</div>
+						<div class="card__dots"></div>
+						<span class="card__link">Смотреть весь образ</span>
+					</div>
+					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
+						<div class="swiper-wrapper">
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-5.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-3.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-2.webp" loading="lazy" alt="">
+							</div>
+							<div class="card__slide swiper-slide">
+								<img src="./images/card-image-1.webp" loading="lazy" alt="">
+							</div>
+						</div>
+						<div class="card__dots"></div>
+						<span class="card__link">Смотреть весь образ</span>
+					</div>
+				</div>
+				<div class="card__toggles tab__buttons toggle">
+					<button class="toggle__button tab__button active"></button>
+					<button class="toggle__button tab__button"></button>
+					<button class="card__favorite">
+						<svg><use xlink:href="#icon-favorite"></use></svg>
+					</button>
+				</div>
+			</div>
+			<div class="card__bottom">
+				<h2 class="card__title">Спортивный топ</h2>
+				<div class="card__irrelevant">4599 ₽</div>
+				<div class="card__price">2999 ₽</div>
+			</div>
+		</a>
+			</div>
+		</div>
 	</div>
 </section>
 

@@ -1,0 +1,53 @@
+.purchase {
+	$self: &;
+	padding: 70px 50px;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(150px, auto)) 1fr;
+	align-items: center;
+	grid-gap: 20px;
+	
+	@include media('<=sm') {
+		padding: 50px 30px;
+	}
+	
+	@include media('<=xs') {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 40px 20px;
+		grid-gap: 20px 40px;
+	}
+
+	&__item {
+		flex-grow: 1;
+		box-sizing: border-box;
+		text-transform: uppercase;
+
+		@include media('<=xs') {
+			&:first-child {
+				margin-left: auto;
+			}
+		}
+
+		span {
+			display: block;
+
+			&:nth-child(1) {
+				font-size: 10px;
+				margin-bottom: 10px;
+				color: #999;
+			}
+			
+			&:nth-child(2) {
+				font-size: 18px;
+			}
+		}
+	}
+
+	&__button {
+		margin-left: auto;
+		
+		@include media('<=xs') {
+			grid-column: span 2;
+			margin: auto;
+		}
+	}
+}

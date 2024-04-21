@@ -25,15 +25,15 @@
 			<a class="header__link" href="./info.html">сотрудничество</a>
 			<a class="header__link" href="./contact.html">контакты</a>
 		</div>
-		<a class="header__button header__button_card" href="./" data-cart="2">
+		<a class="header__button header__button_card" href="./cart.html" data-cart="3">
 			<svg><use xlink:href="#icon-cart"></use></svg>
 		</a>
-		<button class="header__button">
+		<button class="header__button header__button_search">
 			<svg><use xlink:href="#icon-zoom"></use></svg>
 		</button>
-		<button class="header__button">
+		<a class="header__button header__button_fav" href="./favorite.html">
 			<svg><use xlink:href="#icon-heart"></use></svg>
-		</button>
+		</a>
 	</div>
 	<div class="header__navi navi">
 		<div class="navi__content" data-scroll-lock-scrollable>
@@ -103,15 +103,38 @@
 			</a>
 		</div>
 		<div class="navi__panel">
-			<button class="header__button header__button_mobile">
+			<button class="header__button header__button_search header__button_mobile">
 				<svg><use xlink:href="#icon-zoom"></use></svg>
 			</button>
-			<button class="header__button header__button_mobile">
+			<a class="header__button header__button_fav header__button_mobile" href="./favorite.html">
 				<svg><use xlink:href="#icon-heart"></use></svg>
-			</button>
+			</a>
 		</div>
 	</div>
 </header>
+
+<div class="search">
+	<div class="search__top">
+		<h2 class="search__title">Поиск</h2>
+		<button class="search__close"></button>
+	</div>
+	<form class="search__form" action="./">
+		<h3 class="search__subtitle">Что вы ищете?</h3>
+		<div class="search__fieldset">
+			<input type="text" placeholder="Женское платье">
+			<button type="button"></button>
+		</div>
+	</form>
+	<div class="search__also">
+		<h3 class="search__subtitle">Люди так же ищут</h3>
+		<a href="./">Женское платье</a>
+		<a href="./">Кардиган</a>
+		<a href="./">Брюки</a>
+		<a href="./">Блузы</a>
+		<a href="./">Жакеты</a>
+	</div>
+</div>
+
 
 <div class="breadcrumbs container">
 	<a class="breadcrumbs__link" href="./">Каталог</a>
@@ -283,7 +306,7 @@
 <section class="feed">
 	<h1 class="feed__title title title_left container">Весь образ</h1>
 	<div class="feed__items container">
-		<div class="feed__item card"  style="order: 1" >
+		<a class="feed__item card" href="./detail.html"  style="order: 1" >
 			<div class="card__tabs tab">
 				<div class="card__sliders tab__blocks">
 					<div class="card__slider tab__block swiper active" data-badge="new" data-discount="-34%">
@@ -302,7 +325,7 @@
 							</div>
 						</div>
 						<div class="card__dots"></div>
-						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
+						<span class="card__link">Смотреть весь образ</span>
 					</div>
 					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
 						<div class="swiper-wrapper">
@@ -320,12 +343,15 @@
 							</div>
 						</div>
 						<div class="card__dots"></div>
-						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
+						<span class="card__link">Смотреть весь образ</span>
 					</div>
 				</div>
 				<div class="card__toggles tab__buttons toggle">
 					<button class="toggle__button tab__button active"></button>
 					<button class="toggle__button tab__button"></button>
+					<button class="card__favorite">
+						<svg><use xlink:href="#icon-favorite"></use></svg>
+					</button>
 				</div>
 			</div>
 			<div class="card__bottom">
@@ -333,8 +359,8 @@
 				<div class="card__irrelevant">4599 ₽</div>
 				<div class="card__price">2999 ₽</div>
 			</div>
-		</div>
-		<div class="feed__item card"  style="order: 2" >
+		</a>
+		<a class="feed__item card" href="./detail.html"  style="order: 2" >
 			<div class="card__tabs tab">
 				<div class="card__sliders tab__blocks">
 					<div class="card__slider tab__block swiper active" data-badge="new" data-discount="-34%">
@@ -353,7 +379,7 @@
 							</div>
 						</div>
 						<div class="card__dots"></div>
-						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
+						<span class="card__link">Смотреть весь образ</span>
 					</div>
 					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
 						<div class="swiper-wrapper">
@@ -371,12 +397,15 @@
 							</div>
 						</div>
 						<div class="card__dots"></div>
-						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
+						<span class="card__link">Смотреть весь образ</span>
 					</div>
 				</div>
 				<div class="card__toggles tab__buttons toggle">
 					<button class="toggle__button tab__button active"></button>
 					<button class="toggle__button tab__button"></button>
+					<button class="card__favorite">
+						<svg><use xlink:href="#icon-favorite"></use></svg>
+					</button>
 				</div>
 			</div>
 			<div class="card__bottom">
@@ -384,8 +413,8 @@
 				<div class="card__irrelevant">4599 ₽</div>
 				<div class="card__price">2999 ₽</div>
 			</div>
-		</div>
-		<div class="feed__item card"  style="order: 3" >
+		</a>
+		<a class="feed__item card" href="./detail.html"  style="order: 3" >
 			<div class="card__tabs tab">
 				<div class="card__sliders tab__blocks">
 					<div class="card__slider tab__block swiper active" data-badge="new" data-discount="-34%">
@@ -404,7 +433,7 @@
 							</div>
 						</div>
 						<div class="card__dots"></div>
-						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
+						<span class="card__link">Смотреть весь образ</span>
 					</div>
 					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
 						<div class="swiper-wrapper">
@@ -422,12 +451,15 @@
 							</div>
 						</div>
 						<div class="card__dots"></div>
-						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
+						<span class="card__link">Смотреть весь образ</span>
 					</div>
 				</div>
 				<div class="card__toggles tab__buttons toggle">
 					<button class="toggle__button tab__button active"></button>
 					<button class="toggle__button tab__button"></button>
+					<button class="card__favorite">
+						<svg><use xlink:href="#icon-favorite"></use></svg>
+					</button>
 				</div>
 			</div>
 			<div class="card__bottom">
@@ -435,8 +467,8 @@
 				<div class="card__irrelevant">4599 ₽</div>
 				<div class="card__price">2999 ₽</div>
 			</div>
-		</div>
-		<div class="feed__item card"  style="order: 4" >
+		</a>
+		<a class="feed__item card" href="./detail.html"  style="order: 4" >
 			<div class="card__tabs tab">
 				<div class="card__sliders tab__blocks">
 					<div class="card__slider tab__block swiper active" data-badge="new" data-discount="-34%">
@@ -455,7 +487,7 @@
 							</div>
 						</div>
 						<div class="card__dots"></div>
-						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
+						<span class="card__link">Смотреть весь образ</span>
 					</div>
 					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
 						<div class="swiper-wrapper">
@@ -473,12 +505,15 @@
 							</div>
 						</div>
 						<div class="card__dots"></div>
-						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
+						<span class="card__link">Смотреть весь образ</span>
 					</div>
 				</div>
 				<div class="card__toggles tab__buttons toggle">
 					<button class="toggle__button tab__button active"></button>
 					<button class="toggle__button tab__button"></button>
+					<button class="card__favorite">
+						<svg><use xlink:href="#icon-favorite"></use></svg>
+					</button>
 				</div>
 			</div>
 			<div class="card__bottom">
@@ -486,14 +521,14 @@
 				<div class="card__irrelevant">4599 ₽</div>
 				<div class="card__price">2999 ₽</div>
 			</div>
-		</div>
+		</a>
 	</div>
 </section>
 
 <section class="feed">
 	<h1 class="feed__title title title_left container">Возможно вам понравится</h1>
 	<div class="feed__items container">
-		<div class="feed__item card"  style="order: 1" >
+		<a class="feed__item card" href="./detail.html"  style="order: 1" >
 			<div class="card__tabs tab">
 				<div class="card__sliders tab__blocks">
 					<div class="card__slider tab__block swiper active" data-badge="new" data-discount="-34%">
@@ -512,7 +547,7 @@
 							</div>
 						</div>
 						<div class="card__dots"></div>
-						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
+						<span class="card__link">Смотреть весь образ</span>
 					</div>
 					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
 						<div class="swiper-wrapper">
@@ -530,12 +565,15 @@
 							</div>
 						</div>
 						<div class="card__dots"></div>
-						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
+						<span class="card__link">Смотреть весь образ</span>
 					</div>
 				</div>
 				<div class="card__toggles tab__buttons toggle">
 					<button class="toggle__button tab__button active"></button>
 					<button class="toggle__button tab__button"></button>
+					<button class="card__favorite">
+						<svg><use xlink:href="#icon-favorite"></use></svg>
+					</button>
 				</div>
 			</div>
 			<div class="card__bottom">
@@ -543,8 +581,8 @@
 				<div class="card__irrelevant">4599 ₽</div>
 				<div class="card__price">2999 ₽</div>
 			</div>
-		</div>
-		<div class="feed__item card"  style="order: 2" >
+		</a>
+		<a class="feed__item card" href="./detail.html"  style="order: 2" >
 			<div class="card__tabs tab">
 				<div class="card__sliders tab__blocks">
 					<div class="card__slider tab__block swiper active" data-badge="new" data-discount="-34%">
@@ -563,7 +601,7 @@
 							</div>
 						</div>
 						<div class="card__dots"></div>
-						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
+						<span class="card__link">Смотреть весь образ</span>
 					</div>
 					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
 						<div class="swiper-wrapper">
@@ -581,12 +619,15 @@
 							</div>
 						</div>
 						<div class="card__dots"></div>
-						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
+						<span class="card__link">Смотреть весь образ</span>
 					</div>
 				</div>
 				<div class="card__toggles tab__buttons toggle">
 					<button class="toggle__button tab__button active"></button>
 					<button class="toggle__button tab__button"></button>
+					<button class="card__favorite">
+						<svg><use xlink:href="#icon-favorite"></use></svg>
+					</button>
 				</div>
 			</div>
 			<div class="card__bottom">
@@ -594,8 +635,8 @@
 				<div class="card__irrelevant">4599 ₽</div>
 				<div class="card__price">2999 ₽</div>
 			</div>
-		</div>
-		<div class="feed__item card"  style="order: 3" >
+		</a>
+		<a class="feed__item card" href="./detail.html"  style="order: 3" >
 			<div class="card__tabs tab">
 				<div class="card__sliders tab__blocks">
 					<div class="card__slider tab__block swiper active" data-badge="new" data-discount="-34%">
@@ -614,7 +655,7 @@
 							</div>
 						</div>
 						<div class="card__dots"></div>
-						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
+						<span class="card__link">Смотреть весь образ</span>
 					</div>
 					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
 						<div class="swiper-wrapper">
@@ -632,12 +673,15 @@
 							</div>
 						</div>
 						<div class="card__dots"></div>
-						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
+						<span class="card__link">Смотреть весь образ</span>
 					</div>
 				</div>
 				<div class="card__toggles tab__buttons toggle">
 					<button class="toggle__button tab__button active"></button>
 					<button class="toggle__button tab__button"></button>
+					<button class="card__favorite">
+						<svg><use xlink:href="#icon-favorite"></use></svg>
+					</button>
 				</div>
 			</div>
 			<div class="card__bottom">
@@ -645,8 +689,8 @@
 				<div class="card__irrelevant">4599 ₽</div>
 				<div class="card__price">2999 ₽</div>
 			</div>
-		</div>
-		<div class="feed__item card"  style="order: 4" >
+		</a>
+		<a class="feed__item card" href="./detail.html"  style="order: 4" >
 			<div class="card__tabs tab">
 				<div class="card__sliders tab__blocks">
 					<div class="card__slider tab__block swiper active" data-badge="new" data-discount="-34%">
@@ -665,7 +709,7 @@
 							</div>
 						</div>
 						<div class="card__dots"></div>
-						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
+						<span class="card__link">Смотреть весь образ</span>
 					</div>
 					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
 						<div class="swiper-wrapper">
@@ -683,12 +727,15 @@
 							</div>
 						</div>
 						<div class="card__dots"></div>
-						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
+						<span class="card__link">Смотреть весь образ</span>
 					</div>
 				</div>
 				<div class="card__toggles tab__buttons toggle">
 					<button class="toggle__button tab__button active"></button>
 					<button class="toggle__button tab__button"></button>
+					<button class="card__favorite">
+						<svg><use xlink:href="#icon-favorite"></use></svg>
+					</button>
 				</div>
 			</div>
 			<div class="card__bottom">
@@ -696,10 +743,10 @@
 				<div class="card__irrelevant">4599 ₽</div>
 				<div class="card__price">2999 ₽</div>
 			</div>
-		</div>
+		</a>
 		<div class="feed__video feed__video_last feed__video_wide">
 			<a href="./"><svg><use xlink:href="#icon-arr-right"></use></svg></a>
-			<video src="./images/video-2.mp4" muted="muted" loop></video>
+			<video src="./images/video-2.mp4" muted="muted" poster="./images/video-poster-wide.webp" loop playsinline></video>
 		</div>
 	</div>
 </section>

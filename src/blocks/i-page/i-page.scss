@@ -1,7 +1,6 @@
 .i-page {
 	$self: &;
 	box-sizing: border-box;
-	background-color: #fff;
 	padding: 100px 60px 60px;
 	
 	@include media('<=sm') {

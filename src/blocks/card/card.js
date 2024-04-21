@@ -8,6 +8,7 @@ import { Pagination } from 'swiper/modules';
 			modules: [Pagination],
 			spaceBetween: 0,
 			slidesPerView: 1,
+			threshold: 10,
 			pagination: {
 				el: `.card__dots_${i}`,
 				bulletClass: 'card__dot',
@@ -20,5 +21,12 @@ import { Pagination } from 'swiper/modules';
 			}
 		});
 	});
+
+	document.querySelectorAll('.card .card__favorite').forEach(button => {
+		button.addEventListener('click', e => {
+			e.preventDefault();
+			e.currentTarget.classList.toggle('card__favorite_set');
+		})
+	})
 
 })();

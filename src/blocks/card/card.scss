@@ -5,6 +5,8 @@
 	font-family: "CR", sans-serif;
 	display: flex;
 	flex-flow: column nowrap;
+	text-decoration: none;
+	color: inherit;
 	
 	&__tabs {
 		position: relative;
@@ -138,10 +140,37 @@
 		position: absolute;
 		bottom: 20px;
 		left: 10px;
+		right: 10px;
 		z-index: 2;
+		min-height: 25px;
+		display: flex;
+		align-items: center;
 		
 		@include media('<=xxxs') {
 			bottom: 15px;
+		}
+	}
+
+	&__favorite {
+		@extend %reset-button;
+		box-sizing: border-box;
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		svg {
+			fill: transparent;
+			stroke-width: 2;
+			stroke: #b1b1b1;
+			width: 22px;
+			height: 18px;
+			transition: stroke 0.2s, fill 0.2s;
+		}
+		
+		&_set svg {
+			stroke: #cf5554;
+			fill: #cf5554;
 		}
 	}
 

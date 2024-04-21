@@ -1,0 +1,124 @@
+.page {
+	$self: &;
+
+	&__title {
+		max-width: 1240px !important;
+		min-height: 90px;
+		margin-bottom: 60px;
+		
+		@include media('<=sm') {
+			min-height: 70px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__navi {
+		max-width: 1240px !important;
+		display: flex;
+		justify-content: center;
+
+		&_wide {
+			#{$self}__button {
+				flex-grow: 1;
+			}
+		}
+
+		@include media('<=xxxs') {
+			// display: block;
+		}
+	}
+
+	&__navi-link {
+		@extend %reset-button;
+		display: block;
+		font-family: "CR", sans-serif;
+		font-size: 13px;
+		text-transform: uppercase;
+		font-weight: 700;
+		padding: 0 30px;
+		display: flex;
+		align-items: center;
+		
+		@include media('<=xxxs') {
+			// padding: 0;
+			// text-align: left;
+			// min-width: 50%;
+		}
+	
+		span {
+			display: block;
+			width: fit-content;
+			border-bottom: 2px solid transparent;
+			transition: border-color 0.3s;
+			position: relative;
+			padding: 0 0 40px;
+			margin: 0 auto;
+			
+			@include media('<=xxxs') {
+				padding: 0 0 20px;
+				// padding: 15px 0 5px;
+				// margin: 0;
+			}
+
+			&::before {
+				display: block;
+				content: attr(data-hint);
+				position: absolute;
+				bottom: 100%;
+				left: 100%;
+				font-size: 15px;
+				font-weight: 300;
+			}
+		}
+		
+		&.active span {
+			border-color: #000;
+		}
+	}
+
+	&__inner {
+		background-color: #F8F8F8;
+		padding: 60px 0 1px;
+		
+		@include media('<=sm') {
+			padding: 40px 0 1px;
+		}
+		
+		@include media('<=xs') {
+			padding: 30px 0 1px;
+		}
+	}
+
+	&__content {
+		max-width: 950px !important;
+		background-color: #fff;
+		margin-bottom: 60px;
+		padding: 70px 50px;
+		
+		@include media('<=lg') {
+			padding: 50px 30px;
+		}
+		
+		@include media('<=sm') {
+			margin-bottom: 40px;
+		}
+		
+		@include media('<=xs') {
+			padding: 40px 20px;
+			margin-bottom: 30px;
+		}
+		
+		@include media('<=xs') {
+			padding: 30px 10px;
+		}
+		
+		@include media('<=xxxs') {
+			background-color: transparent;
+			padding: 0;
+		}
+
+		&_wide {
+			max-width: 1240px !important;
+		}
+	}
+}

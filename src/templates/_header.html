@@ -15,15 +15,15 @@
 			<a class="header__link" href="./info.html">сотрудничество</a>
 			<a class="header__link" href="./contact.html">контакты</a>
 		</div>
-		<a class="header__button header__button_card" href="./" data-cart="2">
+		<a class="header__button header__button_card" href="./cart.html" data-cart="3">
 			<svg><use xlink:href="#icon-cart"></use></svg>
 		</a>
-		<button class="header__button">
+		<button class="header__button header__button_search">
 			<svg><use xlink:href="#icon-zoom"></use></svg>
 		</button>
-		<button class="header__button">
+		<a class="header__button header__button_fav" href="./favorite.html">
 			<svg><use xlink:href="#icon-heart"></use></svg>
-		</button>
+		</a>
 	</div>
 	<div class="header__navi navi">
 		<div class="navi__content" data-scroll-lock-scrollable>
@@ -93,12 +93,34 @@
 			</a>
 		</div>
 		<div class="navi__panel">
-			<button class="header__button header__button_mobile">
+			<button class="header__button header__button_search header__button_mobile">
 				<svg><use xlink:href="#icon-zoom"></use></svg>
 			</button>
-			<button class="header__button header__button_mobile">
+			<a class="header__button header__button_fav header__button_mobile" href="./favorite.html">
 				<svg><use xlink:href="#icon-heart"></use></svg>
-			</button>
+			</a>
 		</div>
 	</div>
 </header>
+
+<div class="search">
+	<div class="search__top">
+		<h2 class="search__title">Поиск</h2>
+		<button class="search__close"></button>
+	</div>
+	<form class="search__form" action="./">
+		<h3 class="search__subtitle">Что вы ищете?</h3>
+		<div class="search__fieldset">
+			<input type="text" placeholder="Женское платье">
+			<button type="button"></button>
+		</div>
+	</form>
+	<div class="search__also">
+		<h3 class="search__subtitle">Люди так же ищут</h3>
+		<a href="./">Женское платье</a>
+		<a href="./">Кардиган</a>
+		<a href="./">Брюки</a>
+		<a href="./">Блузы</a>
+		<a href="./">Жакеты</a>
+	</div>
+</div>

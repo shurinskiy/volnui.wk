@@ -1,4 +1,4 @@
-<div class="feed__item card"  @@if(this.order){style="order: @@order"} >
+<a class="feed__item card" href="./detail.html"  @@if(this.order){style="order: @@order"} >
 			<div class="card__tabs tab">
 				<div class="card__sliders tab__blocks">
 					<div class="card__slider tab__block swiper active" data-badge="new" data-discount="-34%">
@@ -17,7 +17,7 @@
 							</div>
 						</div>
 						<div class="card__dots"></div>
-						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
+						<span class="card__link">Смотреть весь образ</span>
 					</div>
 					<div class="card__slider tab__block swiper" data-badge="new" data-discount="-20%">
 						<div class="swiper-wrapper">
@@ -35,12 +35,15 @@
 							</div>
 						</div>
 						<div class="card__dots"></div>
-						<a class="card__link" href="./detail.html">Смотреть весь образ</a>
+						<span class="card__link">Смотреть весь образ</span>
 					</div>
 				</div>
 				<div class="card__toggles tab__buttons toggle">
 					<button class="toggle__button tab__button active"></button>
 					<button class="toggle__button tab__button"></button>
+					<button class="card__favorite">
+						<svg><use xlink:href="#icon-favorite"></use></svg>
+					</button>
 				</div>
 			</div>
 			<div class="card__bottom">
@@ -48,4 +51,4 @@
 				<div class="card__irrelevant">4599 ₽</div>
 				<div class="card__price">2999 ₽</div>
 			</div>
-		</div>
+		</a>

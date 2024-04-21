@@ -1,0 +1,35 @@
+@@include("_head.html") 
+@@include("_header.html")
+
+<div class="breadcrumbs container">
+	<a class="breadcrumbs__link" href="./">Каталог</a>
+	<span class="breadcrumbs__current">Корзина</span>
+</div>
+
+<section class="page">
+	<h1 class="page__title title container">Корзина</h1>
+	<div class="page__navi container">
+		<a class="page__navi-link active" href="./cart.html"><span data-hint="3">Корзина</span></a>
+		<a class="page__navi-link" href="./favorite.html"><span data-hint="5">Избранное</span></a>
+	</div>
+	<div class="page__inner">
+		<div class="page__content page__content_wide container cart">
+			@@include("_c-row.html")
+			@@include("_c-row.html")
+			@@include("_c-row.html")
+		</div>
+		<div class="page__content page__content_wide container purchase">
+			<div class="purchase__item">
+				<span>Всего товаров</span>
+				<span>25 штук</span>
+			</div>
+			<div class="purchase__item">
+				<span>Стоимость</span>
+				<span>135 000 руб.</span>
+			</div>
+			<a class="purchase__button button" href="./">Оформить заказ</a>
+		</div>
+	</div>
+</section>
+
+@@include("_bottom.html")

@@ -36,7 +36,21 @@
 				display: none;
 			}		
 		}
+	}
 
+	&_favorite {
+		
+		#{$self}__items {
+			grid-gap: 50px 24px;
+		
+			@include media('<=xs') {
+				grid-gap: 30px 10px;
+			}
+			
+			@include media('<=xxs') {
+				grid-gap: 20px 5px;
+			}
+		}
 	}
 
 	&__title {
