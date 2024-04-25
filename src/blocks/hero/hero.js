@@ -11,13 +11,22 @@ import { Autoplay, Pagination } from 'swiper/modules';
 	const current = status.querySelector('.hero__s-current');
 	const progress = status.querySelector('.hero__s-progress span');
 
-	const statusRender = (sw) => {
+	const changeHandler = (sw) => {
 		let done = sw.realIndex + 1;
 		let max = sw.slides.length;
 
 		total.innerText = ("0" + max).slice(-2);
 		current.innerText = ("0" + done).slice(-2);
 		progress.style.width = (done / max * 100) + '%';
+
+		sw.slides.forEach(slide => {
+			let video = slide.querySelector('video');
+
+			if(video) {
+				video.controls = false;
+				(slide.dataset.swiperSlideIndex == sw.realIndex) ? video.play() : video.pause();
+			}
+		});
 	}
 
 	new Swiper(slider, {
@@ -36,8 +45,8 @@ import { Autoplay, Pagination } from 'swiper/modules';
 			clickable: true,
 		},
 		on: {
-			init: statusRender,
-			slideChangeTransitionEnd: statusRender
+			init: changeHandler,
+			slideChangeTransitionEnd: changeHandler,
 		}
 	});
 
