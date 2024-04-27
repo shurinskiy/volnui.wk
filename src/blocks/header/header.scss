@@ -14,7 +14,6 @@
 		height: 120px;
 		margin: 0 0 -120px;
 		position: relative;
-		z-index: 2;
 
 		#{$self}__logo {
 			max-width: 250px;
@@ -223,8 +222,8 @@
 		position: fixed;
 		z-index: 13;
 		top: 0;
-		left: -440px; 
-		max-width: 440px;
+		left: -450px; 
+		max-width: 450px;
 		transition: left 0.2s linear;
 		box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 

@@ -16,10 +16,16 @@ import { menuToggle } from "../../js/libs/menuToggle";
 
 			Object.assign(this.style, { maxWidth: maxw + scrollw + 'px' });
 			scrollLock.disablePageScroll();
+			document.body.classList.add('underlay');
 		},
 		close: function() {
 			scrollLock.clearQueueScrollLocks();
 			scrollLock.enablePageScroll();
+			document.body.classList.add('underlay_closing');
+			
+			this.addEventListener('transitionend', e => {
+				document.body.classList.remove('underlay','underlay_closing');
+			}, { once: true });
 		}
 	});
 	

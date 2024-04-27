@@ -1,0 +1,39 @@
+.complete {
+	$self: &;
+
+	&__title {
+		font-family: "CR", sans-serif;
+		font-size: 40px;
+		font-weight: 300;
+		text-align: center;
+		padding-bottom: 40px;
+		margin-bottom: 40px;
+		border-bottom: 1px solid #eee;
+		
+		@include media('<=lg') {
+			font-size: 34px;
+		}
+		
+		@include media('<=md') {
+			font-size: 30px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 24px;
+		}
+	}
+
+	&__text {
+		font-size: 20px;
+		font-weight: 300;
+		text-align: center;
+		padding-bottom: 40px;
+		margin: 0 auto 40px;
+		border-bottom: 1px solid #eee;
+		max-width: 280px;
+	}
+
+	&__button {
+		margin: auto;
+	}
+}

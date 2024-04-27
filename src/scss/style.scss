@@ -79,9 +79,29 @@ body, html {
 
 body {
 	padding-top: 90px;
+	position: relative;
 
 	&.outer {
 		padding: 0;
+	}
+
+	&.underlay {
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			z-index: 12;
+			top: 0; left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.7);
+			transition: opacity 0.4s;
+			animation: showItem 0.4s;
+		}
+
+		&_closing::before {
+			opacity: 0;
+		}
 	}
 }
 

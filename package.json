@@ -63,7 +63,7 @@
 		"from": "src/**/*.html",
 		"to": "src/blocks",
 		"js": "src/js/blocks.js",
-		"omit": "@@,js-,swiper,active,opened,svg,icon-box,disabled"
+		"omit": "@@,js-,active,disabled,opened,closing,showing,svg,icon-box,underlay,swiper"
 	},
 	"dependencies": {
 		"enquire.js": "^2.1.6",
