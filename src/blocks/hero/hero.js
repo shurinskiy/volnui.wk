@@ -21,10 +21,13 @@ import { Autoplay, Pagination } from 'swiper/modules';
 
 		sw.slides.forEach(slide => {
 			let video = slide.querySelector('video');
+			let isPlaying;
 
 			if(video) {
 				video.controls = false;
-				(slide.dataset.swiperSlideIndex == sw.realIndex) ? video.play() : video.pause();
+				isPlaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > video.HAVE_CURRENT_DATA;
+
+				(slide.dataset.swiperSlideIndex == sw.realIndex) ? (isPlaying || video.play()) : video.pause();
 			}
 		});
 	}

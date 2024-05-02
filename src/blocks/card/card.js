@@ -6,8 +6,9 @@ import { Pagination } from 'swiper/modules';
 
 		new Swiper(item, {
 			modules: [Pagination],
-			spaceBetween: 0,
+			watchOverflow: true,
 			slidesPerView: 1,
+			spaceBetween: 0,
 			threshold: 10,
 			pagination: {
 				el: `.card__dots_${i}`,

@@ -29,7 +29,7 @@
 			top: 10px;
 		}
 		
-		&::before {
+		&[data-badge]::before {
 			content: attr(data-badge);
 			background-color: #3CFFB9;
 			padding: 5px 7px 4px;
@@ -42,7 +42,7 @@
 			}
 		}
 		
-		&::after {
+		&[data-discount]::after {
 			content: attr(data-discount);
 			background-color: #fff;
 			padding: 3px 9px 2px;
@@ -82,6 +82,10 @@
 		bottom: 5px;
 		left: 10px;
 		right: 10px;
+
+		&.swiper-pagination-lock {
+			display: none;
+		}
 	}
 
 	&__dot {

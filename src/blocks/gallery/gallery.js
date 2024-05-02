@@ -25,8 +25,9 @@ import { driveTabs } from "../../js/libs/driveTabs";
 		const enableSwiper = (el) => {
 			swiper = new Swiper(el, {
 				modules: [Pagination],
-				spaceBetween: 0,
+				watchOverflow: true,
 				slidesPerView: 1,
+				spaceBetween: 0,
 				threshold: 10,
 				pagination: {
 					el: `.gallery__dots_${i}`,
