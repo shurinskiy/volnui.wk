@@ -23,11 +23,11 @@ import { Pagination } from 'swiper/modules';
 		});
 	});
 
-	document.querySelectorAll('.card .card__favorite').forEach(button => {
+	/* document.querySelectorAll('.card .card__favorite').forEach(button => {
 		button.addEventListener('click', e => {
 			e.preventDefault();
 			e.currentTarget.classList.toggle('card__favorite_set');
 		})
-	})
+	}) */
 
 })();
