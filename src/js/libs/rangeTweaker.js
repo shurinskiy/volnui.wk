@@ -6,9 +6,9 @@ export const rangeTweaker = (item, options = {}) => {
 
 			this.options = {
 				class: 'range',
-				maxPrice: 10000,
-				startMin: 2500,
-				startMax: 7500,
+				startMin: item.dataset.startMin || 1000,
+				startMax: item.dataset.startMax || 7500,
+				maxPrice: item.dataset.priceMax || 10000,
 				input: true,
 				step: 100,
 				gap: 1000,

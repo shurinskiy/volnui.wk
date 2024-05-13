@@ -34,7 +34,15 @@
 			padding: 40px 0;
 		}
 	}
-	
+
+	&_oneclick {
+		
+		#{$self}__body {
+			max-width: 600px;
+			padding: 30px ;
+		}
+	}
+
 	&__hidden {
 		display: none;
 	}
