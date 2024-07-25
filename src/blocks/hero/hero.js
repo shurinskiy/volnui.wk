@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 (() => {
 	const slider = document.querySelector('.hero__slider');
@@ -33,13 +33,16 @@ import { Autoplay, Pagination } from 'swiper/modules';
 	}
 
 	new Swiper(slider, {
-		modules: [ Autoplay, Pagination ],
+		modules: [ Autoplay, Pagination, Navigation ],
 		spaceBetween: 0,
 		loop: true,
 		speed: 1000,
 		autoplay: { 
 			delay: 10000,
 			disableOnInteraction: true
+		},
+		navigation: {
+			nextEl: `.hero__link`, 
 		},
 		pagination: {
 			el: '.hero__dots',
