@@ -3,6 +3,9 @@ import { makeModalFrame } from "../../js/libs/modal";
 
 (() => {
 	makeModalFrame({
+		init: function(underlay) {
+			underlay.setAttribute('data-scroll-lock-scrollable', '');
+		},
 		open: function() {
 			scrollLock.disablePageScroll();
 		},

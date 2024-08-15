@@ -1,21 +1,23 @@
 /* 
 * Простое модальное окно. Слушает элементы имеющие data-атрибут с именем 
-* укзанным в параметре cls при вызове (по умолчанию 'modal'). Выборка элементов 
+* укзанным в параметре class при вызове (по умолчанию 'modal'). Выборка элементов 
 * для прослушиваения, может уточняться параметром select при вызове. 
 * 
-* <a href="./" data-modal>some content..</a> - если нет значения - берет содержимое (some content..)
+* <a href="./" data-modal>some content..</a>:
+* если нет значения - берет содержимое (some content..)
 * 
-* <a href="./" data-modal="#someblock"></a> - если начинается с "#", то находит элемент с id="someblock"
+* <a href="./" data-modal="#someblock"></a>:
+* если начинается с "#", то находит элемент с id="someblock"
 * 
-* <a href="./" data-modal="./images/somepicture.png"></a> - если значение есть, но НЕ начинается с "#" - 
-* создает элемент img, в src указывает значение data-modal
+* <a href="./" data-modal="./images/somepicture.png"></a>:
+* если значение есть, но НЕ начинается с "#" - создает элемент img, в src указывает значение data-modal
 * 
-* <a href="./" data-modal="./images/somepicture.png" rel="gallery"></a> - если значение есть, но НЕ 
-* начинается с "#", а так же имеет не пустой атрибут "rel" - создает элемент img, в src указывает 
-* значение data-modal и создает галерею, из всех найденных, с таким же "rel"
+* <a href="./" data-modal="./images/somepicture.png" rel="gallery"></a>: 
+* если значение есть, но НЕ начинается с "#", а так же имеет не пустой атрибут "rel" - создает элемент img, 
+* в src указывает значение data-modal и создает галерею, из всех найденных, с таким же "rel"
 * 
-* <a href="./" data-modal rel="gallery"><img src="./images/somepicture.png" alt="" /></a> - если нет 
-* занчения, но есть не пустой атрибут "rel" - не создает img, а использует содержимое, как элемент галереи
+* <a href="./" data-modal rel="gallery"><img src="./images/somepicture.png" alt="" /></a>:
+* если нет занчения, но есть не пустой атрибут "rel" - не создает img, а использует содержимое, как элемент галереи
 * 
 * 
 * @элемент для прослушивания:
@@ -72,10 +74,10 @@ export const makeModalFrame = function(props = {}) {
 			this.navi = document.querySelector(`.${this.props.class}__navi`);
 			this.slideshow = false;
 		
-			this._init();
+			this.#init();
 		}
 
-		close(e, cb = this.props.close) {
+		close(cb = this.props.close) {
 			this.modal.className = `${this.props.class}`;
 			this.modal.style.display = "none";
 			
@@ -85,7 +87,6 @@ export const makeModalFrame = function(props = {}) {
 			delete this.cnt, this.items;
 
 			if (typeof cb === 'function') cb.call(this.content, this);
-
 			return false;
 		}
 
@@ -111,10 +112,9 @@ export const makeModalFrame = function(props = {}) {
 			this.content['insertAdjacent' + ((typeof content == 'string') ? 'HTML' : 'Element')]('beforeend', content ?? '');
 			
 			if (! data.startsWith('#'))
-				this._slideshow(el.attributes.rel?.value);
+				this.#slideshow(el.attributes.rel?.value);
 
 			if (typeof cb === 'function') cb.call(this.content, this, el);
-
 			return true;
 		}
 						
@@ -131,7 +131,7 @@ export const makeModalFrame = function(props = {}) {
 				return this.props.move.call(this.content, this);
 		}
 
-		_slideshow(rel) {
+		#slideshow(rel) {
 			if (! rel) return;
 			
 			let counter = 0;
@@ -187,8 +187,8 @@ export const makeModalFrame = function(props = {}) {
 			}
 		}
 
-		_underlay() {
-			if (! document.querySelector(`#${this.props.class}__underlay`)) {
+		#underlay() {
+			if (! this.modal) {
 				const underlay = document.createElement('div');
 				const body = document.createElement('div');
 				const close = document.createElement('span');
@@ -196,9 +196,6 @@ export const makeModalFrame = function(props = {}) {
 				
 				underlay.className = `${this.props.class}`;
 				underlay.id = `${this.props.class}__underlay`;
-
-				if(this.scrollLock)
-					underlay.setAttribute('data-scroll-lock-scrollable', '');
 	
 				body.className = `${this.props.class}__body`;
 				close.className = `${this.props.class}__close`;
@@ -215,8 +212,8 @@ export const makeModalFrame = function(props = {}) {
 			}
 		}
 
-		_init() {
-			this._underlay();
+		#init() {
+			this.#underlay();
 
 			document.addEventListener('click', (e) => {
 				let el = e.target.closest(this.select);
@@ -235,7 +232,9 @@ export const makeModalFrame = function(props = {}) {
 			document.addEventListener('keydown', (e) => {
 				if (this.modal.style.display === 'block' && (e.key === "Escape" || e.key === "Esc"))
 					this.close();
-			})
+			});
+				
+			if (typeof this.props.init === 'function') this.props.init.call(this, this.modal);
 		}
 	}
 
